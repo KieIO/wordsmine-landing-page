@@ -2,6 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 5px;
+
+    transition: all .2s;
+    // background-color: red;
+    box-shadow: $box-shawdow;
+    position: sticky;
+    top: 0;
+    background-color: $color-white;
+    z-index: 1000;
 
     &__tools {
         display: flex;
@@ -28,5 +37,30 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+    }
+    &__btn {
+        display: flex;
+        margin-left: 1rem;
+        transition: all .2s;
+
+    }
+    &__btn-item {
+        margin-right: 1rem;
+        transition: all .2s;
+
+    }
+}
+
+
+@media only screen and (max-width: 650px){
+    .header {
+        flex-direction: column;
+         &__right {
+            justify-content: center;
+        }
+        &__btn {
+            margin-top: 1rem;
+        }
     }
 }

@@ -18,8 +18,12 @@ const Header = () => {
                     <Search/>
                 </div>
                 <div className="header__btn">
-                    <ButtonCustom size="large" type="default" ghost={true}>Login</ButtonCustom>
-                    <ButtonCustom size="large">Sign up</ButtonCustom>
+                    <div className="header__btn-item">
+                        <ButtonCustom size="large" type="default" ghost={true}>Login</ButtonCustom>
+                    </div>
+                    <div className="header__btn-item">
+                        <ButtonCustom size="large">Sign up</ButtonCustom>
+                    </div>
                 </div>
             </div>
         </header>
