@@ -2,7 +2,7 @@ import React from 'react';
 
 const FooterColumn = ({ title, data }) => {
     return (
-        <footer className="footer-column">
+        <div className="footer-column">
             <h4 className="footer-column__title">{title}</h4>
             <ul className="footer-column__list">
                 {
@@ -13,7 +13,7 @@ const FooterColumn = ({ title, data }) => {
                     ))
                 }
             </ul>
-        </footer>
+        </div>
     );
 }
 

@@ -2,9 +2,9 @@ import React from 'react';
 
 const Copyright = () => {
     return (
-        <footer className="copyright">
-
-        </footer>
+        <div className="copyright">
+            © 2020 Words, mine! Inc
+        </div>
     );
 }
 

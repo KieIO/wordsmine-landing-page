@@ -142,7 +142,7 @@ const Footer = () => {
             <Row justify="center" align="center">
                 {
                     footerColumns.map((item, index) => (
-                        <Col key={index} className="feature__item" lg={4} md={5} sm={12}>
+                        <Col key={index} className="feature__item" lg={5} sm={6}>
                             <FooterColumn {...item} />
                         </Col>
                     ))

@@ -2,7 +2,7 @@ import React from 'react';
 
 const SocialFooter = () => {
     return (
-        <footer className="social-footer">
+        <div className="social-footer">
             <ul className="social-footer__list">
                 <li className="social-footer__item social-footer__item--facebook">
                     <a href="/">
@@ -37,7 +37,7 @@ const SocialFooter = () => {
                     </a>
                 </li>
             </ul>
-        </footer>
+        </div>
     );
 }
 
