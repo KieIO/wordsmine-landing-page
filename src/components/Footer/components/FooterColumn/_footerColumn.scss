@@ -1,0 +1,24 @@
+.footer-column {
+    &__title {
+        font-weight: bold;
+    }
+    &__list {
+
+    }
+    &__link {
+        list-style: none;
+        text-decoration: none;
+        margin-bottom: .6rem;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover a{
+            color: rgba($color-black, .8);
+        }
+        a  {
+            color: $color-black;
+        }
+
+    }
+}

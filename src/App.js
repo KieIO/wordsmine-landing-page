@@ -3,6 +3,7 @@ import './sass/index.scss'
 import Feature from './components/Feature/Feature';
 import Topic from './components/Topic/Topic';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
       {/* CTA  */}
 
       {/* FOOTER  */}
-      
+        <Footer/>
     </main>
   );
 }
