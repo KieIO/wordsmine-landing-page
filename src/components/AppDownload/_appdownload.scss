@@ -1,0 +1,68 @@
+.app-download {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 15rem;
+    &__row {
+        width: 100%;
+        padding-left: $padding-container-md;
+        padding-right: $padding-container-md;
+        &__item__left {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &__wrap {
+                h2 {
+                    font-size: $font-size-heading1;
+                    color: $color-black;
+                }
+                &__download {
+                    .app-store {
+                        margin-right: 5px;
+                    }
+                    .ch-play {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        &__item__right {
+            text-align: center;
+            &__wrap {
+                &__mobile {
+                    img {
+                        height: 500px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 407px) {
+    .app-download__row {
+        padding-left: $padding-container-sm;
+        padding-right: $padding-container-sm;
+        &__item__left__wrap {
+            h2 {
+                font-size: $font-size-heading3;
+            }
+            &__download {
+                .app-store {
+                    margin-left: 9px;
+                    img {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        &__item__right__wrap {
+            &__mobile {
+                padding-left: 5px;
+                img {
+                    height: 350px;
+                }
+            }
+        }
+    }
+}
