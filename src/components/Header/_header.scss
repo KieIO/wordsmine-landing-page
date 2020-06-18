@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__tools {
+        display: flex;
+        align-items: center;
+        transition: all 2s;
+    }
+    &__btn-create {
+        position: relative;
+        padding-right: 1rem;
+        margin-right: 1rem;
+        margin-bottom: -5px;
+        &::after {
+            content: "";
+            right: -.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+            width: 2px;
+            height: 2rem;
+            background-color: $color-gray;
+        }
+    }
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

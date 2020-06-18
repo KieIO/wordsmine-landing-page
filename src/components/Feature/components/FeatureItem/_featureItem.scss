@@ -1,0 +1,26 @@
+.feature-item {
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: $box-shawdow;
+    padding: 2rem;
+    transition: all .2s;
+    // border: 1px solid red;
+    &:hover {
+        transform: translateY(-3px);
+    }
+    &__icon {
+        font-size: 5rem;
+        background-image: linear-gradient(to right,  $color-primary-dark, $color-primary-light);
+        -webkit-background-clip: text;
+        color: transparent;
+        font-weight: bold;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: $font-size-heading3;
+    }
+    &__description {
+        margin-left: 1rem;
+        color: $color-gray;
+    }
+}

@@ -1,0 +1,11 @@
+.button-custom {
+    &.ant-btn-primary {
+        background-color: $color-primary-dark !important;
+        // padding: 1rem 2rem;
+        font-size: $font-size-paragraph1;
+    }
+    &.ant-btn-default { 
+        color: $color-primary-dark;
+        border-color: $color-primary-dark;
+    }
+}
