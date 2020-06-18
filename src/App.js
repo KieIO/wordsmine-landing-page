@@ -6,7 +6,6 @@ import Header from './components/Header/Header';
 import Banner from './components/Banner/Banner';
 import Description from './components/Description/Description';
 import Value from './components/Value/Value';
-import { Descriptions } from 'antd';
 
 function App() {
   return (
