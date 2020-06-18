@@ -1,0 +1,125 @@
+.value {
+    padding: 0 $padding-container;
+
+    .col-6 {
+        width: 49%;
+        ;
+    }
+
+    h2 {
+        font-size: $font-size-heading2;
+        color: $color-black;
+    }
+
+    p {
+        color: $color-gray;
+    }
+
+    &__disflex{
+        display: flex;
+    }
+
+    &__content-padding {
+        padding: 10rem 10rem 0 0;
+    }
+    &__content-padding-left {
+        padding: 10rem 0 0 10rem;
+    }
+
+    &__img {
+        // background-image: url('../../img/learning-online.jpg');
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+    .value {
+        padding: 0 $padding-container-md;
+
+        &__content-padding {
+            padding: 10rem 5rem 0 0;
+        }
+        &__content-padding-left {
+            padding: 10rem 0 0 5rem;
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .value {
+        padding: 0 $padding-container-sm;
+
+        &__content-padding {
+            padding: 5rem 3rem 0 0;
+        }
+
+        &__content-padding {
+            padding: 5rem 0 0 3rem;
+        }
+
+        h2 {
+            line-height: 4rem;
+        }
+    }
+}
+
+@media(max-width: 670px) {
+    .value {
+        // flex-direction: column;
+
+
+        h2 {
+            font-size: $font-size-heading5;
+            line-height: 2.5rem;
+        }
+
+        p {
+            font-size: $font-size-paragraph1;
+        }
+
+        // .col-6{
+        //     width: 100vw;
+        // }
+    }
+}
+
+@media(max-width: 510px) {
+    .value {
+        flex-direction: column;
+
+        h2 {
+            font-size: $font-size-heading5;
+            line-height: 2.5rem;
+            // padding-left: 5px;
+        }
+
+        p {
+            font-size: $font-size-paragraph2;
+            padding: 0;
+            // padding-left: 5px;
+        }
+
+        .col-6 {
+            width: 80vw;
+        }
+
+        &__content-padding {
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        &__img {
+            position: relative;
+
+            img {
+                width: 80vw;
+                height: 80%;
+            }
+        }
+    }
+}
