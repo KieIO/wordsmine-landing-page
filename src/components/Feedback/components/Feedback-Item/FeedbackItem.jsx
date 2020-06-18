@@ -15,7 +15,7 @@ const FeedbackItem = () => {
         // </Col>
         <div className="feedback__carousel__item">
             <div className="feedback__carousel__item__info">
-                <h3 className="feedback__carousel__item__info__name">Dũng Võ</h3>
+                <h3 className="feedback__carousel__item__info__name">Goware</h3>
                 <p className="feedback__carousel__item__info__location">Vietnam</p>
             </div>
             <div className="feedback__carousel__item__description">

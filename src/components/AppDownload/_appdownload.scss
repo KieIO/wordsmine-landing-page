@@ -6,6 +6,7 @@
         width: 100%;
         padding-left: $padding-container-md;
         padding-right: $padding-container-md;
+        margin: 0 !important;
         &__item__left {
             text-align: center;
             display: flex;
@@ -30,8 +31,12 @@
             text-align: center;
             &__wrap {
                 &__mobile {
-                    img {
-                        height: 500px;
+                    .slick-dots {
+                        display: none !important;
+                    }
+                    &__background {
+                        height: 100%;
+                        width: 40% !important;
                     }
                 }
             }
@@ -59,8 +64,9 @@
         &__item__right__wrap {
             &__mobile {
                 padding-left: 5px;
-                img {
-                    height: 350px;
+                &__background {
+                    width: 60% !important;
+                    height: 100%;
                 }
             }
         }
