@@ -6,32 +6,39 @@ import Header from './components/Header/Header';
 import Banner from './components/Banner/Banner';
 import Description from './components/Description/Description';
 import Value from './components/Value/Value';
+import Feedback from './components/Feedback/Feedback';
+import AppDownload from './components/AppDownload/AppDownload';
+import CTA from './components/CTA/CTA';
 
 function App() {
   return (
     <main className="landing-page">
       {/* HEADER */}
-      <Header/>
+      <Header />
       {/* BANNER */}
       <Banner/>
       {/* FEATURE */}
-      <Feature/> 
+      <Feature />
 
       {/* DESCRIPTION  */}
       <Description/>
 
       {/* TOPIC  */}
-      <Topic/>
+      <Topic />
       {/* VALUE  */}
       <Value/>
+
       {/* FEEBACK  */}
-      
+      <Feedback />
+
       {/* APP DOWLOAD  */}
-      
+      <AppDownload />
+
       {/* CTA  */}
+      <CTA />
 
       {/* FOOTER  */}
-      
+
     </main>
   );
 }

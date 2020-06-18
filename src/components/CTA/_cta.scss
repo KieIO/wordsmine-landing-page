@@ -1,0 +1,38 @@
+.cta {
+    text-align: center;
+    margin-bottom: 15rem;
+    &__wrap {
+        margin-left: $padding-container-md;
+            margin-right: $padding-container-md;
+        &__title {
+            font-size: $font-size-heading1;
+            color: $color-black;
+        }
+        &__button {
+            background-image: linear-gradient(to right,  $color-primary-dark, $color-primary-light);
+            color: #fff;
+            font-weight: 600;
+            border-radius: 50px;
+            height: 68px;
+            width: 195px;
+            font-size: 20px;
+            margin-top: 3rem;
+            &:hover {
+                background-color: $color-warning;
+                color: $color-black;
+            }
+        }
+    }
+}
+
+@media (max-width: 407px) {
+    .cta {
+        &__wrap {
+            margin-left: $padding-container-sm;
+            margin-right: $padding-container-sm;
+            &__title {
+                font-size: $font-size-heading3;
+            }
+        }
+    }
+}
