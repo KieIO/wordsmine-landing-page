@@ -20,28 +20,6 @@
     &__carousel {
         padding-bottom: 50px;
     }
-    &__name {
-        font-size: $font-size-heading1;
-        color: $color-white;
-        font-weight: bold;
-    }
-    &__location {
-        font-size: $font-size-heading5;
-        color: $color-white;
-    }
-    &__description {
-        font-size: $font-size-heading5;
-        color: $color-white;
-        p::before {
-            content: '"';
-            font-size: 50px;
-            line-height: 0;
-        }
-        p::after {
-            content: '"';
-            font-size: 50px;
-        }
-    }
 }
 
 @media (max-width: 407px) {

@@ -1,0 +1,26 @@
+.feedback-item {
+     &__name {
+        font-size: $font-size-heading1;
+        color: $color-white;
+        font-weight: bold;
+    }
+    &__location {
+        font-size: $font-size-heading5;
+        color: $color-white;
+    }
+    &__description {
+        font-size: $font-size-heading5;
+        color: $color-white;
+        p::before {
+            content: '\201C';
+            font-size: 50px;
+            line-height: 0;
+            font-family: 'Passion One', cursive;
+        }
+        p::after {
+            content: '\201D';
+            font-size: 50px;
+            font-family: 'Passion One', cursive;
+        }
+    }
+}
