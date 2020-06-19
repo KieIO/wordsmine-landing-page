@@ -16,18 +16,21 @@ function App() {
     <main className="landing-page">
       {/* HEADER */}
       <Header />
+
       {/* BANNER */}
-      <Banner/>
+      <Banner />
+
       {/* FEATURE */}
       <Feature />
 
       {/* DESCRIPTION  */}
-      <Description/>
+      <Description />
 
       {/* TOPIC  */}
       <Topic />
+
       {/* VALUE  */}
-      <Value/>
+      <Value />
 
       {/* FEEBACK  */}
       <Feedback />
@@ -39,7 +42,7 @@ function App() {
       <CTA />
 
       {/* FOOTER  */}
-        <Footer/>
+      <Footer />
 
     </main>
   );

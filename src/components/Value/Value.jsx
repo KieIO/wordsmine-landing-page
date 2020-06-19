@@ -10,13 +10,10 @@ const Value = () => {
                     <img src={ImgValue1} alt="value" ></img>
                 </div>
                 <div className="col-6 value__content-padding-left">
-                    <h2>Your next win is just
-a fact away</h2>
+                    <h2>Your next win is just a fact away</h2>
                     <p>From flashcards to help you learn francais, to games that make it easy to get a handle on history, use a variety of tools to conquer any challenge.</p>
                 </div>
             </div>
-
-<div className="banner__space"></div>
 
             <div className="value__disflex">
                 <div className="col-6 value__content-padding">
