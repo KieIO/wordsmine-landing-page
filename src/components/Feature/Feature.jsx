@@ -27,7 +27,7 @@ const Feature = () => {
         }
     ])
     return (
-        <section className="feature u-padding-horizontal-section u-padding-vertical-section">
+        <section className="feature u-padding-horizontal-section u-margin-vertical-section">
             <Row justify="center" align="center">
            {
                feature.map(item => (
