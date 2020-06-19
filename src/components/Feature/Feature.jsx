@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import FeatureItem from './components/FeatureItem/FeatureItem';
 import { Row, Col } from 'antd';
-import Heading from '../Heading/Heading';
 
 
 const Feature = () => {

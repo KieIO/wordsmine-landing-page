@@ -1,58 +1,51 @@
-// .feedback {
-//     width: 100%;
-//     margin: 0;
-//     &__row {
-//         padding-left: $padding-container-md;
-//         padding-right: $padding-container-md;
-//         &__item {
-//             &__card {
-//                 &:hover {
-//                     background-image: linear-gradient(to right,  $color-primary-dark, $color-primary-light);
-//                     transition: all .5s;
-//                     cursor: default;
-//                 }
-//                 .ant-card-body {
-//                     .ant-card-meta {
-//                         .ant-card-meta-avatar {
-//                             span {
-//                                 width: 50px;
-//                                 height: 50px;
-//                             }
-//                         }
-//                         .ant-card-meta-detail {
-//                             .ant-card-meta-title {
-//                                 font-size: $font-size-subtitle1;
-//                             }
-//                             .ant-card-meta-description {
-//                                 font-size: $font-size-paragraph1;
-//                             }
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
 .feedback {
     text-align: center;
-    background-image: linear-gradient(to right,  $color-primary-dark, $color-primary-light);
+    background: rgb(0, 147, 233);
+    background: linear-gradient(
+        90deg,
+        rgba(0, 147, 233, 1) 87%,
+        rgba(128, 208, 199, 1) 100%
+    );
     padding: $padding-container;
     margin-bottom: 15rem;
-        &__carousel {
-            padding-bottom: 50px;
-            &__item {
-                &__info {
-                    &__name {
-                        font-size: $font-size-heading4;
-                    }
-                    &__location {
-                        font-size: $font-size-subtitle1;
-                    }
-                }
-                &__description {
-                    font-size: $font-size-paragraph1;
-                }
-            }
+    height: 450px;
+    position: relative;
+    .ant-carousel {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__carousel {
+        padding-bottom: 50px;
+    }
+    &__name {
+        font-size: $font-size-heading1;
+        color: $color-white;
+        font-weight: bold;
+    }
+    &__location {
+        font-size: $font-size-heading5;
+        color: $color-white;
+    }
+    &__description {
+        font-size: $font-size-heading5;
+        color: $color-white;
+        p::before {
+            content: '"';
+            font-size: 50px;
+            line-height: 0;
         }
+        p::after {
+            content: '"';
+            font-size: 50px;
+        }
+    }
+}
+
+@media (max-width: 407px) {
+    .feedback {
+        height: 600px;
+    }
 }
