@@ -3,7 +3,7 @@ import { Button } from 'antd';
 
 const CTA = () => {
     return (
-        <section className="cta">
+        <section className="cta u-margin-vertical-section">
             <div className="cta__wrap">
                 <h1 className="cta__title">Ready to start getting better grades?</h1>
                 <Button size="large" className="cta__button">Get started</Button>

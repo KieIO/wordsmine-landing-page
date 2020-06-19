@@ -11,7 +11,7 @@ import background3 from '../../assets/img/background3.png';
 
 const AppDownload = () => {
     return (
-        <section className="app-download">
+        <section className="app-download u-margin-vertical-section u-margin-vertical-section">
             <Row className="app-download__row" gutter={[16, 24]}>
                 <Col className="app-download__left" xs={{ span: 24 }} lg={{ span: 12 }} >
                     <div className="app-download__left__wrap">
