@@ -8,7 +8,6 @@
     max-height: 62vh;
 
     &__img{
-        // background-image: url('../../img/learning-online.jpg');
         position: relative;
         img {
             width: 100%;
@@ -25,7 +24,6 @@
         font-size: $font-size-heading1;
         margin: 0;
         display: table-header-group;
-        // line-height: 5rem;
     }
 
     &__center{
@@ -53,7 +51,7 @@
         margin: 0;
     }
 
-    p{
+    p {
         padding-right: 2rem;
     }
 }
@@ -74,7 +72,6 @@
         padding: 0 $padding-container-sm;
         max-height: 100vh;
         &__img{
-            // background-image: url('../../img/learning-online.jpg');
             position: relative;
             img {
                 width: 100%;
@@ -88,9 +85,7 @@
             padding-top: 1rem;
         }
 
-        .ant-btn-primary{
-            // height: 3rem;
-            // width: 10rem;
+        .ant-btn-primary {
             padding: 0 8px;
             text-align: center;
             background: $color-success;

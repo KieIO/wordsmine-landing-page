@@ -27,7 +27,6 @@
     }
 
     &__img {
-        // background-image: url('../../img/learning-online.jpg');
         position: relative;
 
         img {
@@ -70,9 +69,6 @@
 
 @media(max-width: 670px) {
     .value {
-        // flex-direction: column;
-
-
         h2 {
             font-size: $font-size-heading5;
             line-height: 2.5rem;
@@ -81,10 +77,6 @@
         p {
             font-size: $font-size-paragraph1;
         }
-
-        // .col-6{
-        //     width: 100vw;
-        // }
     }
 }
 
@@ -95,13 +87,11 @@
         h2 {
             font-size: $font-size-heading5;
             line-height: 2.5rem;
-            // padding-left: 5px;
         }
 
         p {
             font-size: $font-size-paragraph2;
             padding: 0;
-            // padding-left: 5px;
         }
 
         .col-6 {
