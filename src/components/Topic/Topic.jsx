@@ -32,7 +32,7 @@ const Topic = () => {
                 {
                     topic.map((item, index) => (
                         <Col key={index} className="topic__item" lg={6}>
-                            <TopicItem key={index} key={item.title} {...item} />
+                            <TopicItem  {...item} />
                         </Col>
                     ))
                 }
