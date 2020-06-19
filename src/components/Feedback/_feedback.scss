@@ -8,7 +8,7 @@
     );
     padding: $padding-container;
     margin-bottom: 15rem;
-    height: 300px;
+    height: 400px;
     position: relative;
     .ant-carousel {
         width: 80%;
@@ -32,5 +32,14 @@
     &__description {
         font-size: $font-size-heading5;
         color: $color-white;
+        p::before {
+            content: '"';
+            font-size: 50px;
+            line-height: 0;
+        }
+        p::after {
+            content: '"';
+            font-size: 50px;
+        }
     }
 }
