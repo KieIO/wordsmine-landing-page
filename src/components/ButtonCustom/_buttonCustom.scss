@@ -1,4 +1,6 @@
 .button-custom {
+    height: 45px !important;
+    font-size: $font-size-heading6;
     &.ant-btn-primary {
         background-color: $color-primary-dark !important;
         font-size: $font-size-paragraph1;
