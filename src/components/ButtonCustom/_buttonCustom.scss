@@ -1,5 +1,5 @@
 .button-custom {
-    height: 45px !important;
+    height: $height-btn-small !important;
     font-size: $font-size-heading6;
     border-radius: $boder-radious-btn;
     &.ant-btn-primary {
