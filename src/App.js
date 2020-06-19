@@ -14,34 +14,15 @@ import CTA from './components/CTA/CTA';
 function App() {
   return (
     <main className="landing-page">
-      {/* HEADER */}
       <Header />
-
-      {/* BANNER */}
       <Banner />
-
-      {/* FEATURE */}
       <Feature />
-
-      {/* DESCRIPTION  */}
       <Description />
-
-      {/* TOPIC  */}
       <Topic />
-
-      {/* VALUE  */}
       <Value />
-
-      {/* FEEBACK  */}
       <Feedback />
-
-      {/* APP DOWLOAD  */}
       <AppDownload />
-
-      {/* CTA  */}
       <CTA />
-
-      {/* FOOTER  */}
       <Footer />
 
     </main>

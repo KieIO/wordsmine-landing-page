@@ -2,13 +2,16 @@ import React from 'react';
 
 const FeedbackItem = () => {
     return (
-        <div className="feedback__item">
-            <div className="feedback__info">
-                <h3 className="feedback__name">Goware</h3>
-                <p className="feedback__location">Vietnam</p>
+        <div className="feedback-item">
+            <div className="feedback-item__info">
+                <h3 className="feedback-item__name">Goware</h3>
+                <p className="feedback-item__location">Vietnam</p>
             </div>
-            <div className="feedback__description">
+            <div className="feedback-item__description">
+                {/* <span>"</span> */}
                 <p>Words, mine! has helped me to understand just how fun and important and fun studying can be! This school year, in chemistry class I put my terms on Words, mine! and I already feel better about my upcoming test.</p>
+                {/* <span>"</span> */}
+
             </div>
         </div>
     );
