@@ -3,7 +3,7 @@ import { Button } from 'antd';
 
 const ButtonCustom = ({ title, children, type= "primary", ...rest}) => {
     return (
-        <Button type={type} shape="round" className="button-custom" {...rest}>
+        <Button type={type}  className="button-custom" {...rest}>
             {title || children}
         </Button>
     );
