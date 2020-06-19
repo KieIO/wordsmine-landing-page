@@ -7,20 +7,20 @@ import Heading from '../Heading/Heading';
 const Topic = () => {
     const [topic] = useState([
         {
-            name: 'Home',
+            name: 'Science',
             img: 'https://assets.quizlet.com/a/i/homepage/topics/science.0262b9325450ec3.png'
         },
         {
-            name: 'Home',
-            img: 'https://assets.quizlet.com/a/i/homepage/topics/science.0262b9325450ec3.png'
+            name: 'Math',
+            img: 'https://assets.quizlet.com/a/i/homepage/topics/math.6b55cceab6d81db.png'
         },
         {
-            name: 'Home',
-            img: 'https://assets.quizlet.com/a/i/homepage/topics/science.0262b9325450ec3.png'
+            name: 'Education',
+            img: 'https://assets.quizlet.com/a/i/homepage/topics/social_science.f080e4570fd49e2.png'
         },
         {
             name: 'Other',
-            img: 'https://assets.quizlet.com/a/i/homepage/topics/science.0262b9325450ec3.png'
+            img: 'https://assets.quizlet.com/a/i/homepage/topics/other.67db08f4bd869cc.png'
         }
     ])
     return ( 
