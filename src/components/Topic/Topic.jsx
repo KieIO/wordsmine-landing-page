@@ -24,13 +24,15 @@ const Topic = () => {
         }
     ])
     return ( 
-        <section className="topic">
-            <Heading>Topic</Heading>
+        <section className="topic u-padding-horizontal-section">
+            <div className="topic__heading">
+                <Heading>Give it try! Let's go!</Heading>
+            </div>
             <Row justify="center" align="center">
                 {
-                    topic.map(item => (
-                        <Col key={item.title} className="topic__item" lg={6}>
-                            <TopicItem key={item.title} {...item} />
+                    topic.map((item, index) => (
+                        <Col key={index} className="topic__item" lg={6}>
+                            <TopicItem  {...item} />
                         </Col>
                     ))
                 }

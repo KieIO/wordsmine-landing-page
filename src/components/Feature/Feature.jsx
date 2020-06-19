@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import FeatureItem from './components/FeatureItem/FeatureItem';
 import { Row, Col } from 'antd';
-import Heading from '../Heading/Heading';
 
 
 const Feature = () => {
@@ -28,8 +27,7 @@ const Feature = () => {
         }
     ])
     return (
-        <section className="feature">
-            <Heading>Feature</Heading>
+        <section className="feature u-padding-horizontal-section u-padding-vertical-section">
             <Row justify="center" align="center">
            {
                feature.map(item => (

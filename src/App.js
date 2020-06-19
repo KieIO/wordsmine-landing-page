@@ -3,6 +3,7 @@ import './sass/index.scss'
 import Feature from './components/Feature/Feature';
 import Topic from './components/Topic/Topic';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import Banner from './components/Banner/Banner';
 import Description from './components/Description/Description';
 import Value from './components/Value/Value';
@@ -38,6 +39,7 @@ function App() {
       <CTA />
 
       {/* FOOTER  */}
+        <Footer/>
 
     </main>
   );

@@ -1,0 +1,54 @@
+.social-footer {
+    $size: 3rem;
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__item {
+        border-radius: 50%;
+        background-color: $color-white;
+        width: $size;
+        height: $size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 6px 20px rgba($color-black, 0.5);
+        transition: all .2s;
+        margin: 0 1rem;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+                fill:rgba($color-black, 0.8);
+                width: calc(#{$size} - 15px);
+                height: calc(#{$size} - 15px);
+            }
+        }
+        &:hover a svg {
+            fill: $color-white;
+        }
+        &:hover a {
+            transform: scale(1.1);
+        }
+
+        &--facebook {
+            &:hover {
+                background-color: #3B5A9A;
+            }
+        }
+
+        &--instagram {
+            &:hover {
+                background-color: #7C4A3A;
+            }
+        }
+
+        &--youtube {
+            &:hover {
+                background-color: #FF0000;
+            }
+        }
+    }
+}

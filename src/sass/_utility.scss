@@ -1,0 +1,31 @@
+.u-padding-horizontal-section {
+    padding-left: $padding-container;
+    padding-right: $padding-container;
+
+    @media only screen and (max-width: 950px) {
+        padding-left: $padding-container-md;
+        padding-right: $padding-container-md;  
+    }
+
+
+    @media only screen and (max-width: 579px) {
+        padding-left: $padding-container-sm;
+        padding-right: $padding-container-sm;
+    }
+}
+
+.u-padding-vertical-section {
+    padding-top: $padding-vertical-container;
+    padding-bottom: $padding-vertical-container;
+
+    @media only screen and (max-width: 950px) {
+        padding-top: $padding-vertical-container-md;
+        padding-bottom: $padding-vertical-container-md;  
+    }
+
+
+    @media only screen and (max-width: 579px) {
+        padding-top: $padding-vertical-container-sm;
+        padding-bottom: $padding-vertical-container-sm;
+    }
+}
