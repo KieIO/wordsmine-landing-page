@@ -11,9 +11,6 @@ const Banner = () => {
                 <h1 className="banner__text-color">Learn any words, be unstoppable</h1>
                 <p className="banner__text-color"> Words beware, 1 at a time. Learning everywhere and evrytime with Words, mine!
                 </p>
-                {/* <Button type="primary" shape="round" size="large" className="banner__button">
-                    Get Started
-                </Button> */}
                 <ButtonLarge>Get Started</ButtonLarge>
 
             </div>
