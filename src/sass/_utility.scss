@@ -15,17 +15,17 @@
 }
 
 .u-padding-vertical-section {
-    padding-left: $padding-vertical-container;
-    padding-right: $padding-vertical-container;
+    padding-top: $padding-vertical-container;
+    padding-bottom: $padding-vertical-container;
 
     @media only screen and (max-width: 950px) {
-        padding-left: $padding-vertical-container-md;
-        padding-right: $padding-vertical-container-md;  
+        padding-top: $padding-vertical-container-md;
+        padding-bottom: $padding-vertical-container-md;  
     }
 
 
     @media only screen and (max-width: 579px) {
-        padding-left: $padding-vertical-container-sm;
-        padding-right: $padding-vertical-container-sm;
+        padding-top: $padding-vertical-container-sm;
+        padding-bottom: $padding-vertical-container-sm;
     }
 }

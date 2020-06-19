@@ -4,14 +4,16 @@
     align-items: center;
     padding: 10px 5px;
 
-    transition: all .2s;
+    transition: all 0.2s;
     // background-color: red;
     box-shadow: $box-shadow;
     position: sticky;
     top: 0;
     background-color: $color-white;
     z-index: 1000;
-
+    &__logo {
+        margin-left: 1rem;
+    }
     &__tools {
         display: flex;
         align-items: center;
@@ -24,7 +26,7 @@
         margin-bottom: -5px;
         &::after {
             content: "";
-            right: -.5rem;
+            right: -0.5rem;
             top: 50%;
             transform: translateY(-50%);
             position: absolute;
@@ -42,21 +44,21 @@
     &__btn {
         display: flex;
         margin-left: 1rem;
-        transition: all .2s;
-
+        transition: all 0.2s;
     }
     &__btn-item {
         margin-right: 1rem;
-        transition: all .2s;
-
+        transition: all 0.2s;
     }
 }
 
-
-@media only screen and (max-width: 650px){
+@media only screen and (max-width: 650px) {
     .header {
         flex-direction: column;
-         &__right {
+        &__logo {
+            margin-left: 0;
+        }
+        &__right {
             justify-content: center;
         }
         &__btn {
