@@ -7,37 +7,37 @@
         padding-left: $padding-container-md;
         padding-right: $padding-container-md;
         margin: 0 !important;
-        &__item__left {
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            &__wrap {
-                h2 {
-                    font-size: $font-size-heading1;
-                    color: $color-black;
+    }
+    &__left {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__wrap {
+            h2 {
+                font-size: $font-size-heading1;
+                color: $color-black;
+            }
+            &__download {
+                .app-store {
+                    margin-right: 5px;
                 }
-                &__download {
-                    .app-store {
-                        margin-right: 5px;
-                    }
-                    .ch-play {
-                        margin-left: 5px;
-                    }
+                .ch-play {
+                    margin-left: 5px;
                 }
             }
         }
-        &__item__right {
-            text-align: center;
-            &__wrap {
-                &__mobile {
-                    .slick-dots {
-                        display: none !important;
-                    }
-                    &__background {
-                        height: 100%;
-                        width: 40% !important;
-                    }
+    }
+    &__right {
+        text-align: center;
+        &__wrap {
+            &__mobile {
+                .slick-dots {
+                    display: none !important;
+                }
+                &__background {
+                    height: 100%;
+                    width: 40% !important;
                 }
             }
         }
@@ -46,28 +46,27 @@
 
 @media (max-width: 407px) {
     .app-download__row {
-        padding-left: $padding-container-sm;
-        padding-right: $padding-container-sm;
-        &__item__left__wrap {
-            h2 {
-                font-size: $font-size-heading3;
-            }
-            &__download {
-                .app-store {
-                    margin-left: 9px;
-                    img {
-                        margin-bottom: 10px;
-                    }
-                }
-            }
+        padding: 0;
+    }
+    .app-download__left__wrap {
+        h2 {
+            font-size: $font-size-heading3;
         }
-        &__item__right__wrap {
-            &__mobile {
-                padding-left: 5px;
-                &__background {
-                    width: 60% !important;
-                    height: 100%;
-                }
+        // &__download {
+        //     .app-store {
+        //         margin-left: 9px;
+        //         img {
+        //             margin-bottom: 10px;
+        //         }
+        //     }
+        // }
+    }
+    .app-download__right__wrap {
+        &__mobile {
+            // padding-left: 5px;
+            &__background {
+                width: 60% !important;
+                height: 100%;
             }
         }
     }
