@@ -9,7 +9,7 @@ const TopicItem = ({name, img}) => {
                 <figcaption className="topic-item__caption">  
                 <h3>
                     {name}
-                    </h3>  
+                </h3>  
                 </figcaption>
             </figure>
         </section>
