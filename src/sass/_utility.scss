@@ -1,4 +1,4 @@
-.u-padding-section {
+.u-padding-horizontal-section {
     padding-left: $padding-container;
     padding-right: $padding-container;
 
@@ -11,5 +11,21 @@
     @media only screen and (max-width: 579px) {
         padding-left: $padding-container-sm;
         padding-right: $padding-container-sm;
+    }
+}
+
+.u-padding-vertical-section {
+    padding-left: $padding-vertical-container;
+    padding-right: $padding-vertical-container;
+
+    @media only screen and (max-width: 950px) {
+        padding-left: $padding-vertical-container-md;
+        padding-right: $padding-vertical-container-md;  
+    }
+
+
+    @media only screen and (max-width: 579px) {
+        padding-left: $padding-vertical-container-sm;
+        padding-right: $padding-vertical-container-sm;
     }
 }
