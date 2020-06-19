@@ -21,6 +21,12 @@
     }
 }
 
+@media (max-width: 700px) {
+    .feedback {
+        height: 500px;
+    }
+}
+
 @media (max-width: 407px) {
     .feedback {
         height: 600px;
