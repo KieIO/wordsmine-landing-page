@@ -1,7 +1,6 @@
 import React from 'react'
 import ImgBanner from '../../img/learning-online.jpg'
 
-import { Button} from 'antd';
 import ButtonLarge from '../ButtonLarge/ButtonLarge';
 
 const Banner = () => {
