@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Row, Col } from 'antd';
-import TopicItem from './TopicItem/TopicItem';
 import Heading from '../Heading/Heading';
+import TopicItem from './components/TopicItem/TopicItem'
 
 
 const Topic = () => {
