@@ -34,10 +34,22 @@
     }
 }
 
-// @media (max-width: 407px) {
-//     .feedback-item {
-//         &__description {
-//             text-align: justify;
-//         }
-//     }    
-// }
+@media (max-width: 407px) {
+    .feedback-item {
+        &__description {
+            font-size: $font-size-heading6;
+            text-align: justify;
+            p::after {
+                content: "\201D";
+                font-size: 10rem;
+                font-family: "Passion One", cursive;
+                position: absolute;
+                bottom: -25px;
+                line-height: 0;
+                right: 15px;
+                color: rgba($color-white, .6);
+    
+            }
+        }
+    }    
+}
