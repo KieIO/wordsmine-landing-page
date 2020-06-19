@@ -1,3 +1,15 @@
 .footer {
+    padding-top: 2rem;
     padding-bottom: 2rem;
+    background-color: rgba($color-gray, .1);
+}
+
+
+@media only screen and (max-width: 579px) {
+    .footer  {
+        &__top{
+            // margin: auto;
+            padding: 1rem;
+        }
+    }
 }

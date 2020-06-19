@@ -28,7 +28,7 @@ const Feature = () => {
         }
     ])
     return (
-        <section className="feature">
+        <section className="feature u-padding-section">
             <Heading>Feature</Heading>
             <Row justify="center" align="center">
            {
