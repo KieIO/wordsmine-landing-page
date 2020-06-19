@@ -3,10 +3,11 @@
     background-color: $color-primary-dark;
     display: flex;
     justify-content: space-between;
-    padding: 0 0 0 $padding-container;
+    // padding: 0 0 0 $padding-container;
     margin: 0;
-    max-height: 62vh;
+    // max-height: 62vh;
 
+    max-height: 40rem;
     &__img{
         position: relative;
         img {
@@ -32,6 +33,8 @@
 
     &__center{
         text-align: center;
+        margin: auto;
+        padding: 1rem;
     }
 
     &__text-color{
@@ -51,7 +54,7 @@
         background-color: $color-primary-dark;
         display: flex;
         justify-content: space-between;
-        padding: 0 0 0 $padding-container-md;
+        // padding: 0 0 0 $padding-container-md;
         margin: 0;
     }
 
@@ -65,7 +68,7 @@
         line-height: 5rem;
     }
     .banner{
-        padding: 0 0 0 $padding-container-sm;
+        // padding: 0 0 0 $padding-container-sm;
         max-height: 70vh;
     }
 }
@@ -73,7 +76,10 @@
 @media(max-width: 665px){
     .banner{
         flex-direction: column;
-        padding: 0 $padding-container-sm;
+        // padding: 0 $padding-container-sm;
+        &__center {
+            padding: 2rem;
+        }
         max-height: 100vh;
         &__button {
             margin-top: 2rem !important;
@@ -84,6 +90,7 @@
             img {
                 width: 100%;
                 height: 30%;
+                max-height: 30rem;
                 background-repeat: no-repeat;
                 object-fit: cover;
             }
