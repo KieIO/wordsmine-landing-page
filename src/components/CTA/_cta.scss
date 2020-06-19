@@ -16,11 +16,11 @@
             $color-primary-light
         );
         color: #fff;
-        font-weight: 600;
+        font-weight: bold;
         border-radius: 50px;
         height: 68px;
         width: 195px;
-        font-size: 20px;
+        font-size: $font-size-heading5;
         margin-top: 3rem;
         &:hover {
             background-color: $color-warning;
