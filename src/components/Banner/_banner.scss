@@ -17,14 +17,6 @@
             object-fit: cover;
         }
     }
-    .ant-btn-primary{
-        background: $color-success;
-        margin: 3rem 0;
-        height: 60px;
-        width: 170px;
-        font-size: $font-size-heading6;
-
-    }
     h1{
         font-size: $font-size-heading1;
         margin: 0;
@@ -78,10 +70,6 @@
             padding: 2rem;
         }
         max-height: 100vh;
-        &__button {
-            margin-top: 2rem !important;
-            margin-bottom: 2rem !important;
-        }
         &__img{
             position: relative;
             img {
@@ -95,13 +83,6 @@
 
         &__space{
             padding-top: 1rem;
-        }
-
-        .ant-btn-primary {
-            padding: 0 8px;
-            text-align: center;
-            background: $color-success;
-            margin: 0.5rem 0;
         }
     }
 }

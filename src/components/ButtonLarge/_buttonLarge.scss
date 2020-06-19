@@ -1,0 +1,17 @@
+.button-large {
+    background-color: $color-success;
+    color: #fff;
+    font-weight: bold;
+    border-radius: $boder-radious-btn;
+    height: $height-btn-large;
+    width: 195px;
+    font-size: $font-size-heading5;
+    margin-top: 3rem;
+    transition: all 0.5s;
+    border: none;
+
+    &:hover {
+        background-color: $color-warning;
+        color: $color-black;
+    }
+}

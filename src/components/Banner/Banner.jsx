@@ -2,6 +2,7 @@ import React from 'react'
 import ImgBanner from '../../img/learning-online.jpg'
 
 import { Button} from 'antd';
+import ButtonLarge from '../ButtonLarge/ButtonLarge';
 
 const Banner = () => {
     return (
@@ -11,9 +12,10 @@ const Banner = () => {
                 <h1 className="banner__text-color">Learn any words, be unstoppable</h1>
                 <p className="banner__text-color"> Words beware, 1 at a time. Learning everywhere and evrytime with Words, mine!
                 </p>
-                <Button type="primary" shape="round" size="large" className="banner__button">
+                {/* <Button type="primary" shape="round" size="large" className="banner__button">
                     Get Started
-                </Button>
+                </Button> */}
+                <ButtonLarge>Get Started</ButtonLarge>
 
             </div>
 
