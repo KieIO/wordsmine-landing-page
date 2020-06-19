@@ -29,9 +29,6 @@ const Feature = () => {
     ])
     return (
         <section className="feature u-padding-section">
-            <div className="feature__heading">
-                <Heading>Feature</Heading>
-            </div>
             <Row justify="center" align="center">
            {
                feature.map(item => (

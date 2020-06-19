@@ -25,7 +25,9 @@ const Topic = () => {
     ])
     return ( 
         <section className="topic">
-            <Heading>Topic</Heading>
+            <div className="topic__heading">
+                <Heading>Give it try! Let's go!</Heading>
+            </div>
             <Row justify="center" align="center">
                 {
                     topic.map(item => (

@@ -1,6 +1,7 @@
 // This is file feature.scss
 .feature {
     margin-top: 8rem;
+    margin-bottom: 8rem;
     align-content: stretch;
     &__item {
       padding: 1rem;
@@ -10,11 +11,9 @@
 @media only screen and (max-width: 579px) {
     .feature  {
       margin-top: 5rem;
+      margin-bottom: 2rem;
       position: relative;
       padding: 1rem;
-      &__heading {
-        padding-left: 2rem;
-      }
       &__item {
         width: 50%;
       }
