@@ -1,15 +1,24 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5px;
-
-    transition: all 0.2s;
-    box-shadow: $box-shadow;
-    position: sticky;
-    top: 0;
-    background-color: $color-white;
-    z-index: 1000;
+    &__large{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 5px;
+    
+        transition: all 0.2s;
+        box-shadow: $box-shadow;
+        position: sticky;
+        top: 0;
+        background-color: $color-white;
+        z-index: 1000;
+    }
+    &__small {
+        position: sticky;
+        top: 0;
+        background-color: $color-white;
+        z-index: 1000;
+        display: none;
+    }
     &__logo {
         margin-left: 1rem;
     }
@@ -51,9 +60,26 @@
     }
 }
 
-@media only screen and (max-width: 650px) {
+// @media only screen and (max-width: 890px) {
+//     .header {
+//         &__right {
+//             justify-content: flex-end;
+//         }
+//         &__category {
+//             margin-bottom: 1rem;
+//         }
+//     }
+// }
+
+@media only screen and (max-width: 890px) {
     .header {
-        flex-direction: column;
+        &__large {
+            flex-direction: column;
+            display: none;
+        }
+        &__small {
+            display: block;
+        }
         &__logo {
             margin-left: 0;
         }
@@ -63,15 +89,23 @@
         &__btn {
             margin-top: 1rem;
         }
-        &__media {
-            position: fixed;
-            top: 0;
-            background-color: $color-white;
-            z-index: 1001;
-            width: 100%;
-            padding-bottom: 1rem;
-            padding-top: 1rem;
-            box-shadow: $box-shadow;
-        }
+        // &__btn-media {
+        //     display: none;
+        // }
+        // &__category-media {
+        //     position: fixed;
+        //     top: 0;
+        //     background-color: $color-white;
+        //     z-index: 1001;
+        //     width: 100%;
+        //     padding-bottom: 1rem;
+        //     padding-top: 1rem;
+        //     box-shadow: $box-shadow;
+        //     // background-color: red;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     min-height: 7rem;
+        // }
     }
 }

@@ -24,7 +24,7 @@ const Topic = () => {
         }
     ])
     return ( 
-        <section className="topic u-padding-horizontal-section">
+        <section className="topic u-padding-horizontal-section" id="topic">
             <div className="topic__heading">
                 <Heading>Give it try! Let's go!</Heading>
             </div>
