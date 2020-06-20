@@ -9,6 +9,7 @@ import Value from './components/Value/Value';
 import Feedback from './components/Feedback/Feedback';
 import AppDownload from './components/AppDownload/AppDownload';
 import CTA from './components/CTA/CTA';
+import Form from './components/Form/Form';
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
 
       {/* CTA  */}
       <CTA />
-
+      <Form />
       {/* FOOTER  */}
 
     </main>
