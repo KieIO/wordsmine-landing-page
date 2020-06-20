@@ -4,16 +4,16 @@ export const CATEGORY_HEADER = [
         target: 'overview'
     },
     {
-        name: 'Feature',
-        target: 'feature'
-    },
-    {
         name: 'Value',
         target: 'value'
     },
     {
         name: 'Topic',
         target: 'topic'
+    },
+    {
+        name: 'Feature',
+        target: 'feature'
     },
     {
         name: 'Testimonial',
