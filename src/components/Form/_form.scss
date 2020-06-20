@@ -1,7 +1,19 @@
 .form {
+    box-shadow: $box-shadow;
+    // background-color:red;
+    padding: 2rem 4rem;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &__btn-format {
         text-align: center;
         padding-bottom: 2rem;
+    }
+    &__btn-start {
+        text-align: center;
+        margin: auto;
     }
 
     &__checkbox-disflex{

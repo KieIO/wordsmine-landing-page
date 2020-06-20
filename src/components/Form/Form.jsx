@@ -1,33 +1,19 @@
 
-import React, { useState, useEffect } from 'react'
-import { Form, Input, Button, Checkbox } from 'antd';
-import ButtonCustom from '../ButtonCustom/ButtonCustom';
-import CustomInput from '../CustomInput/CustomInput';
-
-const layout = {
-    labelCol: { span: 8 },
-    wrapperCol: { span: 16 },
-};
+import React from 'react'
+import { Form, Input, message } from 'antd';
+import ButtonLarge from '../ButtonLarge/ButtonLarge';
 
 
 const FormSignUp = () => {
     const [form] = Form.useForm();
-    const [checkAgreePolicy, setcheckAgreePolicy] = useState(false);
+    // const [checkAgreePolicy, setcheckAgreePolicy] = useState(false);
 
-    // const validateMessages = {
-    //     required: '${label} is required!',
-    //     types: {
-    //         email: '${label} is not validate email!',
-    //     },
+    // const onCheckboxChange = e => {
+    //     setcheckAgreePolicy(e.target.checked);
     // };
-
-    // useEffect(() => {
-    //     form.validateFields(['isCheckBox']);
-    // }, [checkAgreePolicy, form]);
-
-    const onCheckboxChange = e => {
-        setcheckAgreePolicy(e.target.checked);
-    };
+    // const onChangeBox = (e) => {
+    //     console.log(`checked = ${e.target.checked}`);
+    // }
 
     const submit = async (values) => {
         return fetch('https://formspree.io/mnqgzzev', {
@@ -42,19 +28,9 @@ const FormSignUp = () => {
                 return response.json();
             })
             .then((result) => {
-                // if (status === HTTP_STATUS_SUCCESS) {
                 return result;
-                // }
-                // if (result && result.message) {
-                // 	throw new Error(result.message);
-                // } else {
-                // 	throw new Error('Có lỗi xảy ra. Vui lòng thử lại');
-                // }
             })
             .catch((err) => {
-                // if (err.toString() === ERROR_CONNECTION_REFUSED.server) {
-                // 	throw new Error(ERROR_CONNECTION_REFUSED.client);
-                // }
                 throw err;
             })
     }
@@ -62,18 +38,18 @@ const FormSignUp = () => {
     const onCheck = async () => {
         try {
             const values = await form.validateFields();
-            console.log('Success:', values);
-
-
-            const result = await submit(values)
-            console.log("result: ", result)
+            try {
+                    const result = await submit(values)
+                    console.debug("result: ", result)
+                    message.success("Thanks for your submission")
+                    form.resetFields()
+                } catch (err) {
+                    console.debug("result: ", err)
+                    message.error("Something went wrong, please try later")
+                }
         } catch (err) {
-            console.log("err: ", err)
+            console.debug("result: ", err)
         }
-    }
-
-    const onChangeBox = (e) => {
-        console.log(`checked = ${e.target.checked}`);
     }
 
     return (
@@ -130,10 +106,13 @@ const FormSignUp = () => {
                     <Checkbox checked={checkAgreePolicy} onChange={onCheckboxChange}> I agree to the terms of service and privacy policy.</Checkbox>
                 </Form.Item> */}
 
-                <Form.Item >
-                    <ButtonCustom type="primary" onClick={onCheck}>
-                        Check
-                </ButtonCustom>
+                <Form.Item className="form__btn-start">
+                    {/* <ButtonCustom type="primary" onClick={onCheck}>
+                        Submit
+                    </ButtonCustom> */}
+                    <ButtonLarge type="primary" onClick={onCheck}>
+                        Get started
+                    </ButtonLarge>
                 </Form.Item>
             </Form>
         </section>
