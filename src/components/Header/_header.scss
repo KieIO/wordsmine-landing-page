@@ -2,7 +2,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 5px;
 
+    transition: all 0.2s;
+    box-shadow: $box-shadow;
+    position: sticky;
+    top: 0;
+    background-color: $color-white;
+    z-index: 1000;
+    &__logo {
+        margin-left: 1rem;
+    }
     &__tools {
         display: flex;
         align-items: center;
@@ -15,7 +25,7 @@
         margin-bottom: -5px;
         &::after {
             content: "";
-            right: -.5rem;
+            right: -0.5rem;
             top: 50%;
             transform: translateY(-50%);
             position: absolute;
@@ -28,5 +38,40 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
+    }
+    &__btn {
+        display: flex;
+        margin-left: 1rem;
+        transition: all 0.2s;
+    }
+    &__btn-item {
+        margin-right: 1rem;
+        transition: all 0.2s;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .header {
+        flex-direction: column;
+        &__logo {
+            margin-left: 0;
+        }
+        &__right {
+            justify-content: center;
+        }
+        &__btn {
+            margin-top: 1rem;
+        }
+        &__media {
+            position: fixed;
+            top: 0;
+            background-color: $color-white;
+            z-index: 1001;
+            width: 100%;
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            box-shadow: $box-shadow;
+        }
     }
 }

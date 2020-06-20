@@ -1,0 +1,55 @@
+.feedback-item {
+    &__name {
+        font-size: $font-size-heading1;
+        color: $color-white;
+        font-weight: bold;
+    }
+    &__location {
+        font-size: $font-size-heading6;
+        // color: rgba($color-black, .8);
+        color: rgba($color-white, .9);
+    }
+    &__description {
+        font-size: $font-size-heading5;
+        color: $color-white;
+        position: relative;
+        p::before {
+            content: "\201C";
+            font-size: 10rem;
+            line-height: 0;
+            font-family: "Passion One", cursive;
+            color: rgba($color-white, .6);
+        }
+        p::after {
+            content: "\201D";
+            font-size: 10rem;
+            font-family: "Passion One", cursive;
+            position: absolute;
+            bottom: -2px;
+            line-height: 0;
+            right: 0;
+            color: rgba($color-white, .6);
+
+        }
+    }
+}
+
+@media (max-width: 407px) {
+    .feedback-item {
+        &__description {
+            font-size: $font-size-heading6;
+            text-align: justify;
+            p::after {
+                content: "\201D";
+                font-size: 10rem;
+                font-family: "Passion One", cursive;
+                position: absolute;
+                bottom: -25px;
+                line-height: 0;
+                right: 15px;
+                color: rgba($color-white, .6);
+    
+            }
+        }
+    }    
+}
