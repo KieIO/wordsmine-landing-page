@@ -1,16 +1,17 @@
 
-import React from 'react'
-import { Form, Input, message } from 'antd';
+import React, {useState} from 'react'
+import { Form, Input, message, Checkbox } from 'antd';
 import ButtonLarge from '../ButtonLarge/ButtonLarge';
 
 
 const FormSignUp = () => {
     const [form] = Form.useForm();
-    // const [checkAgreePolicy, setcheckAgreePolicy] = useState(false);
+    const [checkAgreePolicy, setcheckAgreePolicy] = useState(false);
 
-    // const onCheckboxChange = e => {
-    //     setcheckAgreePolicy(e.target.checked);
-    // };
+    const onCheckboxChange = e => {
+        e.preventDefault()
+        setcheckAgreePolicy(e.target.checked);
+    };
     // const onChangeBox = (e) => {
     //     console.log(`checked = ${e.target.checked}`);
     // }
@@ -38,15 +39,20 @@ const FormSignUp = () => {
     const onCheck = async () => {
         try {
             const values = await form.validateFields();
-            try {
-                    const result = await submit(values)
-                    console.debug("result: ", result)
-                    message.success("Thanks for your submission")
-                    form.resetFields()
-                } catch (err) {
-                    console.debug("result: ", err)
-                    message.error("Something went wrong, please try later")
-                }
+            if (checkAgreePolicy)  {
+                try {
+                        const result = await submit(values)
+                        console.debug("result: ", result)
+                        message.success("Thanks for your submission")
+                        form.resetFields()
+                    } catch (err) {
+                        console.debug("result: ", err)
+                        message.error("Something went wrong, please try later")
+                    }
+            } else {
+                message.warning("Please check agree policy to submit form")
+            }
+
         } catch (err) {
             console.debug("result: ", err)
         }
@@ -100,11 +106,10 @@ const FormSignUp = () => {
                 </Form.Item>
 
 
-                {/* <Form.Item 
-                name="isCheckBox"
+                <Form.Item 
                 >
                     <Checkbox checked={checkAgreePolicy} onChange={onCheckboxChange}> I agree to the terms of service and privacy policy.</Checkbox>
-                </Form.Item> */}
+                </Form.Item>
 
                 <Form.Item className="form__btn-start">
                     {/* <ButtonCustom type="primary" onClick={onCheck}>

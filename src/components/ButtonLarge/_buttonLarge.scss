@@ -11,7 +11,11 @@
     border: none;
 
     &:hover {
-        background-color: $color-warning;
+        background-color: $color-warning !important;
         color: $color-black;
+    }
+    &:visited, &:focus {
+        background-color: $color-success;
+
     }
 }
