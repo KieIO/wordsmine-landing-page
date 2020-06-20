@@ -1,8 +1,7 @@
-.header-burger-meu {
+.header-burger-menu {
     // background-color: red;
-    // position: relative;
     width: 100%;
-    padding: .2rem 2rem;
+    padding: 0.2rem 2rem;
     overflow: hidden;
     &__top {
         display: flex;
@@ -19,21 +18,25 @@
         padding: 2rem;
         list-style: none;
         text-decoration: none;
-        transition: all .2s;
+        transition: all 0.2s;
         background-color: $color-white;
-    }  
+    }
     &__content {
-        height: 0;
-        opacity: 0;
-        transition: all .3s;
+        position: absolute;
+        top: $header-height;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        z-index: 2000;
+        transition: all 0.3s;
         transform: translateX(100%);
+        padding: 2rem 2rem 0;
         &--open {
             height: fit-content;
             opacity: 1;
             transform: translateX(0);
-
         }
-    } 
+    }
     &__icon {
         text-align: right;
         span {
@@ -44,17 +47,46 @@
         position: relative;
         &:not(:last-child) {
             margin-bottom: 20px;
-           &::after  {
-               content: "";
-               position: absolute;
-               width: 100%;
-               height: 1px;
-               background-color: rgba($color-primary-dark, .1);
-               bottom: -10px;
-               left: 50%;
-               transform: translateX(-50%);
-
-           }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: rgba($color-primary-dark, 0.1);
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
+    &__icon-change {
+        .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+        .bar2 {
+            opacity: 0;
+        }
+        .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    }
+}
+
+.icon-buger-container {
+    display: inline-block;
+    cursor: pointer;
+    margin: auto;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: $color-primary-dark;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 5px;
 }
