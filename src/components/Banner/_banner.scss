@@ -6,6 +6,7 @@
     // padding: 0 0 0 $padding-container;
     margin: 0;
     // max-height: 62vh;
+    margin-top: $header-height;
 
     max-height: 40rem;
     &__img{
@@ -44,7 +45,7 @@
         display: flex;
         justify-content: space-between;
         // padding: 0 0 0 $padding-container-md;
-        margin: 0;
+        // margin: 0;
     }
 
     p {

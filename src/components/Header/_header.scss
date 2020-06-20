@@ -1,5 +1,6 @@
 .header {
     position: relative;
+    max-height: $header-height;
     &__large{
         display: flex;
         justify-content: space-between;
@@ -8,17 +9,23 @@
     
         transition: all 0.2s;
         box-shadow: $box-shadow;
-        position: sticky;
+        // position: sticky;
+        position: fixed;
+        width: 100%;
         top: 0;
         background-color: $color-white;
         z-index: 1000;
     }
     &__small {
-        position: sticky;
+        // position: sticky;
+        position: fixed;
+        width: 100%;
         top: 0;
         background-color: $color-white;
         z-index: 1000;
         display: none;
+        box-shadow: $box-shadow;
+
     }
     &__logo {
         margin-left: 1rem;

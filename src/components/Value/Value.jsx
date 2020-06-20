@@ -27,11 +27,11 @@ const Value = () => {
         }
     ])
     return (
-        <section className="feature u-padding-horizontal-section u-margin-vertical-section" id="value">
+        <section className="value u-padding-horizontal-section u-margin-vertical-section" id="value">
             <Row justify="center" align="center">
            {
                feature.map(item => (
-                   <Col key ={item.title} className="feature__item" lg={6} md={12} sm={12}>
+                   <Col key ={item.title} className="value__item" lg={6} md={12} sm={12}>
                        <ValueItem key={item.title} {...item} />
                    </Col>
                ))

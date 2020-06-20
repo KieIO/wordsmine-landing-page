@@ -1,4 +1,4 @@
-.feature {
+.value {
     align-content: stretch;
     &__item {
       padding: 1rem;
@@ -6,7 +6,7 @@
 }
 
 @media only screen and (max-width: 579px) {
-    .feature  {
+    .value  {
       position: relative;
       padding: 1rem;
       &__item {
