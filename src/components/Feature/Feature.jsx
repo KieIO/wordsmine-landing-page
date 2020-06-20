@@ -1,42 +1,33 @@
-import React, { useState } from 'react'
-import FeatureItem from './components/FeatureItem/FeatureItem';
-import { Row, Col } from 'antd';
-
+import React from 'react'
+import ImgValue1 from '../../img/value1.png'
+import ImgValue2 from '../../img/value2.png'
 
 const Feature = () => {
-    const [feature] = useState([
-        {
-            icon: <span className="lnr lnr-rocket"></span>,
-            title: 'Flexible',
-            description: 'You can learn vocabulary every time and every where'
-        },
-        {
-            icon: <span className="lnr lnr-eye"></span>,
-            title: 'Visual',
-            description: 'By using flashcard, you can remember new words easily '
-        },
-        {
-            icon: <span className="lnr lnr-magic-wand"></span>,
-            title: 'Effective',
-            description: 'It is time-comsuming way to learn new words'
-        },
-        {
-            icon: <span className="lnr lnr-users"></span>,
-            title: 'Friendly',
-            description: 'Easy to install and use with friendly interface'
-        }
-    ])
     return (
-        <section className="feature u-padding-horizontal-section u-margin-vertical-section" id="value">
-            <Row justify="center" align="center">
-           {
-               feature.map(item => (
-                   <Col key ={item.title} className="feature__item" lg={6} md={12} sm={12}>
-                       <FeatureItem key={item.title} {...item} />
-                   </Col>
-               ))
-           }
-            </Row>   
+        <section className="feature u-padding-horizontal-section" id="feature">
+            <div className="feature__disflex">
+                <div className="feature__img col-6">
+                    <img src={ImgValue1} alt="feature" ></img>
+                </div>
+                <div className="col-6 value__content-padding-left">
+                    <h2>Your next win is just a fact away</h2>
+                    <p>From flashcards to help you learn francais, to games that make it easy to get a handle on history, use a variety of tools to conquer any challenge.</p>
+                </div>
+            </div>
+
+            <div className="feature__disflex">
+                <div className="col-6 value__content-padding">
+                    <h2>Don’t get frustrated. Get it done.</h2>
+                    <p>From flashcards to help you learn francais, to games that make it easy to get a handle on history, use a variety of tools to conquer any challenge.</p>
+                </div>
+
+                <div className="feature__img col-6">
+                    <img src={ImgValue2} alt="feature" ></img>
+                </div>
+            </div>
+
+
+
         </section>
     );
 }

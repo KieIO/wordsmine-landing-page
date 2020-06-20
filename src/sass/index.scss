@@ -2,7 +2,7 @@
 @import './base';
 @import './utility';
 
-@import '../components/Feature/components/FeatureItem/featureItem';
+@import '../components/Feature/feature';
 @import '../components/Topic/components/TopicItem/topicItem';
 @import '../components/Header/components/ButtonCreate/buttonCreate';
 @import '../components/Header/components/Search/search';
@@ -14,6 +14,7 @@
 @import '../components/Header/components/HeaderCategory/headerCategory';
 @import '../components/Header/components/HeaderCategoryItem/headerCategoryItem';
 @import '../components/Header/components/HeaderBurgerMenu/headerBurgerMenu';
+@import '../components/Value/components/FeatureItem/valueItem';
 
 @import '../components/CustomInput/customInput';
 @import '../components/ButtonLarge/buttonLarge';

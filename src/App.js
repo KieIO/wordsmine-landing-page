@@ -16,10 +16,13 @@ function App() {
     <main className="landing-page">
       <Header />
       <Banner />
-      <Feature />
+      <Value />
+
       <Description />
       <Topic />
-      <Value />
+      <Feature />
+
+
       <Feedback />
       <AppDownload />
       <CTA />

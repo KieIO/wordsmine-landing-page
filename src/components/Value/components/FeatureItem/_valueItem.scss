@@ -1,4 +1,4 @@
-.feature-item {
+.value-item {
     margin: auto;
     border-radius: 5px;
     box-shadow: $box-shadow;
@@ -26,7 +26,7 @@
 
 
 @media only screen and (max-width: 579px) {
-    .feature-item {
+    .value-item {
         padding: 1rem;
     }
 }
