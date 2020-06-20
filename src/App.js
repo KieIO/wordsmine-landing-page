@@ -17,12 +17,9 @@ function App() {
       <Header />
       <Banner />
       <Value />
-
       <Description />
       <Topic />
       <Feature />
-
-
       <Feedback />
       <AppDownload />
       <CTA />

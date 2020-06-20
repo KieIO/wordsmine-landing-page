@@ -3,7 +3,7 @@ import { Row, Col } from 'antd';
 import ValueItem from './components/FeatureItem/ValueItem';
 
 
-const Feature = () => {
+const Value = () => {
     const [feature] = useState([
         {
             icon: <span className="lnr lnr-rocket"></span>,
@@ -41,4 +41,4 @@ const Feature = () => {
     );
 }
 
-export default Feature;
+export default Value;
