@@ -1,5 +1,5 @@
 .description {
-    padding: 0 $padding-container;
+    // padding: 0 $padding-container;
     display: flex;
     align-items: flex-start;
 
@@ -29,7 +29,7 @@
 
 @media (max-width: 1240px) {
     .description {
-        padding: 0 $padding-container-md;
+        // padding: 0 $padding-container-md;
 
         &__content-padding {
             padding: 5rem 5rem 0 0;
@@ -39,7 +39,7 @@
 
 @media (max-width: 1050px) {
     .description {
-        padding: 0 $padding-container-sm;
+        // padding: 0 $padding-container-sm;
 
         &__content-padding {
             padding: 5rem 3rem 0 0;

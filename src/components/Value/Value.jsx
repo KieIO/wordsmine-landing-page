@@ -4,7 +4,7 @@ import ImgValue2 from '../../img/value2.png'
 
 const Value = () => {
     return (
-        <section className="value" id="feature">
+        <section className="value u-padding-horizontal-section" id="feature">
             <div className="value__disflex">
                 <div className="value__img col-6">
                     <img src={ImgValue1} alt="value" ></img>

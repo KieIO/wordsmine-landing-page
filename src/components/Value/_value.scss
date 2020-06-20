@@ -1,5 +1,5 @@
 .value {
-    padding: 0 $padding-container;
+    // padding: 0 $padding-container;
 
     .col-6 {
         width: 49%;
@@ -39,7 +39,7 @@
 
 @media (max-width: 1240px) {
     .value {
-        padding: 0 $padding-container-md;
+        // padding: 0 $padding-container-md;
 
         &__content-padding {
             padding: 10rem 5rem 0 0;
