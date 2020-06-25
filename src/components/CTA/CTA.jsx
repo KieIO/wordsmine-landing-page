@@ -1,5 +1,5 @@
 import React from 'react';
-import FormSignUp from '../Form/Form';
+import FormSignUp from '../FormSignUp/FormSignUp';
 
 const CTA = () => {
     return (

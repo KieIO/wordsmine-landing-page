@@ -20,3 +20,5 @@ export const CATEGORY_HEADER = [
         target: 'testimonial'
     },
 ]
+
+export const API_SIGN_UP = 'https://formspree.io/mnqgzzev'
