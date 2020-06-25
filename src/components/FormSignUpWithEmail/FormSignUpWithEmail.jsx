@@ -32,7 +32,7 @@ const FormSignUpWithEmail = () => {
             const values = await form.validateFields();
                 try {
                     console.log("value: ", values)
-                    // const result = await submit(values)
+                    await submit(values)
                     // console.debug("result: ", result)
                     message.success("Thanks for your submission")
                     form.resetFields()
