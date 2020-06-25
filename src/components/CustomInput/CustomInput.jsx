@@ -3,13 +3,11 @@ import { Input } from 'antd';
 
 
 
-const CustomInput = ({placeholder, label}) => {
+export const CustomInputWithTitle = ({placeholder, label}) => {
     return ( 
-        <div className="custom-input">
+        <div className="custom-input-with-title">
             <span className="custom-input__placeholder">{label || placeholder}</span>
             <Input placeholder={placeholder} />
         </div>
      );
 }
- 
-export default CustomInput;

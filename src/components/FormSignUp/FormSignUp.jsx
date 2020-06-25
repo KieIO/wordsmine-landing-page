@@ -2,6 +2,7 @@
 import React, {useState} from 'react'
 import { Form, Input, message, Checkbox } from 'antd';
 import ButtonLarge from '../ButtonLarge/ButtonLarge';
+import { API_SIGN_UP } from '../../utils/constant';
 
 
 const FormSignUp = () => {
@@ -17,7 +18,7 @@ const FormSignUp = () => {
     // }
 
     const submit = async (values) => {
-        return fetch('https://formspree.io/mnqgzzev', {
+        return fetch(API_SIGN_UP, {
             method: "POST",
             body: JSON.stringify({ ...values }),
             headers: {
