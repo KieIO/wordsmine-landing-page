@@ -7,7 +7,7 @@ const Banner = () => {
         <section className="banner">
             <div className="banner__center">
                 <h1 className="banner__text-color">Learn any words, be unstoppable</h1>
-                <p className="banner__text-color"> Words beware, 1 at a time. Learning everywhere and evrytime with Words, mine!
+                <p className="banner__text-color description"> Words beware, 1 at a time. Learning everywhere and everytime with Words, mine!
                 </p>
                 <FormSignUpWithEmail/>
             </div>

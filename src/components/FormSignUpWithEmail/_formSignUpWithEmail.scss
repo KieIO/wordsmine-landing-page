@@ -6,12 +6,19 @@
     transition: all .2s;
     .form-item-email {
         text-align: left;
+        margin-right: -10px !important;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            z-index: 10;
         .ant-form-item-explain {
             transition: all .2s;
             margin-top: 3px;
             color: $color-warning;
             font-size: $font-size-paragraph1;
         }
+    }
+    .form-item-btn {
+        z-index: 5;
     }
 
     .content-form {
@@ -26,6 +33,10 @@
         input {
             height: $height-btn-large;
             font-size: 2rem;
+            // margin-right: -10px;
+            // border-top-right-radius: 0;
+            // border-bottom-right-radius: 0;
+            // z-index: 10;
             &::placeholder {
                 font-size: 2rem;
             }
@@ -33,6 +44,12 @@
     }
 }
 
+
+@media(max-width: 864px){
+    .form-signup-with-email {
+        margin-top: 1rem;
+    }
+}
 
 @media(max-width: 883px){
  .form-signup-with-email {
@@ -42,14 +59,12 @@
         align-items: center;
     }
      .form-item-email {
+         margin: 0 !important;
         text-align: left;
         height: calc(#{$height-btn-large} + 3rem);
     }
     .custom-input-with-email {
         position: relative;
-        &::after {
-
-        }
     }
  }
 }

@@ -69,8 +69,8 @@ const FormSignUpWithEmail = () => {
                     </div>
                 </Form.Item>
 
-                <Form.Item className="form__btn-start">
-                    <ButtonLarge type="primary" onClick={onCheck} style={{ margin: 0, marginLeft: "-2px", borderTopLeftRadius: 0, borderBottomLeftRadius: 0}}>
+                <Form.Item className="form-item-btn">
+                    <ButtonLarge type="primary" onClick={onCheck} style={{ margin: 0}}>
                         Get started
                     </ButtonLarge>
                 </Form.Item>
