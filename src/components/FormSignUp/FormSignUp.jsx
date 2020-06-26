@@ -8,6 +8,7 @@ import { API_SIGN_UP } from '../../utils/constant';
 const FormSignUp = () => {
     const [form] = Form.useForm();
     const [checkAgreePolicy, setcheckAgreePolicy] = useState(false);
+    const [isLoading, setIsLoading] = useState(false)
 
     const onCheckboxChange = e => {
         e.preventDefault()
@@ -38,6 +39,7 @@ const FormSignUp = () => {
     }
 
     const onCheck = async () => {
+        setIsLoading(true)
         try {
             const values = await form.validateFields();
             if (checkAgreePolicy)  {
@@ -57,6 +59,7 @@ const FormSignUp = () => {
         } catch (err) {
             console.debug("result: ", err)
         }
+        setIsLoading(false)
     }
 
     return (
@@ -113,10 +116,7 @@ const FormSignUp = () => {
                 </Form.Item>
 
                 <Form.Item className="form__btn-start">
-                    {/* <ButtonCustom type="primary" onClick={onCheck}>
-                        Submit
-                    </ButtonCustom> */}
-                    <ButtonLarge type="primary" onClick={onCheck}>
+                    <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
                         Get started
                     </ButtonLarge>
                 </Form.Item>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ButtonLarge from '../ButtonLarge/ButtonLarge'
 import { Form, message, Input } from 'antd';
 import { API_SIGN_UP } from '../../utils/constant';
@@ -6,6 +6,7 @@ import { API_SIGN_UP } from '../../utils/constant';
 
 const FormSignUpWithEmail = () => {
     const [form] = Form.useForm();
+    const [isLoading, setIsLoading] = useState(false)
 
     const submit = async (values) => {
         return fetch(API_SIGN_UP, {
@@ -28,6 +29,7 @@ const FormSignUpWithEmail = () => {
     }
 
     const onCheck = async () => {
+        setIsLoading(true)
         try {
             const values = await form.validateFields();
                 try {
@@ -43,6 +45,7 @@ const FormSignUpWithEmail = () => {
         } catch (err) {
             console.debug("result: ", err)
         }
+        setIsLoading(false)
     }
 
     return ( 
@@ -70,7 +73,7 @@ const FormSignUpWithEmail = () => {
                 </Form.Item>
 
                 <Form.Item className="form-item-btn">
-                    <ButtonLarge type="primary" onClick={onCheck} style={{ margin: 0}}>
+                    <ButtonLarge type="primary" onClick={onCheck} style={{ margin: 0}} loading={isLoading}>
                         Get started
                     </ButtonLarge>
                 </Form.Item>
