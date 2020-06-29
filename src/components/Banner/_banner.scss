@@ -4,11 +4,11 @@
     display: flex;
     justify-content: space-between;
     // padding: 0 0 0 $padding-container;
-    margin: 0;
-    // max-height: 62vh;
+    margin: auto;
     margin-top: $header-height;
 
-    max-height: 40rem;
+    min-height: fit-content;
+    // max-height: 40rem;
     &__img{
         position: relative;
         img {
@@ -28,10 +28,18 @@
         text-align: center;
         margin: auto;
         padding: 1rem;
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     }
 
-    &__text-color{
+    &__text-color {
         color: $color-white;
+    }
+    .description {
+        font-size: $font-size-heading5;
+
     }
     p{
         font-size: $font-size-subtitle1;
@@ -57,20 +65,23 @@
     h1{
         line-height: 5rem;
     }
-    .banner{
-        // padding: 0 0 0 $padding-container-sm;
-        max-height: 70vh;
+}
+
+@media (max-width: 960px) {
+    .banner {
+        &__center {
+            margin-top: 2rem;
+        }
     }
 }
 
 @media(max-width: 665px){
     .banner{
         flex-direction: column;
-        // padding: 0 $padding-container-sm;
         &__center {
-            padding: 2rem;
+            padding: 3rem 2rem;
         }
-        max-height: 100vh;
+        // max-height: 100vh;
         &__img{
             position: relative;
             img {

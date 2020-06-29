@@ -56,10 +56,6 @@ const Footer = () => {
                     slug: '/'
                 },
                 {
-                    name: 'Flashcards',
-                    slug: '/'
-                },
-                {
                     name: 'Premium Content',
                     slug: '/'
                 },
@@ -106,15 +102,15 @@ const Footer = () => {
                     slug: '/'
                 },
                 {
-                    name: 'Company',
+                    name: 'Blog',
                     slug: '/'
                 },
                 {
-                    name: 'Company',
+                    name: 'Press',
                     slug: '/'
                 },
                 {
-                    name: 'Company',
+                    name: 'Careers',
                     slug: '/'
                 },
                 {

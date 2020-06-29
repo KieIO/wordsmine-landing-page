@@ -9,11 +9,15 @@ html {
   /* => 1rem = 10px*/
   font-size: 62.5%;
   scroll-behavior: smooth;
+  @media(max-width: 750px) {
+    font-size: 50%;
+  }
 }
 
 body {
     box-sizing: border-box;
     font-size: $font-size-paragraph1;
     color: $color-black;
-    // font-family: 'Circular Std';
+    font-family: 'Circular Std';
+    // word-spacing: -6px;
 }

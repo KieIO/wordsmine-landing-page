@@ -2,11 +2,13 @@
 import React, {useState} from 'react'
 import { Form, Input, message, Checkbox } from 'antd';
 import ButtonLarge from '../ButtonLarge/ButtonLarge';
+import { API_SIGN_UP } from '../../utils/constant';
 
 
 const FormSignUp = () => {
     const [form] = Form.useForm();
     const [checkAgreePolicy, setcheckAgreePolicy] = useState(false);
+    const [isLoading, setIsLoading] = useState(false)
 
     const onCheckboxChange = e => {
         e.preventDefault()
@@ -17,7 +19,7 @@ const FormSignUp = () => {
     // }
 
     const submit = async (values) => {
-        return fetch('https://formspree.io/mnqgzzev', {
+        return fetch(API_SIGN_UP, {
             method: "POST",
             body: JSON.stringify({ ...values }),
             headers: {
@@ -37,6 +39,7 @@ const FormSignUp = () => {
     }
 
     const onCheck = async () => {
+        setIsLoading(true)
         try {
             const values = await form.validateFields();
             if (checkAgreePolicy)  {
@@ -56,6 +59,7 @@ const FormSignUp = () => {
         } catch (err) {
             console.debug("result: ", err)
         }
+        setIsLoading(false)
     }
 
     return (
@@ -112,10 +116,7 @@ const FormSignUp = () => {
                 </Form.Item>
 
                 <Form.Item className="form__btn-start">
-                    {/* <ButtonCustom type="primary" onClick={onCheck}>
-                        Submit
-                    </ButtonCustom> */}
-                    <ButtonLarge type="primary" onClick={onCheck}>
+                    <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
                         Get started
                     </ButtonLarge>
                 </Form.Item>
