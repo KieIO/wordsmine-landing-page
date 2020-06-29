@@ -5,17 +5,18 @@
     justify-content: space-around;
     align-items: center;
     
-    &__column {
-        // flex: 1,
-    }
+    // &__column {
+    //     // flex: 1,
+    // }
     &__wrap {
-        margin-left: $padding-container-md;
+        // margin-left: $padding-container-md;
         margin-right: $padding-container-md;
         text-align: center;
     }
     &__title {
         font-size: $font-size-heading1;
         color: $color-black;
+        margin-bottom: 0;;
     }
 }
 
