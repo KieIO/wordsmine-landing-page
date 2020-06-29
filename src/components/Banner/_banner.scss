@@ -36,9 +36,11 @@
 
     &__text-color {
         color: $color-white;
+        cursor: default;
     }
     .description {
         font-size: $font-size-heading5;
+        cursor: default;
 
     }
     p{
