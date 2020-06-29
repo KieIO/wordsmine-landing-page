@@ -73,7 +73,7 @@ const FormSignUpWithEmail = () => {
                 </Form.Item>
 
                 <Form.Item className="form-item-btn">
-                    <ButtonLarge type="primary" onClick={onCheck} style={{ margin: 0}} loading={isLoading}>
+                    <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
                         Get started
                     </ButtonLarge>
                 </Form.Item>

@@ -11,12 +11,8 @@ const FormSignUp = () => {
     const [isLoading, setIsLoading] = useState(false)
 
     const onCheckboxChange = e => {
-        e.preventDefault()
-        setcheckAgreePolicy(e.target.checked);
+        setcheckAgreePolicy(!checkAgreePolicy);
     };
-    // const onChangeBox = (e) => {
-    //     console.log(`checked = ${e.target.checked}`);
-    // }
 
     const submit = async (values) => {
         return fetch(API_SIGN_UP, {
@@ -110,7 +106,7 @@ const FormSignUp = () => {
                 </Form.Item>
 
 
-                <Form.Item 
+                <Form.Item  className="check-box"
                 >
                     <Checkbox checked={checkAgreePolicy} onChange={onCheckboxChange}> I agree to the terms of service and privacy policy.</Checkbox>
                 </Form.Item>
