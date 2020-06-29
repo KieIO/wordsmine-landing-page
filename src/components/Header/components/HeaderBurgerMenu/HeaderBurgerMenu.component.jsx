@@ -28,11 +28,10 @@ const HeaderBurgerMenu = () => {
                     <span className="lnr lnr-menu"></span>
                 </div> */}
                 <div className="header-burger-menu__icon" id="header-burger-menu__icon" onClick={toggleIsOpen}>
-                    {/* <span class="lnr lnr-menu"></span> */}
-                    <div class="icon-buger-container">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
+                    <div className="icon-buger-container">
+                        <div className="bar1"></div>
+                        <div className="bar2"></div>
+                        <div className="bar3"></div>
                     </div>
                 </div>
             </div>
