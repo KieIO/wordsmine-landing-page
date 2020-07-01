@@ -1,6 +1,5 @@
 import React from 'react';
 import Logo from './components/Logo/Logo';
-// import ButtonCustom from '../ButtonCustom/ButtonCustom';
 import HeaderCategory from './components/HeaderCategory/HeaderCategory';
 import HeaderBurgerMenu from './components/HeaderBurgerMenu/HeaderBurgerMenu.component';
 

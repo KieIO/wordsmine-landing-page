@@ -15,17 +15,17 @@
 }
 
 .u-margin-vertical-section {
-    margin-top: $margin-vertical-container;
-    margin-bottom: $margin-vertical-container;
+    padding-top: $padding-vertical-container;
+    padding-bottom: $padding-vertical-container;
 
     @media only screen and (max-width: 950px) {
-        margin-top: $margin-vertical-container-md;
-        margin-bottom: $margin-vertical-container-md;  
+        padding-top: $padding-vertical-container-md;
+        padding-bottom: $padding-vertical-container-md;  
     }
 
 
     @media only screen and (max-width: 579px) {
-        margin-top: $margin-vertical-container-sm;
-        margin-bottom: $margin-vertical-container-sm;
+        padding-top: $padding-vertical-container-sm;
+        padding-bottom: $padding-vertical-container-sm;
     }
 }

@@ -7,7 +7,9 @@ const HeaderCategory = () => {
     return (  
         
         <section className="header-category">
-                <Scrollspy className="header-category__list" items={CATEGORY_HEADER.map(item => item.target)} currentClassName="active">
+                <Scrollspy className="header-category__list" 
+                offset = {-100}
+                items={CATEGORY_HEADER.map(item => item.target)} currentClassName="active">
                 {
                     CATEGORY_HEADER.map((item, index)=>(
                         <li className="header-category__item" key={index}>

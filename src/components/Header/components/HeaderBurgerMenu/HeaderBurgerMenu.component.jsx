@@ -38,11 +38,13 @@ const HeaderBurgerMenu = () => {
             </div>
 
                 <div id="header-menu" className="header-burger-menu__content">
-                <Scrollspy className="header-burger-menu__list" items={CATEGORY_HEADER.map(item => item.target)} currentClassName="active">
+                <Scrollspy className="header-burger-menu__list" 
+                    offset={-80}
+                    items={CATEGORY_HEADER.map(item => item.target)} currentClassName="active">
                         {
                             CATEGORY_HEADER.map((item, index) => (
                                 <li className="header-burger-menu__item" key={index}>
-                                    <HeaderCategoryItem {...item} />
+                                    <HeaderCategoryItem {...item} isHandleClick = {false}/>
                                 </li>
                             ))
                         }

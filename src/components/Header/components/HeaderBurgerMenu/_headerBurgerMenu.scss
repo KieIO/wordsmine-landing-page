@@ -48,7 +48,7 @@
         padding: 2px 5px;
         // transition: all 0.2s;
         &.active {
-            background-color: rgba($color-primary-light, .2);
+            background-color: rgba($color-primary-dark, .2);
         }
         &:not(:last-child) {
             margin-bottom: 20px;
