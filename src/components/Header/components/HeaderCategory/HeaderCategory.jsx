@@ -1,21 +1,23 @@
 import React from 'react';
+import Scrollspy from 'react-scrollspy'
 import HeaderCategoryItem from '../HeaderCategoryItem/HeaderCategoryItem';
 import { CATEGORY_HEADER } from '../../../../utils/constant';
 
-
 const HeaderCategory = () => {
     return (  
+        
         <section className="header-category">
-            <li className="header-category__list">
+                <Scrollspy className="header-category__list" items={CATEGORY_HEADER.map(item => item.target)} currentClassName="active">
                 {
                     CATEGORY_HEADER.map((item, index)=>(
-                        <ul className="header-category__item" key={index}>
+                        <li className="header-category__item" key={index}>
                             <HeaderCategoryItem {...item}/>
-                        </ul>
+                        </li>
                     ))
                 }
-            </li>
+                </Scrollspy>
         </section>
+
     );
 }
  

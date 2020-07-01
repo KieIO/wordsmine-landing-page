@@ -1,11 +1,11 @@
 export const CATEGORY_HEADER = [
     {
-        name: 'Overview',
-        target: 'overview'
-    },
-    {
         name: 'Value',
         target: 'value'
+    },
+    {
+        name: 'Overview',
+        target: 'overview'
     },
     {
         name: 'Topic',

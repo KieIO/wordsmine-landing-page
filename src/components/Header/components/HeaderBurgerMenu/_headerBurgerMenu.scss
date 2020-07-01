@@ -1,7 +1,7 @@
 .header-burger-menu {
     // background-color: red;
     width: 100%;
-    padding: 0.2rem 2rem;
+    padding: 0.2rem 4rem;
     overflow: hidden;
     &__top {
         display: flex;
@@ -45,6 +45,11 @@
     }
     &__item {
         position: relative;
+        padding: 2px 5px;
+        // transition: all 0.2s;
+        &.active {
+            background-color: rgba($color-primary-light, .2);
+        }
         &:not(:last-child) {
             margin-bottom: 20px;
             &::after {
@@ -78,6 +83,7 @@
     display: inline-block;
     cursor: pointer;
     margin: auto;
+    transform: scale(.8);
 }
 
 .bar1,

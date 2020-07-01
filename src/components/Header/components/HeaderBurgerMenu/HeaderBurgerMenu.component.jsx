@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
-import { CATEGORY_HEADER } from '../../../../utils/constant';
+import Scrollspy from 'react-scrollspy'
 import HeaderCategoryItem from '../HeaderCategoryItem/HeaderCategoryItem';
 import Logo from '../Logo/Logo';
+import { CATEGORY_HEADER } from '../../../../utils/constant';
 
 const HeaderBurgerMenu = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -37,7 +38,7 @@ const HeaderBurgerMenu = () => {
             </div>
 
                 <div id="header-menu" className="header-burger-menu__content">
-                    <ul className="header-burger-menu__list">
+                <Scrollspy className="header-burger-menu__list" items={CATEGORY_HEADER.map(item => item.target)} currentClassName="active">
                         {
                             CATEGORY_HEADER.map((item, index) => (
                                 <li className="header-burger-menu__item" key={index}>
@@ -45,7 +46,7 @@ const HeaderBurgerMenu = () => {
                                 </li>
                             ))
                         }
-                    </ul>
+                </Scrollspy>
                 </div>
         </div>
     );
