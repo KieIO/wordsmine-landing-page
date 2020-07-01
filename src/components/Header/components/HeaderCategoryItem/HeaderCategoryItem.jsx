@@ -1,13 +1,37 @@
 import React from 'react';
 
 
-const HeaderCategoryItem = ({target, name}) => {
+const HeaderCategoryItem = ({ target, name, isHandleClick = true}) => {
+    const scrollToView = (e) => {
+        if (isHandleClick) {
+            e.preventDefault()
+            var element = document.querySelector(`#${target}`);
+            const y = element.getBoundingClientRect().top + window.pageYOffset - 90;
+            window.scrollTo(0, y)
+            
+            // active current item
+            const listItem = document.getElementsByClassName("header-category-item");
+            if (listItem) {
+                Array.from(listItem).map((item) => {
+                    const parent = item.parentNode
+                    const targetAttr = item.getAttribute("href")
+                    const targetName = targetAttr.substr(1, targetAttr.length)
+                
+                    if (targetName === target) {
+                        parent.classList.add("active")
+    
+                    } else {
+                        parent.classList.remove("active")
+                    }
+                    return null;
+                }
+            )
+            }
+        }
+    }
     return (
-        <a className="header-category-item" href={`#${target}`}>
-            {/* <div> */}
+        <a className="header-category-item" href={`#${target}`} onClick={scrollToView}>
             {name}
-
-            {/* </div> */}
         </a>
     );
 }

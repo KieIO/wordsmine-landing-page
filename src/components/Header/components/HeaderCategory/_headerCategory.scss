@@ -4,15 +4,16 @@
         list-style: none;
         display: flex;
         align-items: center;
+        margin: 0;
     }
     &__item {
         position: relative;
         margin-right: 24px;
         margin-bottom: 0;
         padding: 2px 5px;
-        border-bottom: 2px solid rgba($color-primary-light, 0);
+        border-bottom: 2px solid rgba($color-primary-dark, 0);
         &.active {
-            border-bottom: 2px solid rgba($color-primary-light, 0.9);
+            border-bottom: 2px solid rgba($color-primary-dark, 0.9);
         }
         &:last-child {
             margin-right: 0;
