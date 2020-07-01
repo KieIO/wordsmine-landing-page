@@ -16,6 +16,7 @@ function App() {
     <main className="landing-page">
       <Header />
       <Banner />
+      {/* <div style={{height: 300, width: 100}}/> */}
       <Value />
       <Description />
       <Topic />
