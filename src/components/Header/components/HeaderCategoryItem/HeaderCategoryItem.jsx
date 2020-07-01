@@ -18,7 +18,15 @@ const HeaderCategoryItem = ({ target, name, isHandleClick = true}) => {
                     const targetName = targetAttr.substr(1, targetAttr.length)
                 
                     if (targetName === target) {
-                        parent.classList.add("active")
+                        if (Math.abs(y-window.pageYOffset) > 100) {
+                            setTimeout(()=>{
+                                parent.classList.add("active")
+                            }, 1000)
+                        }  else {
+                            parent.classList.add("active")
+
+                        }
+
     
                     } else {
                         parent.classList.remove("active")
