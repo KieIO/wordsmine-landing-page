@@ -1,15 +1,11 @@
- 
-.banner{
+.banner {
     background-color: $color-primary-dark;
     display: flex;
     justify-content: space-between;
-    // padding: 0 0 0 $padding-container;
     margin: auto;
     margin-top: $header-height;
-
     min-height: fit-content;
-    // max-height: 40rem;
-    &__img{
+    &__img {
         position: relative;
         img {
             width: 100%;
@@ -18,74 +14,85 @@
             object-fit: cover;
         }
     }
-    h1{
-        font-size: $font-size-heading1;
-        margin: 0 auto 10px 0px;
-        display: table-header-group;
-    }
 
-    &__center{
+    &__center {
         width: 65%;
         text-align: center;
         margin: auto;
         padding: 1rem 8rem;
-            display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
     }
 
     &__text-color {
         color: $color-white;
-        cursor: default;
+        font-size: $font-size-heading1;
+        text-align: left;
+        // margin: 0 auto 10px 0px;
+        // display: table-header-group;
     }
     .description {
         font-size: $font-size-heading5;
         cursor: default;
-
     }
-    p{
+    p {
         font-size: $font-size-subtitle1;
         margin: 0;
     }
 }
 
-@media (max-width: 1300px) {
-    .banner{
-        background-color: $color-primary-dark;
-        display: flex;
-        justify-content: space-between;
-        // padding: 0 0 0 $padding-container-md;
-        // margin: 0;
-    }
-
-    p {
-        padding-right: 2rem;
-    }
-}
-
-@media (max-width: 1260px) {
-    h1{
-        line-height: 5rem;
-    }
-}
-
-@media (max-width: 960px) {
+@media (max-width: 1259px) {
     .banner {
         &__center {
-            margin-top: 2rem;
+            padding: 1rem 3rem;
         }
     }
 }
 
-@media(max-width: 665px){
-    .banner{
+@media (max-width: 1125px) {
+    .banner {
+        &__center {
+            padding: 1rem 2rem;
+        }
+        &__text-color {
+            font-size: 3rem;
+        }
+        .description {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 994px) {
+    .banner {
+        &__center {
+            margin-top: 4rem;
+            width: 90%;
+        }
+    }
+}
+
+@media (max-width: 895px) {
+    .banner {
         flex-direction: column;
         &__center {
-            padding: 3rem 2rem;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
         }
-        // max-height: 100vh;
-        &__img{
+        &__text-color {
+            font-size: 3.6rem;
+            text-align: center;
+        }
+        .description {
+            font-size: 2.2rem;
+            display: flex;
+            justify-content: center;
+        }
+        &__img {
             position: relative;
             img {
                 width: 100%;
@@ -94,10 +101,6 @@
                 background-repeat: no-repeat;
                 object-fit: cover;
             }
-        }
-
-        &__space{
-            padding-top: 1rem;
         }
     }
 }

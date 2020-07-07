@@ -11,7 +11,6 @@ const Banner = () => {
           <p className="banner__text-color description">The fastest way to learn vocabulary</p>
           <p className="banner__text-color description">From everywhere and everytime</p>
         </div>
-        <p className="banner__text-color description"></p>
         <FormSignUpWithEmail />
       </div>
       <div className="banner__img">
