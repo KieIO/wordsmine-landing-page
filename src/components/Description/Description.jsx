@@ -1,5 +1,6 @@
-import React from 'react'
 import ImgDes1 from '../../img/flashcard.jpg'
+import React from 'react'
+
 const Description = () => {
   return (
     <section className="description u-padding-horizontal-section" id="overview">
