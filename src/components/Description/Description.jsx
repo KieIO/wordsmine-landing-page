@@ -1,5 +1,5 @@
-import ImgDes1 from '../../img/flashcard.jpg'
 import React from 'react'
+import ImgDes1 from '../../img/flashcard.jpg'
 
 const Description = () => {
   return (
