@@ -26,8 +26,31 @@
 }
 
 
+@media only screen and (max-width: 1125px) {
+ .value-item {
+        &__title {
+            font-size: 2.5rem;
+        }
+    }
+}
+@media only screen and (max-width: 988px) {
+ .value-item {
+        &__title {
+            font-size: $font-size-heading2;
+        }
+    }
+}
+
 @media only screen and (max-width: 579px) {
     .value-item {
         padding: 1rem;
     }
 }
+
+@media only screen and (max-width: 436px) {
+    .value-item {
+        &__title {
+            font-size: 2.8rem;
+        }
+    }
+} 
