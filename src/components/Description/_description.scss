@@ -1,5 +1,4 @@
 .description {
-    // padding: 0 $padding-container;
     display: flex;
     align-items: flex-start;
 
@@ -44,27 +43,9 @@
     }
 }
 
-@media(max-width: 670px) {
-    .description {
-        // h2 {
-        //     font-size: $font-size-heading3;
-        // }
-    }
-}
-
 @media(max-width: 510px) {
     .description {
         flex-direction: column;
-
-        // h2 {
-        //     font-size: $font-size-heading4;
-        // }
-
-        // p {
-        //     font-size: $font-size-paragraph2;
-        //     padding: 0;
-        // }
-
         .col-6 {
             width: 80vw;
         }
