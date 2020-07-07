@@ -1,14 +1,16 @@
 .form-signup-with-email {
     margin-top: 3rem;
     display: flex;
-    justify-content: center;
     height: 9rem;
     transition: all .2s;
+    width: 100%;
+    text-align: left;
     .form-item-email {
+        flex: 1;
         text-align: left;
-        margin-right: -10px !important;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
+        // margin-right: -2px !important;
+        margin-right: 1rem !important;
+        
             z-index: 10;
         .ant-form-item-explain {
             transition: all .2s;
@@ -22,6 +24,7 @@
     }
 
     .content-form {
+        width: 80%;
         display: flex;
         // justify-content: center;
         align-items: flex-start;
@@ -31,6 +34,7 @@
     }
     .custom-input-with-email {
         input {
+            border-radius: $boder-radious-btn !important;
             height: $height-btn-large;
             font-size: 2rem;
             // margin-right: -10px;
@@ -44,27 +48,41 @@
     }
 }
 
-
-@media(max-width: 864px){
+@media(max-width: 1100px){
     .form-signup-with-email {
-        margin-top: 1rem;
+        .content-form {
+            width: 90%;
+        }
     }
 }
 
-@media(max-width: 883px){
- .form-signup-with-email {
-     height: fit-content;
-    .content-form {
-        flex-direction: column;
-        align-items: center;
+@media(max-width: 895px){
+    .form-signup-with-email {
+        justify-content: center;
+        margin-top: 2rem;
+        .content-form {
+            width: 70%;
+        }
     }
-     .form-item-email {
-         margin: 0 !important;
-        text-align: left;
-        height: calc(#{$height-btn-large} + 3rem);
-    }
-    .custom-input-with-email {
-        position: relative;
-    }
- }
 }
+@media(max-width: 600px){
+    .form-signup-with-email {
+        .content-form {
+            width: 100%;
+        }
+    }
+}
+
+// @media(max-width: 883px){
+//  .form-signup-with-email {
+//      height: fit-content;
+//     .content-form {
+//         // flex-direction: column;
+//         align-items: center;
+//         height: calc(#{$height-btn-large} + 3rem);
+//     }
+//      .form-item-email {
+//         text-align: left;
+//     }
+//  }
+// }

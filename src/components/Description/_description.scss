@@ -1,18 +1,16 @@
 .description {
-    // padding: 0 $padding-container;
     display: flex;
     align-items: flex-start;
 
     h2 {
         font-size: $font-size-heading2;
         color: $color-black;
-    }
-
-    p {
-        color: $color-gray;
+        font-weight: bold;
+        
     }
 
     &__content-padding {
+        color: $color-gray;
         padding: 5rem 10rem 0 0;
         font-size: $font-size-heading6;
         cursor: default;
@@ -31,8 +29,6 @@
 
 @media (max-width: 1240px) {
     .description {
-        // padding: 0 $padding-container-md;
-
         &__content-padding {
             padding: 5rem 5rem 0 0;
         }
@@ -41,22 +37,8 @@
 
 @media (max-width: 1050px) {
     .description {
-        // padding: 0 $padding-container-sm;
-
         &__content-padding {
             padding: 5rem 3rem 0 0;
-        }
-    }
-}
-
-@media(max-width: 670px) {
-    .description {
-        h2 {
-            font-size: $font-size-heading3;
-        }
-
-        p {
-            font-size: $font-size-paragraph1;
         }
     }
 }
@@ -64,16 +46,6 @@
 @media(max-width: 510px) {
     .description {
         flex-direction: column;
-
-        h2 {
-            font-size: $font-size-heading4;
-        }
-
-        p {
-            font-size: $font-size-paragraph2;
-            padding: 0;
-        }
-
         .col-6 {
             width: 80vw;
         }

@@ -3,8 +3,8 @@ import { Row, Col } from 'antd';
 import { Carousel } from 'antd';
 
 // IMPORT IMAGES
-import appStore from '../../assets/img/app-store.png';
-import chPlay from '../../assets/img/ch-play.png';
+import appStore from '../../assets/img/dowload-mobile-app-store.png';
+import chPlay from '../../assets/img/dowload-mobile-google-store.png';
 import background1 from '../../assets/img/background1.png';
 import background2 from '../../assets/img/background2.png';
 import background3 from '../../assets/img/background3.png';

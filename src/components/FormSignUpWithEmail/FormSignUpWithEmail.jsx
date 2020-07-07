@@ -32,10 +32,10 @@ const FormSignUpWithEmail = () => {
     setIsLoading(true)
     try {
       const values = await form.validateFields();
+      console.log("value: ", values)
+      
       try {
-        console.log("value: ", values)
         await submit(values)
-        // console.debug("result: ", result)
         message.success("Thanks for your submission")
         form.resetFields()
       } catch (err) {
@@ -74,8 +74,8 @@ const FormSignUpWithEmail = () => {
 
         <Form.Item className="form-item-btn">
           <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
-            Get Trial Now
-                    </ButtonLarge>
+            Try now
+          </ButtonLarge>
         </Form.Item>
       </Form>
     </section>

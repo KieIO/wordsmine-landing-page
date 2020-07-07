@@ -1,6 +1,4 @@
 .feature {
-    // padding: 0 $padding-container;
-
     .col-6 {
         width: 49%;
     }
@@ -12,7 +10,7 @@
 
     p {
         color: $color-gray;
-        font-size: $font-size-heading5;
+        font-size: $font-size-heading6;
     }
 
     &__disflex {
@@ -41,8 +39,6 @@
 
 @media (max-width: 1240px) {
     .feature {
-        // padding: 0 $padding-container-md;
-
         &__content-padding {
             padding: 10rem 5rem 0 0;
         }
@@ -52,72 +48,13 @@
     }
 }
 
-// @media (max-width: 1050px) {
-//     .feature {
-//         padding: 0 $padding-container-sm;
-
-//         &__content-padding {
-//             padding: 5rem 3rem 0 0;
-//         }
-
-//         &__content-padding {
-//             padding: 5rem 0 0 3rem;
-//         }
-
-//         h2 {
-//             line-height: 4rem;
-//         }
-//     }
-// }
-
 @media (max-width: 670px) {
     .feature {
         h2 {
-            font-size: $font-size-heading5;
             line-height: 2.5rem;
-        }
-
-        p {
-            font-size: $font-size-paragraph1;
         }
     }
 }
-
-// @media (max-width: 510px) {
-//     .feature {
-//         flex-direction: column;
-
-//         h2 {
-//             font-size: $font-size-heading5;
-//             line-height: 2.5rem;
-//             // padding-left: 5px;
-//         }
-
-//         p {
-//             font-size: $font-size-paragraph2;
-//             padding: 0;
-//             // padding-left: 5px;
-//         }
-
-//         .col-6 {
-//             width: 80vw;
-//         }
-
-//         &__content-padding {
-//             padding: 5rem 0;
-//             text-align: center;
-//         }
-
-//         &__img {
-//             position: relative;
-
-//             img {
-//                 width: 80vw;
-//                 height: 80%;
-//             }
-//         }
-//     }
-// }
 
 @media (max-width: 859px) {
     .feature {
@@ -134,24 +71,16 @@
             padding: 0;
             padding-top: $padding-container-sm;
             text-align: center;
-            h2 {
-                font-size: $font-size-heading4;
-            }
             p {
                 padding: 0;
-                font-size: $font-size-heading5;
             }
         }
         &__content-padding-left {
             padding: 0;
             padding-top: $padding-container-sm;
             text-align: center;
-            h2 {
-                font-size: $font-size-heading4;
-            }
             p {
                 padding: 0;
-                font-size: $font-size-heading5;
             }
         }
         .col-6 {
