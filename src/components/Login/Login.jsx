@@ -4,6 +4,7 @@ import './Login.scss';
 import { Form, Input, message } from 'antd';
 import ButtonCustom from '../ButtonCustom/ButtonCustom';
 import { Link } from 'react-router-dom';
+import AuthWithGoogle from '../AuthWithGoogle/AuthWithGoogle';
 
 
 const Login = () => {
@@ -44,6 +45,11 @@ const Login = () => {
                 <img class="login-avatar"
                     src="https://i2.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1"
                     alt="user" />
+
+                <div className="social-authen">
+                    <AuthWithGoogle/>
+                    <div className="or">OR</div>
+                </div>
                 <Form form={form} name="dynamic_rule" className="content-form">
                     <Form.Item
                         className="form-item-custom"
@@ -90,6 +96,9 @@ const Login = () => {
                         </ButtonCustom>
                     </Form.Item>
                 </Form>
+                <div className="other-option">
+                    You do not have account? <Link to="/register">Register</Link>
+                </div>
             </div>
 
         </section>

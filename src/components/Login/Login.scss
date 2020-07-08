@@ -48,6 +48,15 @@
         width: 150px;
         height: 150px;
     }
+    .other-option {
+        color: $color-primary-dark;
+        a {
+            color: $color-white;
+            // &:hover {
+                // color: rgba($color-gray, 1);
+            // }
+        }
+    }
     .content-form {
         padding: 2rem 3rem;
     }
