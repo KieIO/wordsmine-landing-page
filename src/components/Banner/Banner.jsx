@@ -1,5 +1,5 @@
 import React from 'react'
-import ImgBanner from '../../img/learning-online.jpg'
+import ImgBanner from '../../assets/img/banner.png'
 import FormSignUpWithEmail from '../FormSignUpWithEmail/FormSignUpWithEmail';
 
 const Banner = () => {

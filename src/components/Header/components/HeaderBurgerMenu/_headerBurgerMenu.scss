@@ -3,11 +3,12 @@
     width: 100%;
     padding: 0.2rem 4rem;
     overflow: hidden;
-    height: $header-height;
+    height: $header-height;;
     &__top {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: $header-height;
     }
     &__icon {
         cursor: pointer;
