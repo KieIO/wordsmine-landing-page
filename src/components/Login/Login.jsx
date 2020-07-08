@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
 import './Login.scss';
 import { Form, Input, message } from 'antd';
-import ButtonCustom from '../ButtonCustom/ButtonCustom';
+import ButtonLarge from '../ButtonLarge/ButtonLarge';
 import { Link } from 'react-router-dom';
 import AuthWithGoogle from '../AuthWithGoogle/AuthWithGoogle';
 
@@ -42,9 +42,10 @@ const Login = () => {
                 </span>
             </div>
             <div class="card-container">
-                <img class="login-avatar"
+                {/* <img class="login-avatar"
                     src="https://i2.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1"
-                    alt="user" />
+                    alt="user" /> */}
+                    <div className="title-form">Login</div>
 
                 <div className="social-authen">
                     <AuthWithGoogle/>
@@ -91,9 +92,9 @@ const Login = () => {
                     </Form.Item>
 
                     <Form.Item className="form-item-btn">
-                        <ButtonCustom size='large' type="primary" onClick={onCheck} loading={isLoading}>
+                        <ButtonLarge size='large' type="primary" onClick={onCheck} loading={isLoading}>
                             Login
-                        </ButtonCustom>
+                        </ButtonLarge>
                     </Form.Item>
                 </Form>
                 <div className="other-option">

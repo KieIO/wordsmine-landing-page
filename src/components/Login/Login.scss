@@ -40,6 +40,11 @@
         /* margin-top: 42px;
         margin-bottom: 42px; */
         margin: auto;
+        .title-form {
+            font-size: $font-size-heading1;
+            letter-spacing: 4px;
+            margin-bottom: 3rem;
+        }
     }
     .login-avatar {
         border: 1px solid #03bfcb;
