@@ -4,9 +4,11 @@ import 'antd/dist/antd.css';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Login from './components/Login/Login';
 
 ReactDOM.render(
-    <App />,
+    // <App />,
+    <Login/>,
   document.getElementById('root')
 );
 
