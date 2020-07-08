@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import './Login.scss';
-import { Form, Input, Button, message } from 'antd';
+import { Form, Input, message } from 'antd';
+import ButtonCustom from '../ButtonCustom/ButtonCustom';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
@@ -29,15 +31,22 @@ const Login = () => {
     }
 
     return (
-        <section class="login__wrap">
-            <div class="login__card card-container">
-                <img class="login__avatar"
+        <section class="login-wrap">
+            <div className="back-to-home">
+                <Link className="icon-back" to='/'>
+                    <span className=" lnr lnr-arrow-left"></span>
+                </Link>
+                <span className="content">
+                    Back to <Link className="link" to='/'>home page</Link>
+                </span>
+            </div>
+            <div class="card-container">
+                <img class="login-avatar"
                     src="https://i2.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1"
                     alt="user" />
-                <h3 class="login__name">User</h3>
                 <Form form={form} name="dynamic_rule" className="content-form">
                     <Form.Item
-                        className="form-item-email"
+                        className="form-item-custom"
                         name="email"
                         type="email"
                         rules={[
@@ -59,7 +68,7 @@ const Login = () => {
                     </Form.Item>
 
                     <Form.Item
-                        className="form-item-email"
+                        className="form-item-custom"
                         name="password"
                         type="password"
                         rules={[
@@ -68,19 +77,6 @@ const Login = () => {
                                 required: true,
                                 message: 'Please input your password',
                             },
-                            {
-                                min: 8,
-                                message: 'Please input your password',
-                            },
-                            {
-                                min: 16,
-                                message: 'Please input your password',
-                            },
-                            {
-                                type: 'email',
-                                message: 'Email is not valid',
-
-                            }
                         ]}
                     >
                         {/* <div className="custom-input-with-email"> */}
@@ -89,9 +85,9 @@ const Login = () => {
                     </Form.Item>
 
                     <Form.Item className="form-item-btn">
-                        <Button type="primary" onClick={onCheck} loading={isLoading}>
+                        <ButtonCustom size='large' type="primary" onClick={onCheck} loading={isLoading}>
                             Login
-          </Button>
+                        </ButtonCustom>
                     </Form.Item>
                 </Form>
             </div>
@@ -100,8 +96,8 @@ const Login = () => {
     );
 };
 
-Login.propTypes = {
+// Login.propTypes = {
 
-};
+// };
 
 export default Login;

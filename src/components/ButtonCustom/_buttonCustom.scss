@@ -1,7 +1,14 @@
 .button-custom {
-    height: $height-btn-small !important;
+    height: $height-btn-small;
     font-size: $font-size-heading6;
     border-radius: $boder-radious-btn;
+    padding: 0 3rem;
+    // size
+    &.large {
+        height: $height-btn-large !important;
+        font-size: $font-size-heading5 !important;
+
+    }
     &.ant-btn-primary {
         background-color: $color-primary-dark !important;
         font-size: $font-size-paragraph1;
