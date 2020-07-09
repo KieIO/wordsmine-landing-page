@@ -23,3 +23,21 @@ export const login = async (data) => {
             throw response
         });
 };
+
+
+export const getlistWord = async () => {
+    return axios({
+        method: 'get',
+        url: `${API_URL}/api/word/list`,
+    })
+        .then(function (response) {
+            //handle success
+            console.log(response);
+            return response
+        })
+        .catch(function (response) {
+            //handle error
+            console.log(response);
+            throw response
+        });
+};

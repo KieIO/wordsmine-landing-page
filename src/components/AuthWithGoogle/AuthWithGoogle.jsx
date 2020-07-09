@@ -1,11 +1,11 @@
 import React, { useEffect, Component} from 'react';
 import LogoGoogle from '../../assets/img/google-logo.png'
 import {GoogleLogin} from 'react-google-login';
+import { message } from 'antd';
 
 class AuthWithGoogle extends Component {
     componentDidMount() {
         this.googleSDK()
-        console.log('did mount')
     }
 
     prepareLoginButton = () => {
@@ -15,6 +15,8 @@ class AuthWithGoogle extends Component {
             googleUser => {
                 const profile = googleUser.getBasicProfile()
                 console.log("profile: ", profile)
+                message.success(`Hello ${profile.getName()}, you login successfully`)
+
 
                 // const token = googleUser.getAuthResponse().id_token
                 // const email = profile.getEmail()
