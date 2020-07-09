@@ -1,11 +1,11 @@
-import React, { useEffect, Component} from 'react';
+import React, { useEffect, Component } from 'react';
 import LogoGoogle from '../../assets/img/google-logo.png'
-import {GoogleLogin} from 'react-google-login';
+import { GoogleLogin } from 'react-google-login';
+import { message } from 'antd';
 
 class AuthWithGoogle extends Component {
     componentDidMount() {
         this.googleSDK()
-        console.log('did mount')
     }
 
     prepareLoginButton = () => {
@@ -15,6 +15,8 @@ class AuthWithGoogle extends Component {
             googleUser => {
                 const profile = googleUser.getBasicProfile()
                 console.log("profile: ", profile)
+                message.success(`Hello ${profile.getName()}, you login successfully`)
+
 
                 // const token = googleUser.getAuthResponse().id_token
                 // const email = profile.getEmail()
@@ -59,10 +61,10 @@ class AuthWithGoogle extends Component {
         return (
             <div className="auth-with-google" >
                 <div className="content" ref="googleLoginBtn">
-                 <img className="logo" src={LogoGoogle} alt="Google"/>
-                 <span className="title">Continue with Google</span>
-             </div>
-         </div>
+                    <img className="logo" src={LogoGoogle} alt="Google" />
+                    <span className="title">Continue with Google</span>
+                </div>
+            </div>
 
             // <div className="login-with-google">
             //     <button type="button" className="loginBtn loginBtn--google" ref="googleLoginBtn">
@@ -71,40 +73,40 @@ class AuthWithGoogle extends Component {
             //     </button>
             // </div>
 
-                    //         <div className="auth-with-google" onClick={renderProps.onClick} disabled={renderProps.disabled}>
-        //     <div className="content">
-        //         <img className="logo" src={LogoGoogle} alt="Google"/>
-        //         <span className="title">Continue with Google</span>
-        //     </div>
-        // </div>
+            //         <div className="auth-with-google" onClick={renderProps.onClick} disabled={renderProps.disabled}>
+            //     <div className="content">
+            //         <img className="logo" src={LogoGoogle} alt="Google"/>
+            //         <span className="title">Continue with Google</span>
+            //     </div>
+            // </div>
         )
     }
 
 
-    
-        
-            // {/* <GoogleLogin
-            //     clientId="1056138370544-e9h2fhpfajmhtd75jvf38gatra6h5342.apps.googleusercontent.com" //CLIENTID NOT CREATED YET
-            //     buttonText="LOGIN WITH GOOGLE"
-            //     onSuccess={responseGoogle}
-            //     onFailure={responseGoogle}
-            // /> */}
-        // {/* <GoogleLogin
-        //     clientId="1056138370544-e9h2fhpfajmhtd75jvf38gatra6h5342.apps.googleusercontent.com"
-        //     buttonText="Login"
-        //     onSuccess={responseGoogle}
-        //     onFailure={responseGoogleFailure}
-        //     render={renderProps => (
-        //         <div className="auth-with-google" onClick={renderProps.onClick} disabled={renderProps.disabled}>
-        //     <div className="content">
-        //         <img className="logo" src={LogoGoogle} alt="Google"/>
-        //         <span className="title">Continue with Google</span>
-        //     </div>
-        // </div>
-        //     )}
-        //     cookiePolicy={'single_host_origin'}
-        // /> */}
-    
+
+
+    // {/* <GoogleLogin
+    //     clientId="1056138370544-e9h2fhpfajmhtd75jvf38gatra6h5342.apps.googleusercontent.com" //CLIENTID NOT CREATED YET
+    //     buttonText="LOGIN WITH GOOGLE"
+    //     onSuccess={responseGoogle}
+    //     onFailure={responseGoogle}
+    // /> */}
+    // {/* <GoogleLogin
+    //     clientId="1056138370544-e9h2fhpfajmhtd75jvf38gatra6h5342.apps.googleusercontent.com"
+    //     buttonText="Login"
+    //     onSuccess={responseGoogle}
+    //     onFailure={responseGoogleFailure}
+    //     render={renderProps => (
+    //         <div className="auth-with-google" onClick={renderProps.onClick} disabled={renderProps.disabled}>
+    //     <div className="content">
+    //         <img className="logo" src={LogoGoogle} alt="Google"/>
+    //         <span className="title">Continue with Google</span>
+    //     </div>
+    // </div>
+    //     )}
+    //     cookiePolicy={'single_host_origin'}
+    // /> */}
+
 };
 
 export default AuthWithGoogle;

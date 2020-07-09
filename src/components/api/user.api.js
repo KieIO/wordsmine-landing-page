@@ -1,4 +1,5 @@
 import { serializeForm, API_URL } from './utils.api';
+import cookie from "react-cookie";
 import { message } from 'antd';
 
 const axios = require('axios');
@@ -15,8 +16,8 @@ export const login = async (data) => {
     })
         .then(function (response) {
             //handle success
-            console.log(response);
-            return response
+            // console.log(response.data);
+            document.cookie = `tokenUser=${response.data.authToken}`;
         })
         .catch(function (response) {
             //handle error
@@ -51,3 +52,20 @@ export const register = async (data) => {
         // console.log(err)
     })
 }
+
+export const getlistWord = async () => {
+    return axios({
+        method: 'get',
+        url: `${API_URL}/api/word/list`,
+    })
+        .then(function (response) {
+            //handle success
+            console.log(response);
+            return response
+        })
+        .catch(function (response) {
+            //handle error
+            console.log(response);
+            throw response
+        });
+};

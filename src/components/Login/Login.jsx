@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
 import { Form, Input, message } from 'antd';
 import { MailOutlined, LockOutlined } from '@ant-design/icons';
-import ButtonLarge from '../ButtonLarge/ButtonLarge';
 import { Link } from 'react-router-dom';
 import AuthWithGoogle from '../AuthWithGoogle/AuthWithGoogle';
 import ButtonCustom from '../ButtonCustom/ButtonCustom';
-import { login } from '../api/user.api';
+import { login} from '../api/user.api';
 
 
 const Login = () => {
@@ -17,14 +16,15 @@ const Login = () => {
         setIsLoading(true)
         try {
             const values = await form.validateFields();
-            console.log("value: ", values)
-
             try {
                 const result = await login(values)
-                console.log("user: ", result)
+                // console.log("user: ", result)
                 
-                message.success("Thanks for your submission")
+                message.success(`Hello${result.data.authName ? ` ${result.data.authName}` : ','} you login successfully`)
                 form.resetFields()
+
+                // const other = await getlistWord()
+                // console.log(other)
             } catch (err) {
                 console.debug("result: ", err)
                 message.error("Something went wrong, please try later")
