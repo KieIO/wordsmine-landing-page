@@ -3,13 +3,13 @@
     display: flex;
     justify-content: center;
     margin: 1.5rem auto;
-    cursor: pointer;
     &:hover .content {
-        border: 1px solid rgba($color-gray, .9);
+        border: 1px solid rgba($color-white, .8);
     }
     .content {
+        cursor: pointer;
         padding: .5rem 1rem;
-        border: 1px solid rgba($color-gray, .5);
+        border: 1px solid rgba($color-white, .5);
         border-radius: $boder-radious-btn;
         display: flex;
         justify-content: center;

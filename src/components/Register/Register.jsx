@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
-import { Form, Input, message } from 'antd';
-import { MailOutlined, LockOutlined } from '@ant-design/icons';
+import { Form, Input, message} from 'antd';
+import { MailOutlined, LockOutlined, UserOutlined} from '@ant-design/icons';
 import ButtonLarge from '../ButtonLarge/ButtonLarge';
 import { Link } from 'react-router-dom';
 import AuthWithGoogle from '../AuthWithGoogle/AuthWithGoogle';
 import ButtonCustom from '../ButtonCustom/ButtonCustom';
 
-
-const Login = () => {
+const Register = props => {
     const [form] = Form.useForm();
     const [isLoading, setIsLoading] = useState(false)
 
@@ -46,10 +45,10 @@ const Login = () => {
                 {/* <img class="login-avatar"
                     src="https://i2.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1"
                     alt="user" /> */}
-                    <div className="title-form">Login</div>
+                <div className="title-form">Register</div>
 
                 <div className="social-authen">
-                    <AuthWithGoogle/>
+                    <AuthWithGoogle />
                     <div className="or">OR</div>
                 </div>
                 <Form form={form} name="dynamic_rule" className="content-form">
@@ -71,8 +70,21 @@ const Login = () => {
                         ]}
                     >
                         {/* <div className="custom-input-with-email"> */}
-                        <Input placeholder="Your email" type="email" prefix={<MailOutlined />} />
+                        <Input placeholder="Your email" type="email" prefix={<MailOutlined />}/>
                         {/* </div> */}
+                    </Form.Item>
+                    <Form.Item
+                        className="form-item-custom"
+                        name="username"
+                        type="text"
+                        rules={[
+                            {
+                                required: true,
+                                message: 'Please input your name',
+                            },
+                        ]}
+                    >
+                        <Input placeholder="Your name" type="text" prefix={<UserOutlined />} />
                     </Form.Item>
 
                     <Form.Item
@@ -85,10 +97,44 @@ const Login = () => {
                                 required: true,
                                 message: 'Please input your password',
                             },
+                            {
+                                min: 6,
+                                message: 'Your password should more than 6 characters',
+                            },
+                            {
+                                max: 15,
+                                message: 'Your password should less than 15 characters',
+                            },
                         ]}
                     >
                         {/* <div className="custom-input-with-email"> */}
                         <Input.Password placeholder="Your password" type="password" prefix={<LockOutlined />} />
+                        {/* </div> */}
+                    </Form.Item>
+
+                    <Form.Item
+                        className="form-item-custom"
+                        name="confirmPassword"
+                        type="password"
+                        dependencies={['password']}
+                        rules={[
+                            { transform: (value) => (value ? value.trim() : '') },
+                            {
+                                required: true,
+                                message: 'Please input your confirm password',
+                            },
+                            ({ getFieldValue }) => ({
+                                validator(rule, value) {
+                                    if (!value || getFieldValue('password') === value) {
+                                        return Promise.resolve();
+                                    }
+                                    return Promise.reject('The two passwords that you entered do not match');
+                                },
+                            }),
+                        ]}
+                    >
+                        {/* <div className="custom-input-with-email"> */}
+                        <Input.Password placeholder="Your confirm password" type="password" prefix={<LockOutlined />}/>
                         {/* </div> */}
                     </Form.Item>
 
@@ -99,7 +145,7 @@ const Login = () => {
                     </Form.Item>
                 </Form>
                 <div className="other-option">
-                    You do not have account? <Link to="/register">Register</Link>
+                    You have an account? <Link to="/login">Login</Link>
                 </div>
             </div>
 
@@ -107,8 +153,8 @@ const Login = () => {
     );
 };
 
-// Login.propTypes = {
+Register.propTypes = {
+    
+};
 
-// };
-
-export default Login;
+export default Register;
