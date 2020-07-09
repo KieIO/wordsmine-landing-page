@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
+import Cookies from 'js-cookie'
 import { Form, Input, message } from 'antd';
 import { MailOutlined, LockOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import AuthWithGoogle from '../AuthWithGoogle/AuthWithGoogle';
 import ButtonCustom from '../ButtonCustom/ButtonCustom';
 import { login} from '../api/user.api';
+import { AUTH_TOKEN_EXPIRE_DAY, AUTH_TOKEN_KEY } from '../../utils/constant';
 
 
 const Login = () => {
@@ -18,7 +20,9 @@ const Login = () => {
             const values = await form.validateFields();
             try {
                 const result = await login(values)
-                console.log("user: ", result)
+                // console.log("user: ", result)
+                // save user info to cookie
+                Cookies.set(AUTH_TOKEN_KEY, result.data.authToken, { expires: AUTH_TOKEN_EXPIRE_DAY });
                 
                 message.success(`Hello${result.data.authName ? ` ${result.data.authName},` : ','} you login successfully`)
                 form.resetFields()
