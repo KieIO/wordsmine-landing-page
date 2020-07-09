@@ -16,16 +16,12 @@ const Register = props => {
         setIsLoading(true)
         try {
             const values = await form.validateFields();
-            console.log("value: ", values)
-
             try {
                 const result = await register(values)
                 // await submit(values)
-                message.success("Thanks for your submission")
                 form.resetFields()
             } catch (err) {
                 console.debug("result: ", err)
-                message.error("Something went wrong, please try later")
             }
         } catch (err) {
             console.debug("result: ", err)
@@ -55,7 +51,6 @@ const Register = props => {
                 </div>
                 <Form form={form} name="dynamic_rule" className="content-form">
                     <Form.Item
-                        initialValue="test10@gmail.com"
                         className="form-item-custom"
                         name="authEmail"
                         type="authEmail"
@@ -77,7 +72,6 @@ const Register = props => {
                         {/* </div> */}
                     </Form.Item>
                     <Form.Item
-                        initialValue="test10"
                         className="form-item-custom"
                         name="username"
                         type="text"
@@ -92,7 +86,6 @@ const Register = props => {
                     </Form.Item>
 
                     <Form.Item
-                        initialValue="123456"
                         className="form-item-custom"
                         name="password"
                         type="password"
@@ -118,7 +111,6 @@ const Register = props => {
                     </Form.Item>
 
                     <Form.Item
-                        initialValue="123456"
                         className="form-item-custom"
                         name="confirmPassword"
                         type="password"

@@ -58,7 +58,6 @@ const Login = () => {
                 <Form form={form} name="dynamic_rule" className="content-form">
                     <Form.Item
                         className="form-item-custom"
-                        initialValue="aloha@gmail.com"
                         name="authEmail"
                         type="email"
                         rules={[
@@ -81,7 +80,6 @@ const Login = () => {
 
                     <Form.Item
                         className="form-item-custom"
-                        initialValue="aloha123"
                         name="password"
                         type="password"
                         rules={[
