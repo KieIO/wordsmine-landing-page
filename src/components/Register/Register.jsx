@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
-import { Form, Input, message} from 'antd';
-import { MailOutlined, LockOutlined, UserOutlined} from '@ant-design/icons';
+import { Form, Input, message } from 'antd';
+import { MailOutlined, LockOutlined, UserOutlined } from '@ant-design/icons';
 import ButtonLarge from '../ButtonLarge/ButtonLarge';
 import { Link } from 'react-router-dom';
 import AuthWithGoogle from '../AuthWithGoogle/AuthWithGoogle';
 import ButtonCustom from '../ButtonCustom/ButtonCustom';
+import { register } from '../api/user.api';
 
 const Register = props => {
     const [form] = Form.useForm();
@@ -18,6 +19,7 @@ const Register = props => {
             console.log("value: ", values)
 
             try {
+                const result = await register(values)
                 // await submit(values)
                 message.success("Thanks for your submission")
                 form.resetFields()
@@ -53,9 +55,10 @@ const Register = props => {
                 </div>
                 <Form form={form} name="dynamic_rule" className="content-form">
                     <Form.Item
+                        initialValue="test10@gmail.com"
                         className="form-item-custom"
-                        name="email"
-                        type="email"
+                        name="authEmail"
+                        type="authEmail"
                         rules={[
                             { transform: (value) => (value ? value.trim() : '') },
                             {
@@ -70,10 +73,11 @@ const Register = props => {
                         ]}
                     >
                         {/* <div className="custom-input-with-email"> */}
-                        <Input placeholder="Your email" type="email" prefix={<MailOutlined />}/>
+                        <Input placeholder="Your email" type="email" prefix={<MailOutlined />} />
                         {/* </div> */}
                     </Form.Item>
                     <Form.Item
+                        initialValue="test10"
                         className="form-item-custom"
                         name="username"
                         type="text"
@@ -88,6 +92,7 @@ const Register = props => {
                     </Form.Item>
 
                     <Form.Item
+                        initialValue="123456"
                         className="form-item-custom"
                         name="password"
                         type="password"
@@ -113,6 +118,7 @@ const Register = props => {
                     </Form.Item>
 
                     <Form.Item
+                        initialValue="123456"
                         className="form-item-custom"
                         name="confirmPassword"
                         type="password"
@@ -134,7 +140,7 @@ const Register = props => {
                         ]}
                     >
                         {/* <div className="custom-input-with-email"> */}
-                        <Input.Password placeholder="Your confirm password" type="password" prefix={<LockOutlined />}/>
+                        <Input.Password placeholder="Your confirm password" type="password" prefix={<LockOutlined />} />
                         {/* </div> */}
                     </Form.Item>
 
@@ -154,7 +160,7 @@ const Register = props => {
 };
 
 Register.propTypes = {
-    
+
 };
 
 export default Register;
