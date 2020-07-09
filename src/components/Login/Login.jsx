@@ -6,6 +6,7 @@ import ButtonLarge from '../ButtonLarge/ButtonLarge';
 import { Link } from 'react-router-dom';
 import AuthWithGoogle from '../AuthWithGoogle/AuthWithGoogle';
 import ButtonCustom from '../ButtonCustom/ButtonCustom';
+import { login } from '../api/user.api';
 
 
 const Login = () => {
@@ -19,7 +20,9 @@ const Login = () => {
             console.log("value: ", values)
 
             try {
-                // await submit(values)
+                const result = await login(values)
+                console.log("user: ", result)
+                
                 message.success("Thanks for your submission")
                 form.resetFields()
             } catch (err) {
@@ -55,7 +58,7 @@ const Login = () => {
                 <Form form={form} name="dynamic_rule" className="content-form">
                     <Form.Item
                         className="form-item-custom"
-                        name="email"
+                        name="authEmail"
                         type="email"
                         rules={[
                             { transform: (value) => (value ? value.trim() : '') },
