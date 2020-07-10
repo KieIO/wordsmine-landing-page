@@ -20,7 +20,7 @@ const Login = () => {
             const values = await form.validateFields();
             try {
                 const result = await login(values)
-                // console.log("user: ", result)
+                console.log("user: ", result)
                 // save user info to cookie
                 Cookies.set(AUTH_TOKEN_KEY, result.data.authToken, { expires: AUTH_TOKEN_EXPIRE_DAY });
                 
