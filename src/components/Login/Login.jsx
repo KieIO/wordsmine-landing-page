@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
+import Cookies from 'js-cookie'
 import { Form, Input, message } from 'antd';
 import { MailOutlined, LockOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import AuthWithGoogle from '../AuthWithGoogle/AuthWithGoogle';
 import ButtonCustom from '../ButtonCustom/ButtonCustom';
 import { login} from '../api/user.api';
+import { AUTH_TOKEN_EXPIRE_DAY, AUTH_TOKEN_KEY } from '../../utils/constant';
 
 
 const Login = () => {
@@ -19,12 +21,12 @@ const Login = () => {
             try {
                 const result = await login(values)
                 // console.log("user: ", result)
+                // save user info to cookie
+                Cookies.set(AUTH_TOKEN_KEY, result.data.authToken, { expires: AUTH_TOKEN_EXPIRE_DAY });
                 
-                message.success(`Hello${result.data.authName ? ` ${result.data.authName}` : ','} you login successfully`)
+                message.success(`Hello${result.data.authName ? ` ${result.data.authName},` : ','} you login successfully`)
                 form.resetFields()
-
-                // const other = await getlistWord()
-                // console.log(other)
+                window.location.href = "/"
             } catch (err) {
                 console.debug("result: ", err)
                 message.error("Something went wrong, please try later")
@@ -36,7 +38,7 @@ const Login = () => {
     }
 
     return (
-        <section class="login-wrap">
+        <section className="login-wrap">
             <div className="back-to-home">
                 <Link className="icon-back" to='/'>
                     <span className=" lnr lnr-arrow-left"></span>
@@ -45,8 +47,8 @@ const Login = () => {
                     Back to <Link className="link" to='/'>home page</Link>
                 </span>
             </div>
-            <div class="card-container">
-                {/* <img class="login-avatar"
+            <div className="card-container">
+                {/* <img className="login-avatar"
                     src="https://i2.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1"
                     alt="user" /> */}
                     <div className="title-form">Login</div>

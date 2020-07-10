@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
-import { Form, Input, message } from 'antd';
+import { Form, Input } from 'antd';
 import { MailOutlined, LockOutlined, UserOutlined } from '@ant-design/icons';
-import ButtonLarge from '../ButtonLarge/ButtonLarge';
 import { Link } from 'react-router-dom';
 import AuthWithGoogle from '../AuthWithGoogle/AuthWithGoogle';
 import ButtonCustom from '../ButtonCustom/ButtonCustom';

@@ -1,7 +1,8 @@
-import React, { useEffect, Component } from 'react';
+import React, { Component} from 'react';
 import LogoGoogle from '../../assets/img/google-logo.png'
-import { GoogleLogin } from 'react-google-login';
+import Cookies from 'js-cookie'
 import { message } from 'antd';
+import { AUTH_TOKEN_EXPIRE_DAY, AUTH_TOKEN_KEY_GOOGLE } from '../../utils/constant';
 
 class AuthWithGoogle extends Component {
     componentDidMount() {
@@ -14,17 +15,17 @@ class AuthWithGoogle extends Component {
             {},
             googleUser => {
                 const profile = googleUser.getBasicProfile()
-                console.log("profile: ", profile)
+                // console.log("profile: ", profile)
                 message.success(`Hello ${profile.getName()}, you login successfully`)
+                Cookies.set(AUTH_TOKEN_KEY_GOOGLE, profile.googleID(), { expires: AUTH_TOKEN_EXPIRE_DAY });
 
+                window.location.href = "/"
 
                 // const token = googleUser.getAuthResponse().id_token
                 // const email = profile.getEmail()
                 // const googleID = profile.getId()
                 // const displayName = profile.getName()
                 // const avatar = profile.getImageUrl()
-                // const { authenWithSocial, typeID } = this.props
-                // authenWithSocial({ email, googleID, displayName, avatar, typeID })
             },
             error => {
                 console.error(error)
@@ -61,52 +62,28 @@ class AuthWithGoogle extends Component {
         return (
             <div className="auth-with-google" >
                 <div className="content" ref="googleLoginBtn">
-                    <img className="logo" src={LogoGoogle} alt="Google" />
-                    <span className="title">Continue with Google</span>
-                </div>
-            </div>
-
-            // <div className="login-with-google">
-            //     <button type="button" className="loginBtn loginBtn--google" ref="googleLoginBtn">
-            //         <i className="fab fa-google" />
-            //         Google
-            //     </button>
-            // </div>
-
-            //         <div className="auth-with-google" onClick={renderProps.onClick} disabled={renderProps.disabled}>
-            //     <div className="content">
-            //         <img className="logo" src={LogoGoogle} alt="Google"/>
-            //         <span className="title">Continue with Google</span>
-            //     </div>
-            // </div>
+                 <img className="logo" src={LogoGoogle} alt="Google"/>
+                 <span className="title">Continue with Google</span>
+             </div>
+         </div>
         )
     }
-
-
-
-
-    // {/* <GoogleLogin
-    //     clientId="1056138370544-e9h2fhpfajmhtd75jvf38gatra6h5342.apps.googleusercontent.com" //CLIENTID NOT CREATED YET
-    //     buttonText="LOGIN WITH GOOGLE"
-    //     onSuccess={responseGoogle}
-    //     onFailure={responseGoogle}
-    // /> */}
-    // {/* <GoogleLogin
-    //     clientId="1056138370544-e9h2fhpfajmhtd75jvf38gatra6h5342.apps.googleusercontent.com"
-    //     buttonText="Login"
-    //     onSuccess={responseGoogle}
-    //     onFailure={responseGoogleFailure}
-    //     render={renderProps => (
-    //         <div className="auth-with-google" onClick={renderProps.onClick} disabled={renderProps.disabled}>
-    //     <div className="content">
-    //         <img className="logo" src={LogoGoogle} alt="Google"/>
-    //         <span className="title">Continue with Google</span>
-    //     </div>
-    // </div>
-    //     )}
-    //     cookiePolicy={'single_host_origin'}
-    // /> */}
-
+        // {/* <GoogleLogin
+        //     clientId="1056138370544-e9h2fhpfajmhtd75jvf38gatra6h5342.apps.googleusercontent.com"
+        //     buttonText="Login"
+        //     onSuccess={responseGoogle}
+        //     onFailure={responseGoogleFailure}
+        //     render={renderProps => (
+        //         <div className="auth-with-google" onClick={renderProps.onClick} disabled={renderProps.disabled}>
+        //     <div className="content">
+        //         <img className="logo" src={LogoGoogle} alt="Google"/>
+        //         <span className="title">Continue with Google</span>
+        //     </div>
+        // </div>
+        //     )}
+        //     cookiePolicy={'single_host_origin'}
+        // /> */}
+    
 };
 
 export default AuthWithGoogle;

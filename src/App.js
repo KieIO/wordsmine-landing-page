@@ -1,31 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Cookies from 'js-cookie'
+import { Switch, Route } from 'react-router-dom';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
+import HomePage from './pages/HomePage/HomePage';
+import { AUTH_TOKEN_KEY, AUTH_TOKEN_KEY_GOOGLE } from './utils/constant';
+import { UserContext } from './contexts/user.context';
+import WithNotLogin from './components/WithNotLogin/WithNotLogin';
 import './sass/index.scss'
-import Feature from './components/Feature/Feature';
-import Topic from './components/Topic/Topic';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Banner from './components/Banner/Banner';
-import Description from './components/Description/Description';
-import Value from './components/Value/Value';
-import Feedback from './components/Feedback/Feedback';
-import AppDownload from './components/AppDownload/AppDownload';
-import CTA from './components/CTA/CTA';
 
-function App() {
+
+const  App = () => {
+  const [userContext, setUserContext] = useState({authToken: null})
+
+  useEffect(()=>{
+    let authToken = Cookies.get(AUTH_TOKEN_KEY)
+    if (!authToken) {
+       authToken = Cookies.get(AUTH_TOKEN_KEY_GOOGLE)
+      }
+    // TODO: call api get user profile to validate token
+    // console.log("token*: ", authToken)
+    setUserContext({authToken})
+  }, [])
+
+
+
   return (
-    <main className="landing-page">
-      <Header />
-      <Banner />
-      {/* <div style={{height: 300, width: 100}}/> */}
-      <Value />
-      <Description />
-      <Topic />
-      <Feature />
-      <Feedback />
-      <AppDownload />
-      <CTA />
-      <Footer />
-    </main>
+    <UserContext.Provider value={[userContext, setUserContext]}>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <WithNotLogin path="/login" component={Login} />
+        <WithNotLogin path="/register" component={Register} />
+      </Switch>
+
+    </UserContext.Provider>
   );
 }
 
