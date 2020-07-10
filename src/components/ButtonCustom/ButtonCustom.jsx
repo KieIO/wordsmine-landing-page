@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button } from 'antd';
 
-const ButtonCustom = ({ title, children, type= "primary", ...rest}) => {
+const ButtonCustom = ({ title, size, type = "primary", children, ...rest}) => {
     return (
-        <Button type={type}  className="button-custom" {...rest}>
+        <Button type={type}  className={`button-custom ${size} ${type}`} {...rest}>
             {title || children}
         </Button>
     );
