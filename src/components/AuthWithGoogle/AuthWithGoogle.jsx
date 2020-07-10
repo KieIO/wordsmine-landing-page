@@ -1,7 +1,6 @@
 import React, { Component} from 'react';
 import LogoGoogle from '../../assets/img/google-logo.png'
 import Cookies from 'js-cookie'
-// import {GoogleLogin} from 'react-google-login';
 import { message } from 'antd';
 import { AUTH_TOKEN_EXPIRE_DAY, AUTH_TOKEN_KEY_GOOGLE } from '../../utils/constant';
 
