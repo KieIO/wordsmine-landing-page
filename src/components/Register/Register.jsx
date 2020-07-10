@@ -18,7 +18,9 @@ const Register = props => {
             const values = await form.validateFields();
             try {
                 const result = await register(values)
-
+                if (result !== 400) {
+                    props.history.push('/login')
+                }
                 // await submit(values)
                 form.resetFields()
             } catch (err) {

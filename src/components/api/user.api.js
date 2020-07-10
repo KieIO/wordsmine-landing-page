@@ -44,9 +44,10 @@ export const register = async (data) => {
         }
     }).then(result => {
         message.success("Register Successfully!")
+        return result
     }).catch(err => {
         message.error("Register fail, please try again!")
-        // console.log(err)
+        return err.response.status
     })
 }
 
