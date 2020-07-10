@@ -52,7 +52,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="header__small">
-                <HeaderBurgerMenu />
+                <HeaderBurgerMenu logout={logout} />
             </div>
         </header>
     );

@@ -79,6 +79,11 @@
             transform: rotate(45deg) translate(-8px, -8px);
         }
     }
+    &__btn {
+        display: flex;
+        transition: all 0.2s;
+        margin: 0 0 3rem 2rem;
+    }
 }
 
 .icon-buger-container {

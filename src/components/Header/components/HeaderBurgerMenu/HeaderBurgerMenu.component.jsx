@@ -1,10 +1,14 @@
-import React, {useState} from 'react';
+import React, { useState, useContext} from 'react';
 import Scrollspy from 'react-scrollspy'
 import HeaderCategoryItem from '../HeaderCategoryItem/HeaderCategoryItem';
 import Logo from '../Logo/Logo';
 import { CATEGORY_HEADER } from '../../../../utils/constant';
+import { UserContext } from '../../../../contexts/user.context';
+import ButtonCustom from '../../../ButtonCustom/ButtonCustom';
+import { Link } from 'react-router-dom';
 
-const HeaderBurgerMenu = () => {
+const HeaderBurgerMenu = ({ logout }) => {
+    const [userContext] = useContext(UserContext)
     const [isOpen, setIsOpen] = useState(false)
     const toggleIsOpen = (e) => {
         e.preventDefault()
@@ -49,6 +53,29 @@ const HeaderBurgerMenu = () => {
                             ))
                         }
                 </Scrollspy>
+                
+                <div className="header-burger-menu__btn" id="header__btn">
+                    {
+                        (userContext || {}).authToken ?
+                            <div className="header__btn-item">
+                                <ButtonCustom onClick={logout}>Logout</ButtonCustom>
+                            </div>
+                            : (
+                                <>
+                                    <div className="header__btn-item">
+                                        <Link to="/login">
+                                            <ButtonCustom type="default" ghost={true}>Login</ButtonCustom>
+                                        </Link>
+                                    </div>
+                                    <div className="header__btn-item">
+                                        <Link to="/register">
+                                            <ButtonCustom >Register</ButtonCustom>
+                                        </Link>
+                                    </div>
+                                </>
+                            )
+                    }
+                </div>
                 </div>
         </div>
     );

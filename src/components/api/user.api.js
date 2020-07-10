@@ -14,11 +14,12 @@ export const login = async (data) => {
     })
         .then(function (response) {
             //handle success
-            document.cookie = `tokenUser=${response.data.authToken}`;
+            return response;
         })
         .catch(function (response) {
-            //handle error
-            console.log(response);
+            // handle error
+            console.debug(response);
+            throw response;
         });
 };
 
