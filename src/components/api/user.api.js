@@ -1,9 +1,7 @@
 import { serializeForm, API_URL } from './utils.api';
-import cookie from "react-cookie";
 import { message } from 'antd';
 
 const axios = require('axios');
-
 
 export const HTTP_STATUS_SUCCESS = 200;
 
@@ -16,7 +14,6 @@ export const login = async (data) => {
     })
         .then(function (response) {
             //handle success
-            // console.log(response.data);
             document.cookie = `tokenUser=${response.data.authToken}`;
         })
         .catch(function (response) {
@@ -34,7 +31,7 @@ export const register = async (data) => {
         authName: username,
         firstName: 'Guess',
         lastName: 'Guess',
-        dateOfBirth: '2019-10-12T00:00:00.52Z',
+        dateOfBirth: '2020-01-01T00:00:00.52Z',
         phone: '0123456789'
     }
 

@@ -18,6 +18,7 @@ const Register = props => {
             const values = await form.validateFields();
             try {
                 const result = await register(values)
+
                 // await submit(values)
                 form.resetFields()
             } catch (err) {
