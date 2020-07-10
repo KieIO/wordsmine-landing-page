@@ -16,7 +16,7 @@ class AuthWithGoogle extends Component {
             {},
             googleUser => {
                 const profile = googleUser.getBasicProfile()
-                console.log("profile: ", profile)
+                // console.log("profile: ", profile)
                 message.success(`Hello ${profile.getName()}, you login successfully`)
                 Cookies.set(AUTH_TOKEN_KEY_GOOGLE, profile.googleID(), { expires: AUTH_TOKEN_EXPIRE_DAY });
 

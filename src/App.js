@@ -19,7 +19,7 @@ const  App = () => {
        authToken = Cookies.get(AUTH_TOKEN_KEY_GOOGLE)
       }
     // TODO: call api get user profile to validate token
-    console.log("token*: ", authToken)
+    // console.log("token*: ", authToken)
     setUserContext({authToken})
   }, [])
 
