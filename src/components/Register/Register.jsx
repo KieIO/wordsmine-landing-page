@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 // import PropTypes from 'prop-types';
-import { Form, Input } from 'antd';
+import { Form, Input, message } from 'antd';
 import { MailOutlined, LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import AuthWithGoogle from '../AuthWithGoogle/AuthWithGoogle';
@@ -17,12 +17,15 @@ const Register = props => {
             const values = await form.validateFields();
             try {
                 const result = await register(values)
+                message.success("Register Successfully!")
+
                 if (result !== 400) {
                     props.history.push('/login')
                 }
                 // await submit(values)
                 form.resetFields()
             } catch (err) {
+                message.error("Register fail, please try again!")
                 console.debug("result: ", err)
             }
         } catch (err) {
