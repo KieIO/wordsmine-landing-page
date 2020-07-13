@@ -20,12 +20,13 @@ const Login = () => {
             const values = await form.validateFields();
             try {
                 const result = await login(values)
-                console.log("user: ", result)
+                // console.log("user: ", result)
                 // save user info to cookie
                 Cookies.set(AUTH_TOKEN_KEY, result.data.authToken, { expires: AUTH_TOKEN_EXPIRE_DAY });
                 
                 message.success(`Hello${result.data.authName ? ` ${result.data.authName},` : ','} you login successfully`)
                 form.resetFields()
+
                 window.location.href = "/"
             } catch (err) {
                 console.debug("result: ", err)

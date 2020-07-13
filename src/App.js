@@ -8,6 +8,7 @@ import { AUTH_TOKEN_KEY, AUTH_TOKEN_KEY_GOOGLE } from './utils/constant';
 import { UserContext } from './contexts/user.context';
 import WithNotLogin from './components/WithNotLogin/WithNotLogin';
 import './sass/index.scss'
+import Logout from './pages/Logout/Logout';
 
 
 const  App = () => {
@@ -31,6 +32,7 @@ const  App = () => {
         <Route exact path="/" component={HomePage} />
         <WithNotLogin path="/login" component={Login} />
         <WithNotLogin path="/register" component={Register} />
+        <Route path="/logout" component={Logout} />
       </Switch>
 
     </UserContext.Provider>
