@@ -42,6 +42,10 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
+                            opacity: 0.3;
+                            &:hover {
+                                opacity: 0.5;
+                            }
                         }
                     }
                     li.slick-active {
@@ -49,6 +53,7 @@
                         height: 10px;
                         button {
                             background-color: $color-primary-dark;
+                            opacity: 1;
                         }
                     }
                 }
@@ -99,9 +104,9 @@
         &__left {
             &__wrap {
                 &__download {
-                   a {
-                       margin-top: 10px;
-                   }
+                    a {
+                        margin-top: 10px;
+                    }
                 }
             }
         }
