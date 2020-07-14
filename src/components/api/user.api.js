@@ -2,14 +2,14 @@ import { serializeForm, API_URL } from './utils.api';
 
 const axios = require('axios');
 
-export const HTTP_STATUS_SUCCESS = 200;
+export const HTTP_STATUS_SUCCESS = 200; 
 
 export const login = async (data) => {
     return axios({
         method: 'post',
         url: `${API_URL}/login`,
         data: serializeForm(data),
-        withCredential: true,
+        withCredentials: true,
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     })
         .then(function (response) {
@@ -55,7 +55,7 @@ export const getlistWord = async () => {
     return axios({
         method: 'get',
         url: `${API_URL}/api/word/list`,
-        withCredential: true,
+        withCredentials: true,
     })
         .then(function (response) {
             //handle success
