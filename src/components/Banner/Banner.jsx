@@ -15,7 +15,9 @@ const Banner = () => {
         <FormSignUpWithEmail />
       </div>
       <div className="banner__img">
-        <video className="video" src={BannerVideo} autoPlay loop></video>
+        <video className="video" autoPlay loop muted>
+          <source src={BannerVideo} type="video/mp4"/>
+        </video>
       </div>
     </section >
   );
