@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './FooterColumn.scss';
+
 const FooterColumn = ({ title, data }) => {
     return (
         <div className="footer-column">

@@ -8,6 +8,8 @@ import { UserContext } from '../../contexts/user.context';
 import { message } from 'antd';
 import { logout } from '../api/user.api';
 
+import './Header.scss';
+
 const Header = () => {
     const [userContext, setUserContext] = useContext(UserContext)
     const handleLogout = async () => {

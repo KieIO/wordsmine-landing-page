@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './HeaderCategoryItem.scss';
 
 const HeaderCategoryItem = ({ target, name, isHandleClick = true}) => {
     const scrollToView = (e) => {

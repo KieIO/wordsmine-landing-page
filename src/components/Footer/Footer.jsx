@@ -5,6 +5,8 @@ import { Row, Col } from 'antd';
 import SocialFooter from './components/SocialFooter/SocialFooter';
 import Copyright from './components/Copyright/Copyright';
 
+import './Footer.scss';
+
 const Footer = () => {
     const [footerColumns] = useState([
         {

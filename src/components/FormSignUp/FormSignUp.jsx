@@ -4,6 +4,8 @@ import { Form, Input, message, Checkbox } from 'antd';
 import ButtonLarge from '../ButtonLarge/ButtonLarge';
 import { API_SIGN_UP } from '../../utils/constant';
 
+import './FormSignUp.scss';
+
 
 const FormSignUp = () => {
     const [form] = Form.useForm();
