@@ -1,8 +1,7 @@
 import React, { Component} from 'react';
 import LogoGoogle from '../../assets/img/google-logo.png'
-import Cookies from 'js-cookie'
 import { message } from 'antd';
-import { AUTH_TOKEN_EXPIRE_DAY, AUTH_TOKEN_KEY_GOOGLE } from '../../utils/constant';
+import './AuthWithGoogle.scss'
 
 class AuthWithGoogle extends Component {
     componentDidMount() {
@@ -17,8 +16,6 @@ class AuthWithGoogle extends Component {
                 const profile = googleUser.getBasicProfile()
                 // console.log("profile: ", profile)
                 message.success(`Hello ${profile.getName()}, you login successfully`)
-                Cookies.set(AUTH_TOKEN_KEY_GOOGLE, profile.googleID(), { expires: AUTH_TOKEN_EXPIRE_DAY });
-
                 window.location.href = "/"
 
                 // const token = googleUser.getAuthResponse().id_token
