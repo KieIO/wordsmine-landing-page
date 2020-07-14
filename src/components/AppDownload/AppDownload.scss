@@ -44,6 +44,10 @@
                             width: 10px;
                             height: 10px;
                             border-radius: 50%;
+                            opacity: .3;
+                            &:hover {
+                                opacity: .7;
+                            }
                         }
                     }
                     li.slick-active {
@@ -51,6 +55,7 @@
                         height: 10px;
                         button {
                             background-color: $color-primary-dark;
+                            opacity: 1;
                         }
                     }
                 }
