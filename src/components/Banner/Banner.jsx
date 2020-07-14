@@ -1,6 +1,5 @@
 import React from 'react'
-import ImgBanner from '../../assets/img/banner.png'
-// import BannerGif from './Banner.gif';
+import BannerVideo from '../../assets/video/Banner_Anim_color_blue.mp4';
 import FormSignUpWithEmail from '../FormSignUpWithEmail/FormSignUpWithEmail';
 
 const Banner = () => {
@@ -15,8 +14,7 @@ const Banner = () => {
         <FormSignUpWithEmail />
       </div>
       <div className="banner__img">
-        <img src={ImgBanner} alt="banner" />
-        {/* <img src={BannerGif} alt="banner" /> */}
+        <video className="video" src={BannerVideo} autoPlay loop></video>
       </div>
     </section >
   );
