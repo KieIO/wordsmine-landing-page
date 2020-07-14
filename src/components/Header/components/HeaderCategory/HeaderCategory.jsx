@@ -4,7 +4,7 @@ import HeaderCategoryItem from '../HeaderCategoryItem/HeaderCategoryItem';
 import { CATEGORY_HEADER } from '../../../../utils/constant';
 import { useEffect } from 'react';
 
-import './HeaderCategory';
+import './HeaderCategory.scss';
 
 const HeaderCategory = () => {
     useEffect(()=>{
