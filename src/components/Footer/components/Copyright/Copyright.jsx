@@ -4,7 +4,7 @@ import './Copyright.scss';
 const Copyright = () => {
     return (
         <div className="copyright">
-            © 2020 Words, mine! Inc
+            © 2020 Words Mine! Inc
         </div>
     );
 }

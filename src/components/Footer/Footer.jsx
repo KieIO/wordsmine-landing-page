@@ -42,11 +42,11 @@ const Footer = () => {
             title: 'Features',
             data: [
                 {
-                    name: 'Words, mine! Live',
+                    name: 'Words Mine! Live',
                     slug: '/'
                 },
                 {
-                    name: 'Words, mine! Learn',
+                    name: 'Words Mine! Learn',
                     slug: '/'
                 },
                 {
