@@ -1,9 +1,7 @@
 import React, { useContext } from 'react';
-import Cookies from 'js-cookie'
 import Logo from './components/Logo/Logo';
 import HeaderCategory from './components/HeaderCategory/HeaderCategory';
 import HeaderBurgerMenu from './components/HeaderBurgerMenu/HeaderBurgerMenu.component';
-import { AUTH_TOKEN_KEY, AUTH_TOKEN_KEY_GOOGLE } from '../../utils/constant';
 import ButtonCustom from '../ButtonCustom/ButtonCustom';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../contexts/user.context';

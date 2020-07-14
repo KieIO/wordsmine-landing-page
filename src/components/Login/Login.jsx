@@ -1,13 +1,11 @@
 import React, { useState, useContext } from 'react';
 // import PropTypes from 'prop-types';
-import Cookies from 'js-cookie'
 import { Form, Input, message } from 'antd';
 import { MailOutlined, LockOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import AuthWithGoogle from '../AuthWithGoogle/AuthWithGoogle';
 import ButtonCustom from '../ButtonCustom/ButtonCustom';
 import { login, getProfile} from '../api/user.api';
-import { AUTH_TOKEN_EXPIRE_DAY, AUTH_TOKEN_KEY } from '../../utils/constant';
 import { UserContext } from '../../contexts/user.context';
 
 
@@ -22,17 +20,11 @@ const Login = ({history}) => {
             const values = await form.validateFields();
             try {
                 const result = await login(values)
-                // console.log("user: ", result)
-                // save user info to cookie
-                // Cookies.set(AUTH_TOKEN_KEY, result.data.authToken, { expires: AUTH_TOKEN_EXPIRE_DAY });
-                
                 message.success(`Hello${result.data.authName ? ` ${result.data.authName},` : ','} you login successfully`)
                 form.resetFields()
                 const rs = await getProfile()
                 await setUserContext(rs)
-                console.log("rs: ",rs)
                 history.push("/")
-                // window.location.href = "/"
             } catch (err) {
                 console.debug("result: ", err)
                 message.error("Something went wrong, please try later")
