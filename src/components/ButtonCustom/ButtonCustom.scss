@@ -1,0 +1,36 @@
+@import '../../sass/index.scss';
+
+.button-custom {
+    height: $height-btn-small;
+    font-size: $font-size-heading6;
+    border-radius: $boder-radious-btn;
+    padding: 0 3rem;
+    // size
+    &.large {
+        height: $height-btn-large !important;
+        font-size: $font-size-heading5 !important;
+    }
+
+    // type
+    &.success {
+        background-color: $color-success;
+        border: none;
+        color: $color-white;
+        &:hover {
+            background-color: $color-warning !important;
+            color: $color-black;
+        }
+        &:visited,
+        &:focus {
+            background-color: $color-success;
+        }
+    }
+    &.ant-btn-primary {
+        background-color: $color-primary-dark !important;
+        font-size: $font-size-paragraph1;
+    }
+    &.ant-btn-default {
+        color: $color-primary-dark;
+        border-color: $color-primary-dark;
+    }
+}

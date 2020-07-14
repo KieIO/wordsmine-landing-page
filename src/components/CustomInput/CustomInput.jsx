@@ -1,6 +1,6 @@
 import React from 'react';
 import { Input } from 'antd';
-
+import './CustomInput.scss';
 
 
 export const CustomInputWithTitle = ({placeholder, label}) => {

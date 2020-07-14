@@ -1,0 +1,19 @@
+@import '../../sass/index.scss';
+
+.value {
+    align-content: stretch;
+    &__item {
+      padding: 1rem;
+      cursor: default;
+    }
+}
+
+@media only screen and (max-width: 579px) {
+    .value  {
+      position: relative;
+      padding: 1rem;
+      &__item {
+        width: 50%;
+      }
+    }
+}

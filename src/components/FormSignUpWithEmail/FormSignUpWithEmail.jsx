@@ -3,6 +3,7 @@ import ButtonLarge from '../ButtonLarge/ButtonLarge'
 import { Form, message, Input } from 'antd';
 import { API_SIGN_UP } from '../../utils/constant';
 
+import './FormSignUpWithEmail.scss';
 
 const FormSignUpWithEmail = () => {
   const [form] = Form.useForm();

@@ -2,6 +2,8 @@ import React from 'react'
 import ImgValue1 from '../../img/value1.png'
 import ImgValue2 from '../../img/value2.png'
 
+import './Feature.scss';
+
 const Feature = () => {
     return (
         <section className="feature u-padding-horizontal-section" id="feature">

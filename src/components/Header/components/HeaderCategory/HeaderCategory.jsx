@@ -4,6 +4,8 @@ import HeaderCategoryItem from '../HeaderCategoryItem/HeaderCategoryItem';
 import { CATEGORY_HEADER } from '../../../../utils/constant';
 import { useEffect } from 'react';
 
+import './HeaderCategory.scss';
+
 const HeaderCategory = () => {
     useEffect(()=>{
         window.scrollTo(0, 1) // to remove active "Value" in header at first

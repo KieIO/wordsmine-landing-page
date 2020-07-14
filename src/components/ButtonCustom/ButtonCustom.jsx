@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from 'antd';
+import './ButtonCustom.scss';
 
 const ButtonCustom = ({ title, size, type = "primary", children, ...rest}) => {
     return (

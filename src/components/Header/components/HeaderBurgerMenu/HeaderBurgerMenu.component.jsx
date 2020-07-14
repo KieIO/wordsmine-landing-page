@@ -7,6 +7,8 @@ import { UserContext } from '../../../../contexts/user.context';
 import ButtonCustom from '../../../ButtonCustom/ButtonCustom';
 import { Link } from 'react-router-dom';
 
+import './HeaderBurgerMenu.scss';
+
 const HeaderBurgerMenu = ({ logout }) => {
     const [userContext] = useContext(UserContext)
     const [isOpen, setIsOpen] = useState(false)

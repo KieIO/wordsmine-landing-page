@@ -1,0 +1,23 @@
+@import '../../sass/index.scss';
+
+.button-large {
+    background-color: $color-success;
+    color: #fff;
+    font-weight: bold;
+    border-radius: $boder-radious-btn;
+    height: $height-btn-large;
+    // width: 195px;
+    font-size: $font-size-heading5;
+    // margin-top: 3rem;
+    transition: all 0.2s;
+    border: none;
+
+    &:hover {
+        background-color: $color-warning !important;
+        color: $color-black;
+    }
+    &:visited, &:focus {
+        background-color: $color-success;
+
+    }
+}
