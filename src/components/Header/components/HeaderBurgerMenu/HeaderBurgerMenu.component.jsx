@@ -56,7 +56,7 @@ const HeaderBurgerMenu = ({ logout }) => {
                 
                 <div className="header-burger-menu__btn" id="header__btn">
                     {
-                        (userContext || {}).authToken ?
+                        userContext ?
                             <div className="header__btn-item">
                                 <ButtonCustom onClick={logout}>Logout</ButtonCustom>
                             </div>

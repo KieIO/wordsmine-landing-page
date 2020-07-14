@@ -9,19 +9,32 @@ import { UserContext } from './contexts/user.context';
 import WithNotLogin from './components/WithNotLogin/WithNotLogin';
 import './sass/index.scss'
 import Logout from './pages/Logout/Logout';
+import { getProfile } from './components/api/user.api';
 
 
 const  App = () => {
-  const [userContext, setUserContext] = useState({authToken: null})
+  const [userContext, setUserContext] = useState()
 
   useEffect(()=>{
-    let authToken = Cookies.get(AUTH_TOKEN_KEY)
-    if (!authToken) {
-       authToken = Cookies.get(AUTH_TOKEN_KEY_GOOGLE)
+    const getUserProfile = async () => {
+      try {
+        console.log("before* ", )
+
+        const profile = await getProfile()
+        console.log("after2:  ", profile)
+
+        setUserContext(profile)
+      } catch (error) {
+        console.log("after* ")
+
+        console.log("err* ", error)
+        //  setUserContext(null)
       }
-    // TODO: call api get user profile to validate token
-    // console.log("token*: ", authToken)
-    setUserContext({authToken})
+    }
+
+
+    getUserProfile()
+
   }, [])
 
 
@@ -32,7 +45,8 @@ const  App = () => {
         <Route exact path="/" component={HomePage} />
         <WithNotLogin path="/login" component={Login} />
         <WithNotLogin path="/register" component={Register} />
-        <Route path="/logout" component={Logout} />
+        {/* <Route exact path="/logout" component={Logout} /> */}
+        <Route path="/logout/:token" component={Logout} />
       </Switch>
 
     </UserContext.Provider>

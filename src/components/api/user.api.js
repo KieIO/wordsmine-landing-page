@@ -9,7 +9,7 @@ export const login = async (data) => {
         method: 'post',
         url: `${API_URL}/login`,
         data: serializeForm(data),
-        withCredential: true,
+        withCredentials: true,
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     })
         .then(function (response) {
@@ -55,7 +55,7 @@ export const getlistWord = async () => {
     return axios({
         method: 'get',
         url: `${API_URL}/api/word/list`,
-        withCredential: true,
+        withCredentials: true,
     })
         .then(function (response) {
             //handle success
@@ -75,10 +75,9 @@ export const getProfile = async (data) => {
         url: `${API_URL}/api/user/profile`,
         withCredentials: true,
     }).then(result => {
-        console.log("user profile: ", result)
         return result
     }).catch(err => {
-        return err.message
+        throw err
     })
 }
 

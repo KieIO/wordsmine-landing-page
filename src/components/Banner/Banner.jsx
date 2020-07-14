@@ -1,5 +1,6 @@
 import React from 'react'
 import ImgBanner from '../../assets/img/banner.png'
+import BannerGif from './Banner.gif';
 import FormSignUpWithEmail from '../FormSignUpWithEmail/FormSignUpWithEmail';
 
 const Banner = () => {
@@ -14,7 +15,8 @@ const Banner = () => {
         <FormSignUpWithEmail />
       </div>
       <div className="banner__img">
-        <img src={ImgBanner} alt="banner" />
+        {/* <img src={ImgBanner} alt="banner" /> */}
+        <img src={BannerGif} alt="banner" />
       </div>
     </section >
   );
