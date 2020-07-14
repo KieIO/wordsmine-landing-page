@@ -1,0 +1,29 @@
+@import '../../sass/index.scss';
+
+.custom-input-with-title {
+    position: relative;
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    background-color: #fafafa;
+    &:focus {
+        background-color: #E4E4FF;
+    }
+    &__placeholder {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        // background-color: red;
+        background-color: $color-white;
+        padding: 0 10px;
+        z-index: 900;
+        color: $color-primary-dark;
+        font-size: $font-size-subtitle1;
+        font-weight: 400;
+    }
+    input {
+        // margin-top: 50px;
+        // height: 60px;
+        padding-top: 15px !important;
+    }
+}

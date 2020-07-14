@@ -5,6 +5,8 @@ import { Row, Col } from 'antd';
 import SocialFooter from './components/SocialFooter/SocialFooter';
 import Copyright from './components/Copyright/Copyright';
 
+import './Footer.scss';
+
 const Footer = () => {
     const [footerColumns] = useState([
         {
@@ -40,11 +42,11 @@ const Footer = () => {
             title: 'Features',
             data: [
                 {
-                    name: 'Words, mine! Live',
+                    name: 'Words Mine! Live',
                     slug: '/'
                 },
                 {
-                    name: 'Words, mine! Learn',
+                    name: 'Words Mine! Learn',
                     slug: '/'
                 },
                 {

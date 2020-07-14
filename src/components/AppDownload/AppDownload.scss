@@ -1,0 +1,116 @@
+@import '../../sass/index.scss';
+
+.app-download {
+    width: 100%;
+    // margin: 0;
+    // margin-bottom: 15rem;
+    &__row {
+        width: 100%;
+        padding-left: $padding-container-md;
+        padding-right: $padding-container-md;
+        margin: 0 !important;
+    }
+    &__left {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__wrap {
+            h2 {
+                font-size: $font-size-heading1;
+                color: $color-black;
+                cursor: default;
+            }
+            &__download {
+                .app-store {
+                    margin-right: 5px;
+                }
+                .ch-play {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    &__right {
+        text-align: center;
+        &__wrap {
+            &__mobile {
+                .slick-dots {
+                    li {
+                        width: 10px;
+                        height: 10px;
+                        button {
+                            background-color: $color-primary-dark;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            opacity: .3;
+                            &:hover {
+                                opacity: .7;
+                            }
+                        }
+                    }
+                    li.slick-active {
+                        width: 10px;
+                        height: 10px;
+                        button {
+                            background-color: $color-primary-dark;
+                            opacity: 1;
+                        }
+                    }
+                }
+                .slick-dots-bottom {
+                    bottom: -35px;
+                }
+                &__background {
+                    height: 100%;
+                    width: 40% !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 411px) {
+    .app-download__row {
+        padding: 0;
+    }
+    .app-download__left__wrap {
+        margin-bottom: 10px;
+        h2 {
+            font-size: $font-size-heading3;
+            margin-bottom: 20px;
+        }
+        &__download {
+            .app-store {
+                margin-left: 9px;
+            }
+        }
+    }
+    .app-download__right__wrap {
+        &__mobile {
+            padding-left: 5px;
+            &__background {
+                width: 60% !important;
+                height: 100%;
+            }
+            .slick-dots-bottom {
+                bottom: -50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .app-download {
+        &__left {
+            &__wrap {
+                &__download {
+                    a {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

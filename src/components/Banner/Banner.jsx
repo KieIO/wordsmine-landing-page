@@ -1,6 +1,7 @@
 import React from 'react'
 import BannerVideo from '../../assets/video/Banner_Anim_color_blue.mp4';
 import FormSignUpWithEmail from '../FormSignUpWithEmail/FormSignUpWithEmail';
+import './Banner.scss';
 
 const Banner = () => {
   return (

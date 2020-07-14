@@ -1,0 +1,30 @@
+@import '../../../../sass/index.scss';
+
+.footer-column {
+    // text-align: center;
+    &__title {
+        font-weight: bold;
+    }
+    &__link {
+        list-style: none;
+        text-decoration: none;
+        margin-bottom: .6rem;
+    
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:hover a{
+            color: rgba($color-black, .8);
+        }
+        a  {
+            color: $color-black;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 579px) {
+    .footer-column  {
+        text-align: center;
+    }  
+}

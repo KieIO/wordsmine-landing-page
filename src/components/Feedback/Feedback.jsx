@@ -1,6 +1,7 @@
 import React from 'react';
 import { Carousel } from 'antd';
 import FeedbackItem from './components/Feedback-Item/FeedbackItem';
+import './Feedback.scss';
 
 const Feedback = () => {
     return (

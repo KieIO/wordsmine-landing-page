@@ -1,4 +1,5 @@
 import React from 'react';
+import './SocialFooter.scss';
 
 const SocialFooter = () => {
     return (

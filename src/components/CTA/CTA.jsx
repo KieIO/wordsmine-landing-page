@@ -1,5 +1,6 @@
 import React from 'react';
 import FormSignUp from '../FormSignUp/FormSignUp';
+import './CTA.scss';
 
 const CTA = () => {
   return (

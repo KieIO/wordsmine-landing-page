@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Row, Col } from 'antd';
 import ValueItem from './components/FeatureItem/ValueItem';
-
+import './Value.scss'
 
 const Value = () => {
   const [feature] = useState([

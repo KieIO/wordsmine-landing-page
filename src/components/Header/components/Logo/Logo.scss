@@ -1,0 +1,10 @@
+@import '../../../../sass/index.scss';
+
+.logo {
+    font-size: $font-size-heading3;
+     background-image: linear-gradient(to right,  $color-primary-dark, $color-primary-light);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+
+}
