@@ -75,10 +75,9 @@ export const getProfile = async (data) => {
         url: `${API_URL}/api/user/profile`,
         withCredentials: true,
     }).then(result => {
-        console.log("user profile: ", result)
         return result
     }).catch(err => {
-        return err.message
+        throw err
     })
 }
 

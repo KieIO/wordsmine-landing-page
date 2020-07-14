@@ -7,13 +7,19 @@ import { AUTH_TOKEN_KEY, AUTH_TOKEN_KEY_GOOGLE } from '../../utils/constant';
 import ButtonCustom from '../ButtonCustom/ButtonCustom';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../contexts/user.context';
+import { message } from 'antd';
+import { logout } from '../api/user.api';
 
 const Header = () => {
     const [userContext, setUserContext] = useContext(UserContext)
-    const logout = () => {
-        Cookies.remove(AUTH_TOKEN_KEY);
-        Cookies.remove(AUTH_TOKEN_KEY_GOOGLE);
-        setUserContext(null)
+    const handleLogout = async () => {
+        try {
+            await logout()
+            setUserContext(null)
+        } catch {
+            message.error("Something went wrong, please try later!")
+        }
+
     }
 
     return (
@@ -29,9 +35,9 @@ const Header = () => {
 
                     <div className="header__btn" id="header__btn">
                         {
-                            (userContext || {}).authToken ?
+                            userContext ?
                                 <div className="header__btn-item">
-                                    <ButtonCustom onClick={logout}>Logout</ButtonCustom>
+                                    <ButtonCustom onClick={handleLogout}>Logout</ButtonCustom>
                                 </div>
                                 : (
                                     <>
@@ -52,7 +58,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="header__small">
-                <HeaderBurgerMenu logout={logout} />
+                <HeaderBurgerMenu logout={handleLogout} />
             </div>
         </header>
     );
