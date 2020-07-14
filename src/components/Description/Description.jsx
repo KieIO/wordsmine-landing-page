@@ -1,5 +1,6 @@
 import React from 'react'
 import ImgDes1 from '../../img/flashcard.jpg'
+import './Description.scss'
 
 const Description = () => {
   return (

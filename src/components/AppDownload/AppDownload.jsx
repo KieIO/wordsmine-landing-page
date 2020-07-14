@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import { Carousel } from 'antd';
+import './AppDownload.scss'
 
 // IMPORT IMAGES
 import appStore from '../../assets/img/dowload-mobile-app-store.png';
