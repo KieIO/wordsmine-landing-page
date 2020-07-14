@@ -1,5 +1,4 @@
 import { serializeForm, API_URL } from './utils.api';
-import { message } from 'antd';
 
 const axios = require('axios');
 
@@ -10,10 +9,12 @@ export const login = async (data) => {
         method: 'post',
         url: `${API_URL}/login`,
         data: serializeForm(data),
+        withCredentials: true,
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     })
         .then(function (response) {
             //handle success
+            console.log("header: ", response)
             return response;
         })
         .catch(function (response) {
@@ -44,10 +45,8 @@ export const register = async (data) => {
             'Content-Type': 'application/x-www-form-urlencoded'
         }
     }).then(result => {
-        message.success("Register Successfully!")
         return result
     }).catch(err => {
-        message.error("Register fail, please try again!")
         return err.response.status
     })
 }
@@ -56,6 +55,7 @@ export const getlistWord = async () => {
     return axios({
         method: 'get',
         url: `${API_URL}/api/word/list`,
+        withCredentials: true,
     })
         .then(function (response) {
             //handle success
@@ -64,7 +64,31 @@ export const getlistWord = async () => {
         })
         .catch(function (response) {
             //handle error
-            console.log(response);
+            console.log(response.message);
             throw response
         });
 };
+
+export const getProfile = async (data) => {
+    return axios({
+        method: 'get',
+        url: `${API_URL}/api/user/profile`,
+        withCredentials: true,
+    }).then(result => {
+        return result
+    }).catch(err => {
+        throw err
+    })
+}
+
+export const logout = async (data) => {
+    return axios({
+        method: 'post',
+        url: `${API_URL}/api/logout`,
+        withCredentials: true,
+    }).then(result => {
+        return result
+    }).catch(err => {
+        return err.message
+    })
+}
