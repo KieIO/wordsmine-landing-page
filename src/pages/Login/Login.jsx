@@ -7,6 +7,7 @@ import AuthWithGoogle from '../../components/AuthWithGoogle/AuthWithGoogle';
 import ButtonCustom from '../../components/ButtonCustom/ButtonCustom';
 import { login, getProfile} from '../../components/api/user.api';
 import { UserContext } from '../../contexts/user.context';
+import './Login.scss'
 
 
 const Login = ({history}) => {

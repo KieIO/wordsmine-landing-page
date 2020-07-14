@@ -1,4 +1,5 @@
 import React from 'react'
+import './ValueItem.scss'
 
 const ValueItem = ({icon, title, description}) => {
     return ( 

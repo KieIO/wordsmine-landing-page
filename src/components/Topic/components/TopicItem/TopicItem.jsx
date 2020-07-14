@@ -1,4 +1,5 @@
 import React from 'react';
+import './TopicItem.scss';
 
 
 const TopicItem = ({name, img}) => {
