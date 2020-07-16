@@ -11,10 +11,10 @@ const Topic = () => {
       name: 'Web Extension',
       img: 'https://assets.quizlet.com/a/i/homepage/topics/science.0262b9325450ec3.png'
     },
-    {
-      name: 'Web App',
-      img: 'https://assets.quizlet.com/a/i/homepage/topics/math.6b55cceab6d81db.png'
-    },
+    // {
+    //   name: 'Web App',
+    //   img: 'https://assets.quizlet.com/a/i/homepage/topics/math.6b55cceab6d81db.png'
+    // },
     {
       name: 'Mobile App',
       img: 'https://assets.quizlet.com/a/i/homepage/topics/social_science.f080e4570fd49e2.png'
