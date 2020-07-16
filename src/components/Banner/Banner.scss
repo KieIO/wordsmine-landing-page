@@ -26,7 +26,7 @@
         width: 65%;
         text-align: center;
         margin: auto;
-        padding: 1rem 4rem;
+        padding: 1rem 6rem;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -47,14 +47,6 @@
     p {
         font-size: $font-size-subtitle1;
         margin: 0;
-    }
-}
-
-@media (max-width: 1259px) {
-    .banner {
-        &__center {
-            padding: 1rem 3rem;
-        }
     }
 }
 

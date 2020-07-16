@@ -4,9 +4,9 @@ import './Logo.scss';
 
 const Logo = () => {
     return (
-        <div className="logo">
+        <h1 className="logo">
             Words Mine!
-        </div>
+        </h1>
     );
 }
 
