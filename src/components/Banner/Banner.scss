@@ -15,6 +15,7 @@
             height: 100%;
             background-repeat: no-repeat;
             object-fit: cover;
+            padding: 2rem 8rem;
         }
         video {
             width: 100%;
@@ -53,7 +54,15 @@
 @media (max-width: 1259px) {
     .banner {
         &__center {
-            padding: 1rem 3rem;
+            padding: 1rem 0rem 1rem 5rem;
+        }
+    }
+    .banner {
+        &__img {
+            padding: 2rem 0rem 2rem 0rem
+        }
+        img {
+            padding: 0rem 0rem;
         }
     }
 }
@@ -61,7 +70,7 @@
 @media (max-width: 1125px) {
     .banner {
         &__center {
-            padding: 1rem 2rem;
+            padding: 1rem 0rem 1rem 5rem;
         }
         &__text-color {
             font-size: 3rem;
