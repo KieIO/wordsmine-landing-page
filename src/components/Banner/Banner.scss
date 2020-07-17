@@ -15,6 +15,7 @@
             height: 100%;
             background-repeat: no-repeat;
             object-fit: cover;
+            padding: 2rem 8rem;
         }
         video {
             width: 100%;
@@ -26,7 +27,7 @@
         width: 65%;
         text-align: center;
         margin: auto;
-        padding: 1rem 8rem;
+        padding: 1rem 6rem;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -50,18 +51,10 @@
     }
 }
 
-@media (max-width: 1259px) {
-    .banner {
-        &__center {
-            padding: 1rem 3rem;
-        }
-    }
-}
-
 @media (max-width: 1125px) {
     .banner {
         &__center {
-            padding: 1rem 2rem;
+            padding: 1rem 0rem 1rem 5rem;
         }
         &__text-color {
             font-size: 3rem;
