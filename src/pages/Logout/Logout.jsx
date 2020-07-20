@@ -7,9 +7,10 @@ const Logout = ({history, match: {params}}) => {
          const handleLogout = async () => {
             try {
                 await logout()
-                console.log("logout success ")
+                history.push("/")
             } catch (err) {
                 console.debug(err.message)
+                history.push("/")
             }
 
         }
