@@ -5,7 +5,7 @@ import { MailOutlined, LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import AuthWithGoogle from '../../components/AuthWithGoogle/AuthWithGoogle';
 import ButtonCustom from '../../components/ButtonCustom/ButtonCustom';
-import { register } from '../../components/api/user.api';
+import { register } from '../../api/user.api';
 
 const Register = props => {
     const [form] = Form.useForm();

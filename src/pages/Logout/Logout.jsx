@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { logout } from '../../components/api/user.api';
+import { logout } from '../../api/user.api';
 import { EXPIRE_TOKEN_LOGOUT_TIME } from '../../utils/constant';
 
 const Logout = ({history, match: {params}}) => {
@@ -7,9 +7,10 @@ const Logout = ({history, match: {params}}) => {
          const handleLogout = async () => {
             try {
                 await logout()
-                console.log("logout success ")
+                history.push("/")
             } catch (err) {
                 console.debug(err.message)
+                history.push("/")
             }
 
         }
@@ -20,9 +21,11 @@ const Logout = ({history, match: {params}}) => {
 
         if (currentTime - time < EXPIRE_TOKEN_LOGOUT_TIME) {
             handleLogout()  
-            history.push('/')
+            console.log("logout success")
+            // history.push('/')
         } else {
-            history.push('/')
+            console.log("not logout")
+            // history.push('/')
         }
 
     }, [history, params])
