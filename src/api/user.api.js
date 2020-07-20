@@ -14,7 +14,7 @@ export const login = async (data) => {
     })
         .then(function (response) {
             //handle success
-            console.log("header: ", response)
+            // console.log("header: ", response)
             return response;
         })
         .catch(function (response) {

@@ -6,7 +6,7 @@ import ButtonCustom from '../ButtonCustom/ButtonCustom';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../contexts/user.context';
 import { message } from 'antd';
-import { logout } from '../api/user.api';
+import { logout } from '../../api/user.api';
 
 import './Header.scss';
 
