@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Row, Col } from 'antd';
 import Heading from '../Heading/Heading';
 import TopicItem from './components/TopicItem/TopicItem'
+import ExtensionImg from '../../assets/img/topic_1.png';
+import MobileImg from '../../assets/img/topic_2.png';
 import './Topic.scss'
 
 
@@ -9,7 +11,7 @@ const Topic = () => {
   const [topic] = useState([
     {
       name: 'Web Extension',
-      img: 'https://assets.quizlet.com/a/i/homepage/topics/science.0262b9325450ec3.png'
+      img: ExtensionImg
     },
     // {
     //   name: 'Web App',
@@ -17,7 +19,7 @@ const Topic = () => {
     // },
     {
       name: 'Mobile App',
-      img: 'https://assets.quizlet.com/a/i/homepage/topics/social_science.f080e4570fd49e2.png'
+      img: MobileImg
     }
     // ,
     // {
