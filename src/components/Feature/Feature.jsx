@@ -1,13 +1,55 @@
 import React from 'react'
-import ImgValue1 from '../../img/value1.png'
-import ImgValue2 from '../../img/value2.png'
+// import ImgValue1 from '../../img/value1.png'
+// import ImgValue2 from '../../img/value2.png'
 
 import './Feature.scss';
+import FeatureItem from './FeatureItem/FeatureItem';
+import Heading from '../Heading/Heading';
+
+const features = [
+    {
+        key: 1,
+        img: '',
+        content: 'Collect words from selection on webpage',
+    },
+    {
+        key: 2,
+        img: '',
+        content: 'Collect words from clipboard in webpage',
+    },
+    {
+        key: 3,
+        img: '',
+        content: 'Collect words from mobile web',
+    },
+    {
+        key: 4,
+        img: '',
+        content: 'Use flashcard mode to memorize your learning',
+    },
+    {
+        key: 5,
+        img: '',
+        content: 'Lookup for definition from reliable sources',
+    },
+    {
+        key: 6,
+        img: '',
+        content: 'Customize your definition as you want',
+    }
+]
 
 const Feature = () => {
     return (
-        <section className="feature u-padding-horizontal-section" id="feature">
-            <div className="feature__disflex">
+        <section className="feature u-padding-horizontal-section u-margin-vertical-section" id="feature">
+            <Heading>What you can do with Wordsmine?</Heading>
+            <div className="content">
+            {
+                features.map(item => <FeatureItem key={item.key} img= {item.img} content = {item.content}/>)
+            }
+            </div>
+
+            {/* <div className="feature__disflex">
                 <div className="feature__img col-6">
                     <img src={ImgValue1} alt="feature" ></img>
                 </div>
@@ -26,9 +68,7 @@ const Feature = () => {
                 <div className="feature__img col-6">
                     <img src={ImgValue2} alt="feature" ></img>
                 </div>
-            </div>
-
-
+            </div> */}
 
         </section>
     );
