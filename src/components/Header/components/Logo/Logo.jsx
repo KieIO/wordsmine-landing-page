@@ -1,13 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import './Logo.scss';
+import "./Logo.scss";
 
 const Logo = () => {
-    return (
-        <h1 className="logo">
-            Words Mine!
-        </h1>
-    );
-}
+  return <h1 className="logo">WordsMine!</h1>;
+};
 
 export default Logo;
