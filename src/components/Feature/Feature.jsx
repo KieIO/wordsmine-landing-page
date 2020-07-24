@@ -1,12 +1,15 @@
 import React from "react";
 import ImgValue1 from "../../img/value1.png";
 import ImgValue2 from "../../img/value2.png";
-
+import Heading from "../Heading/Heading";
 import "./Feature.scss";
 
 const Feature = () => {
   return (
     <section className="feature u-padding-horizontal-section" id="feature">
+      <div className="topic__heading">
+        <Heading>What you can do with Wordsmine!?</Heading>
+      </div>
       <div className="feature__disflex">
         <div className="feature__img col-6">
           <img src={ImgValue1} alt="feature"></img>
