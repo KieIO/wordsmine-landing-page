@@ -8,7 +8,8 @@ const FeatureItem = ({content}) => {
             <div className="img">
                 <img src={img} alt=""/>
             </div>
-            <div className="description">{content}</div>
+            <div className="description" dangerouslySetInnerHTML={{ __html: content }} />
+
         </div>
     );
 };

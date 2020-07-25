@@ -11,33 +11,33 @@ const features = [
     key: 1,
     img: "",
     content:
-      "Save words from selection. You can collect any words from any pages.",
+      "<strong>Save words from selection</strong><p>You can store any words from any pages. All the vocabularies are saved for later reviewing just in one place</p>",
   },
   {
     key: 2,
     img: "",
     content:
-      "Save words from clipboard. You are in hurry? Don't worry, we also allow to you to save words on the go while surfing the net.",
+      "<strong>Save words from clipboard</strong><p>You are in hurry? Don't worry, we also allow to you to save words on the go while surfing the net</p>",
   },
   {
     key: 3,
     img: "",
-    content: "Collect words from mobile web",
+    content: "<strong>Collect words from mobile</strong><p>Catch some new words when browsing web in mobile, we can capture them too</p>",
   },
   {
     key: 4,
     img: "",
-    content: "Use flashcard mode to memorize your learning",
+    content: "<strong>Use flashcard mode to memorize your learning</strong><p>No more forgetting every new word you see everyday, we help put them to stay engraved in your memory</p>",
   },
   {
     key: 5,
     img: "",
-    content: "Lookup for definition from reliable sources",
+    content: "<strong>Lookup for definition from reliable sources</strong><p>Learn to use your words wisely in proper context, word definition is provided from different reputable sources</p>",
   },
   {
     key: 6,
     img: "",
-    content: "Customize your definition as you want",
+    content: "<strong>Customize your definition as you want</strong><p>Personalize the word definition to your desire so it can be more memorable only for you</p>",
   },
 ];
 
