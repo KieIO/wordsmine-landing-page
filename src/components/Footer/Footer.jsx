@@ -10,30 +10,14 @@ import "./Footer.scss";
 const Footer = () => {
   const [footerColumns] = useState([
     {
-      title: "Subject",
+      title: "About",
       data: [
         {
-          name: "Arts and Humanities",
+          name: "Company",
           slug: "/",
         },
         {
-          name: "Languages",
-          slug: "/",
-        },
-        {
-          name: "Math",
-          slug: "/",
-        },
-        {
-          name: "Science",
-          slug: "/",
-        },
-        {
-          name: "Social Science",
-          slug: "/",
-        },
-        {
-          name: "Other",
+          name: "Blog",
           slug: "/",
         },
       ],
@@ -42,27 +26,11 @@ const Footer = () => {
       title: "Features",
       data: [
         {
-          name: "WordsMine! Live",
+          name: "WordsMine! Extension",
           slug: "/",
         },
         {
-          name: "WordsMine! Learn",
-          slug: "/",
-        },
-        {
-          name: "Diagrams",
-          slug: "/",
-        },
-        {
-          name: "Flashcards",
-          slug: "/",
-        },
-        {
-          name: "Premium Content",
-          slug: "/",
-        },
-        {
-          name: "Partnerships",
+          name: "WordsMine! Mobile App",
           slug: "/",
         },
       ],
@@ -74,61 +42,13 @@ const Footer = () => {
           name: "Sign up",
           slug: "/",
         },
-        {
-          name: "Help Center",
-          slug: "/",
-        },
-        {
-          name: "Honor Code",
-          slug: "/",
-        },
-        {
-          name: "Community Guidelines",
-          slug: "/",
-        },
-        {
-          name: "Students",
-          slug: "/",
-        },
-        {
-          name: "Teachers",
-          slug: "/",
-        },
       ],
     },
     {
-      title: "About",
+      title: "Statistics",
       data: [
         {
-          name: "Company",
-          slug: "/",
-        },
-        {
-          name: "Blog",
-          slug: "/",
-        },
-        {
-          name: "Press",
-          slug: "/",
-        },
-        {
-          name: "Careers",
-          slug: "/",
-        },
-        {
-          name: "Testimonials",
-          slug: "/",
-        },
-        {
-          name: "Privacy",
-          slug: "/",
-        },
-        {
-          name: "Ad and Cookie Policy",
-          slug: "/",
-        },
-        {
-          name: "Terms",
+          name: "Added Words: 0",
           slug: "/",
         },
       ],

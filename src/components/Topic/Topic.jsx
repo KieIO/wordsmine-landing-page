@@ -22,7 +22,7 @@ const Topic = () => {
   return (
     <section className="topic u-padding-horizontal-section" id="topic">
       <div className="topic__heading">
-        <Heading>Give it try! Let's go!</Heading>
+        <Heading>Give it a try! Let's go!</Heading>
       </div>
       <Row justify="center" align="center">
         {topic.map((item, index) => (

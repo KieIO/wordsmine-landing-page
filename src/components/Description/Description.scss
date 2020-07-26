@@ -12,6 +12,9 @@
 
   p {
     max-width: 1250px;
+    font-size: 1.8rem;
+    color: $color-gray;
+    text-align: justify;
   }
 
   &__content-padding {
