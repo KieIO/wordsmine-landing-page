@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
-import ButtonLarge from '../ButtonLarge/ButtonLarge'
-import { Form, message, Input } from 'antd';
-import { API_SIGN_UP } from '../../utils/constant';
+import React, { useState } from "react";
+import ButtonLarge from "../ButtonLarge/ButtonLarge";
+import { Form, message, Input } from "antd";
+import { API_SIGN_UP } from "../../utils/constant";
 
-import './FormSignUpWithEmail.scss';
+import "./FormSignUpWithEmail.scss";
 
 const FormSignUpWithEmail = () => {
   const [form] = Form.useForm();
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const submit = async (values) => {
     return fetch(API_SIGN_UP, {
       method: "POST",
       body: JSON.stringify({ ...values }),
       headers: {
-        'Content-type': 'application/json; charset=UTF-8',
+        "Content-type": "application/json; charset=UTF-8",
       },
     })
       .then((response) => {
@@ -26,28 +26,28 @@ const FormSignUpWithEmail = () => {
       })
       .catch((err) => {
         throw err;
-      })
-  }
+      });
+  };
 
   const onCheck = async () => {
-    setIsLoading(true)
+    setIsLoading(true);
     try {
       const values = await form.validateFields();
       // console.log("value: ", values)
-      
+
       try {
-        await submit(values)
-        message.success("Thanks for your submission")
-        form.resetFields()
+        await submit(values);
+        message.success("Thanks for your submission");
+        form.resetFields();
       } catch (err) {
-        console.debug("result: ", err)
-        message.error("Something went wrong, please try later")
+        console.debug("result: ", err);
+        message.error("Something went wrong, please try later");
       }
     } catch (err) {
-      console.debug("result: ", err)
+      console.debug("result: ", err);
     }
-    setIsLoading(false)
-  }
+    setIsLoading(false);
+  };
 
   return (
     <section className="form-signup-with-email">
@@ -59,29 +59,27 @@ const FormSignUpWithEmail = () => {
           rules={[
             {
               required: true,
-              message: 'Please input your email',
+              message: "Please input your email",
             },
             {
-              type: 'email',
-              message: 'Email is not valid',
-
-            }
+              type: "email",
+              message: "Email is not valid",
+            },
           ]}
         >
           <div className="custom-input-with-email">
-            <Input placeholder="Your email" type="email" />
+            <Input placeholder="Your Email" type="email" />
           </div>
         </Form.Item>
 
         <Form.Item className="form-item-btn">
           <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
-            Try now
+            Try Now
           </ButtonLarge>
         </Form.Item>
       </Form>
-    
     </section>
   );
-}
+};
 
 export default FormSignUpWithEmail;

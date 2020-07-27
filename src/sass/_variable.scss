@@ -1,14 +1,14 @@
-$color-primary-dark: #0093E9;
-$color-primary-light: #80D0C7;
+$color-primary-dark: #0093e9;
+$color-primary-light: #80d0c7;
 
-$color-black: #222B54;
-$color-gray: #8F9BB3;
+$color-black: #222b54;
+$color-gray: #8f9bb3;
+$color-gray-lighter: #e7efff;
 $color-white: #fff;
 $color-favourite: #ff0180;
 $color-warning: #ffc100;
 $color-success: #00e096;
-$color-disable: rgba(#8f9bb3, .48);
-
+$color-disable: rgba(#8f9bb3, 0.48);
 
 $font-size-heading1: 3.6rem;
 $font-size-heading2: 3.2rem;
@@ -31,7 +31,7 @@ $padding-vertical-container: 8rem;
 $padding-vertical-container-md: 7rem;
 $padding-vertical-container-sm: 6rem;
 
-$box-shadow: 0px 6px 20px rgba($color-black, .05);
+$box-shadow: 0px 6px 20px rgba($color-black, 0.05);
 
 $boder-radious: 50px;
 $boder-radious-btn: 5px;
@@ -40,5 +40,3 @@ $height-btn-small: 4.5rem;
 $height-btn-large: 6rem;
 
 $header-height: 6.9rem;
-
-
