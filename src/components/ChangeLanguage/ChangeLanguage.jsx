@@ -11,11 +11,12 @@ const ChangeLanguage = () => {
 
     const handleChange = (value) => {
         i18n.changeLanguage(value)
+        localStorage.setItem('language', value);
     }
 
     return (
         <div className="change-language">
-            <Select defaultValue="English" style={{ width: 120 }} onChange={handleChange}>
+            <Select defaultValue={localStorage.getItem('language') === 'vn' ? 'Tiếng Việt' : 'English'} style={{ width: 120 }} onChange={handleChange}>
                 <Option value="en">{t('footerEnglish')}</Option>
                 <Option value="vn">{t('footerVietnamese')}</Option>
             </Select>
