@@ -4,55 +4,52 @@ import FooterColumn from "./components/FooterColumn/FooterColumn";
 import { Row, Col } from "antd";
 import SocialFooter from "./components/SocialFooter/SocialFooter";
 import Copyright from "./components/Copyright/Copyright";
-import { useTranslation } from 'react-i18next';
 
 import "./Footer.scss";
 import ChangeLanguage from "../ChangeLanguage/ChangeLanguage";
 
 const Footer = () => {
-  const { t } = useTranslation()
-
   const [footerColumns] = useState([
     {
-      title: t('footerAbout'),
+      title: 'footerAbout',
       data: [
         {
-          name: t('footerCompany'),
+          name: 'footerCompany',
           slug: "/",
         },
         {
-          name: t('footerBlog'),
+          name: 'footerBlog',
           slug: "/",
         },
       ],
     },
     {
-      title: t('footerFeatures'),
+      title: 'footerFeatures',
       data: [
         {
-          name: t('footerExtension'),
+          name: 'footerExtension',
           slug: "/",
         },
         {
-          name: t('footerMobileApp'),
-          slug: "/",
-        },
-      ],
-    },
-    {
-      title: t('footerHelp'),
-      data: [
-        {
-          name: t('footerSignup'),
+          name: 'footerMobileApp',
           slug: "/",
         },
       ],
     },
     {
-      title: t('footerStatistics'),
+      title: 'footerHelp',
       data: [
         {
-          name: t('footerAddedWords'),
+          name: 'footerSignup',
+          slug: "/",
+        },
+      ],
+    },
+    {
+      title: 'footerStatistics',
+      data: [
+        {
+          name: 'footerAddedWords',
           slug: "/",
         },
       ],

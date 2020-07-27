@@ -2,31 +2,28 @@ import React, { useState } from 'react'
 import { Row, Col } from 'antd';
 import ValueItem from './components/FeatureItem/ValueItem';
 import './Value.scss'
-import { useTranslation } from 'react-i18next';
 
 const Value = () => {
-  const { t } = useTranslation()
-
   const [feature] = useState([
     {
       icon: <span className="lnr lnr-users"></span>,
-      title: t('valueConvenientTitle'),
-      description: t('valueConvenientDes')
+      title: 'valueConvenientTitle',
+      description: 'valueConvenientDes'
     },
     {
       icon: <span className="lnr lnr-rocket"></span>,
-      title: t('valueCloudStorageTitle'),
-      description: t('valueCloudStorageDes')
+      title: 'valueCloudStorageTitle',
+      description: 'valueCloudStorageDes'
     },
     {
       icon: <span className="lnr lnr-eye"></span>,
-      title: t('valueFlashCardTitle'),
-      description: t('valueFlashCardDes')
+      title: 'valueFlashCardTitle',
+      description: 'valueFlashCardDes'
     },
     {
       icon: <span className="lnr lnr-magic-wand"></span>,
-      title: t('valueLexicographerTitle'),
-      description: t('valueLexicographerDes')
+      title: 'valueLexicographerTitle',
+      description: 'valueLexicographerDes'
     }
   ])
   return (

@@ -7,7 +7,7 @@ import './ChangeLanguage.scss';
 const { Option } = Select;
 
 const ChangeLanguage = () => {
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const handleChange = (value) => {
         i18n.changeLanguage(value)
@@ -16,8 +16,8 @@ const ChangeLanguage = () => {
     return (
         <div className="change-language">
             <Select defaultValue="English" style={{ width: 120 }} onChange={handleChange}>
-                <Option value="en">English</Option>
-                <Option value="vn">Vietnamese</Option>
+                <Option value="en">{t('footerEnglish')}</Option>
+                <Option value="vn">{t('footerVietnamese')}</Option>
             </Select>
         </div>
     );

@@ -64,5 +64,8 @@
     "footerHelp": "Help",
     "footerSignup": "Sign up",
     "footerStatistics": "Statistics",
-    "footerAddedWords": "Added Words: 0"
+    "footerAddedWords": "Added Words: 0",
+
+    "footerEnglish": "English",
+    "footerVietnamese": "Vietnamese"
 }
