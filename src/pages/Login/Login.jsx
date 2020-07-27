@@ -22,7 +22,7 @@ const Login = ({ history }) => {
         const result = await login(values);
         message.success(
           `Hello${
-            result.data.authName ? ` ${result.data.authName},` : ","
+            !result.data.lastName ? ' Wordminer,' : ` ${result.data.authName},`
           } you login successfully`
         );
         form.resetFields();
