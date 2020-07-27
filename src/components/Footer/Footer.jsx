@@ -58,9 +58,9 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__top">
-        <Row justify="center" align="center" gutter={[24, 8]}>
+        <Row justify="center" align="center" gutter={[36, 8]}>
           {footerColumns.map((item, index) => (
-            <Col key={index} className="feature__item" lg={6} sm={12}>
+            <Col key={index} className="feature__item" lg={5} sm={6}>
               <FooterColumn {...item} />
             </Col>
           ))}
