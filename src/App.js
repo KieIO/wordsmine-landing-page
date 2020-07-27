@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import { UserContext } from './contexts/user.context';
@@ -10,10 +10,10 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 
 
-const  App = () => {
+const App = () => {
   const [userContext, setUserContext] = useState()
 
-  useEffect(()=>{
+  useEffect(() => {
     const getUserProfile = async () => {
       try {
         const profile = await getProfile()
@@ -29,15 +29,17 @@ const  App = () => {
 
 
   return (
-    <UserContext.Provider value={[userContext, setUserContext]}>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <WithNotLogin path="/login" component={Login} />
-        <WithNotLogin path="/register" component={Register} />
-        <Route path="/logout/:token" component={Logout} />
-      </Switch>
+    <Suspense fallback={null}>
+      <UserContext.Provider value={[userContext, setUserContext]}>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <WithNotLogin path="/login" component={Login} />
+          <WithNotLogin path="/register" component={Register} />
+          <Route path="/logout/:token" component={Logout} />
+        </Switch>
 
-    </UserContext.Provider>
+      </UserContext.Provider>
+    </Suspense>
   );
 }
 

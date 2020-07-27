@@ -1,0 +1,68 @@
+{
+    "headerValue": "Giá trị",
+    "headerOverview": "Tổng quan",
+    "headerTopic": "Chủ đề",
+    "headerFeature": "Chức năng",
+    "headerTestimonial": "Đánh giá",
+    "headerLogin": "Đăng nhập",
+    "headerRegister": "Đăng ký",
+    "headerLogout": "Đăng xuất",
+
+    "bannerTitle": "Learn any words, be unstoppable!",
+    "bannerDes1": "Cách nhanh nhất để học từ vựng",
+    "bannerDes2": "Bất kỳ đâu, bất kỳ lúc nào",
+    "bannerTryNowButton": "Try Now",
+
+    "valueConvenientTitle": "Thuận tiện",
+    "valueConvenientDes": "Không bỏ lỡ từ mới bạn nhìn thấy hàng ngày!",
+    "valueCloudStorageTitle": "Lưu trữ đám mây",
+    "valueCloudStorageDes": "Collect and save vocabulary from any where, any time",
+    "valueFlashCardTitle": "Flashcard",
+    "valueFlashCardDes": "Testing your knowledge and being master with smart Flashcard mode",
+    "valueLexicographerTitle": "Lexicographer",
+    "valueLexicographerDes": "Enrich your vocabulary bank 10x times",
+
+    "descriptionTitle": "Wordsmine là gì?",
+    "descriptionDes": "Wordsmine là ứng dụng học ngôn ngữ thứ hai đầu tiên giúp bạn thu thập từ vựng bạn thấy trong các hoạt động lướt Internet hàng ngày và học chúng nhanh hơn bằng cách cung cấp cho bạn các phương pháp khoa học và các ví dụ theo ngữ cảnh được lấy từ các nguồn đáng tin cậy.",
+
+    "topicTitle": "Give it a try! Let's go!",
+    "topicWebExtension": "Web Extension",
+    "topicMobileApp": "Mobile App",
+
+    "featureTitle": "Bạn có thể làm gì với Wordsmine?",
+    "featureSaveFromSelectionTitle": "Save words from selection",
+    "featureSaveFromSelectionDes": "Bạn có thể lưu trữ bất kỳ từ nào từ bất kỳ trang nào. Tất cả các từ vựng được lưu lại để xem lại sau này chỉ ở một nơi",
+    "featureSaveFromClipboardTitle": "Save words from clipboard",
+    "featureSaveFromClipboardDes": "Bạn đang vội? Đừng lo lắng, chúng tôi cũng cho phép bạn lưu các từ khi đang lướt web",
+    "featureCollectWordsFromMobileTitle": "Collect words from mobile",
+    "featureCollectWordsFromMobileDes": "Catch some new words when browsing web in mobile, we can capture them too",
+    "featureFlashcardToLearnTitle": "Use flashcard mode to memorize your learning",
+    "featureFlashcardToLearnDes": "No more forgetting every new word you see everyday, we help put them to stay engraved in your memory",
+    "featureLookupDefinitionTitle": "Lookup for definition from reliable sources",
+    "featureLookupDefinitionDes": "Learn to use your words wisely in proper context, word definition is provided from different reputable sources",
+    "featureCustomDefinitionTitle": "Customize your definition as you want",
+    "featureCustomDefinitionDes": "Personalize the word definition to your desire so it can be more memorable only for you",
+
+    "testimonialContent": "WordsMine! has helped me to understand just how fun and important and fun studying can be! This school year, in IELTS class I put my terms on WordsMine! and I already feel better about my upcoming test.",
+    "testimonialName": "Julien Ng, Ielts 8.0",
+
+    "appDownloadTitle": "Take your learning with you",
+    
+    "ctaTitle": "Ready to start getting better grades?",
+    "ctaFullName": "Họ tên",
+    "ctaEmail": "Email",
+    "ctaInterest": "Sở thích",
+    "ctaRule": "Tôi đồng ý với các điều khoản dịch vụ và chính sách bảo mật.",
+    "ctaButton": "Get Started",
+
+    "footerAbout": "Về chúng tôi",
+    "footerCompany": "Công ty",
+    "footerBlog": "Blog",
+    "footerFeatures": "Tiện ích",
+    "footerExtension": "WordsMine! Extension",
+    "footerMobileApp": "WordsMine! Mobile App",
+    "footerHelp": "Trợ giúp",
+    "footerSignup": "Đăng ký",
+    "footerStatistics": "Số liệu thống kê",
+    "footerAddedWords": "Added Words: 0"
+}

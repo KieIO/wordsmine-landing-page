@@ -10,13 +10,17 @@ import background1 from '../../assets/img/background1.png';
 import background2 from '../../assets/img/background2.png';
 import background3 from '../../assets/img/background3.png';
 
+import { useTranslation } from 'react-i18next';
+
 const AppDownload = () => {
+    const { t } = useTranslation()
+
     return (
         <section className="app-download u-margin-vertical-section u-margin-vertical-section">
             <Row className="app-download__row" gutter={[16, 24]}>
                 <Col className="app-download__left" xs={{ span: 24 }} lg={{ span: 12 }} >
                     <div className="app-download__left__wrap">
-                        <h2>Take your learning with you</h2>
+                        <h2>{t('appDownloadTitle')}</h2>
                         <div className="app-download__left__wrap__download">
                             <a className="app-store" href="/">
                                 <img src={appStore} alt="app-store" />

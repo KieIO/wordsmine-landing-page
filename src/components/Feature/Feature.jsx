@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 // import ImgValue1 from '../../img/value1.png'
 // import ImgValue2 from '../../img/value2.png'
 
@@ -6,48 +7,50 @@ import "./Feature.scss";
 import FeatureItem from "./FeatureItem/FeatureItem";
 import Heading from "../Heading/Heading";
 
-const features = [
-  {
-    key: 1,
-    img: "",
-    content:
-      "<strong>Save words from selection</strong><p>You can store any words from any pages. All the vocabularies are saved for later reviewing just in one place</p>",
-  },
-  {
-    key: 2,
-    img: "",
-    content:
-      "<strong>Save words from clipboard</strong><p>You are in hurry? Don't worry, we also allow to you to save words on the go while surfing the net</p>",
-  },
-  {
-    key: 3,
-    img: "",
-    content: "<strong>Collect words from mobile</strong><p>Catch some new words when browsing web in mobile, we can capture them too</p>",
-  },
-  {
-    key: 4,
-    img: "",
-    content: "<strong>Use flashcard mode to memorize your learning</strong><p>No more forgetting every new word you see everyday, we help put them to stay engraved in your memory</p>",
-  },
-  {
-    key: 5,
-    img: "",
-    content: "<strong>Lookup for definition from reliable sources</strong><p>Learn to use your words wisely in proper context, word definition is provided from different reputable sources</p>",
-  },
-  {
-    key: 6,
-    img: "",
-    content: "<strong>Customize your definition as you want</strong><p>Personalize the word definition to your desire so it can be more memorable only for you</p>",
-  },
-];
-
 const Feature = () => {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      key: 1,
+      img: "",
+      content:
+        `<strong>${t('featureSaveFromSelectionTitle')}</strong><p>${t('featureSaveFromSelectionDes')}</p>`,
+    },
+    {
+      key: 2,
+      img: "",
+      content:
+        `<strong>${t('featureSaveFromClipboardTitle')}</strong><p>${t('featureSaveFromClipboardDes')}</p>`,
+    },
+    {
+      key: 3,
+      img: "",
+      content: `<strong>${t('featureCollectWordsFromMobileTitle')}</strong><p>${t('featureCollectWordsFromMobileDes')}</p>`,
+    },
+    {
+      key: 4,
+      img: "",
+      content: `<strong>${t('featureFlashcardToLearnTitle')}</strong><p>${t('featureFlashcardToLearnDes')}</p>`,
+    },
+    {
+      key: 5,
+      img: "",
+      content: `<strong>${t('featureLookupDefinitionTitle')}</strong><p>${t('featureLookupDefinitionDes')}</p>`,
+    },
+    {
+      key: 6,
+      img: "",
+      content: `<strong>${t('featureCustomDefinitionTitle')}</strong><p>${t('featureCustomDefinitionDes')}</p>`,
+    },
+  ];
+
   return (
     <section
       className="feature u-padding-horizontal-section u-margin-vertical-section"
       id="feature"
     >
-      <Heading>What you can do with Wordsmine?</Heading>
+      <Heading>{t('featureTitle')}</Heading>
       <div className="content">
         {features.map((item) => (
           <FeatureItem key={item.key} img={item.img} content={item.content} />

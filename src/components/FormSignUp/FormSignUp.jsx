@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { Form, Input, message, Checkbox } from "antd";
 import ButtonLarge from "../ButtonLarge/ButtonLarge";
 import { API_SIGN_UP } from "../../utils/constant";
+import { useTranslation } from 'react-i18next';
 
 import "./FormSignUp.scss";
 
 const FormSignUp = () => {
+  const { t } = useTranslation();
+
   const [form] = Form.useForm();
   const [checkAgreePolicy, setcheckAgreePolicy] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -70,7 +73,7 @@ const FormSignUp = () => {
           ]}
         >
           <div className="custom-input">
-            <span className="custom-input__placeholder">Your Full Name</span>
+            <span className="custom-input__placeholder">{t('ctaFullName')}</span>
             <Input placeholder="David Copperfield" />
           </div>
         </Form.Item>
@@ -89,14 +92,14 @@ const FormSignUp = () => {
           ]}
         >
           <div className="custom-input">
-            <span className="custom-input__placeholder">Email</span>
+            <span className="custom-input__placeholder">{t('ctaEmail')}</span>
             <Input placeholder="davicopper@email.com" type="email" />
           </div>
         </Form.Item>
 
         <Form.Item name="interest">
           <div className="custom-input">
-            <span className="custom-input__placeholder">Your Interest</span>
+            <span className="custom-input__placeholder">{t('ctaInterest')}</span>
             <Input placeholder="Learn vocabulary, grammar, etc" />
           </div>
         </Form.Item>
@@ -104,13 +107,13 @@ const FormSignUp = () => {
         <Form.Item className="check-box">
           <Checkbox checked={checkAgreePolicy} onChange={onCheckboxChange}>
             {" "}
-            I agree to the terms of service and privacy policy.
+            {t('ctaRule')}
           </Checkbox>
         </Form.Item>
 
         <Form.Item className="form__btn-start">
           <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
-            Get Started
+            {t('ctaButton')}
           </ButtonLarge>
         </Form.Item>
       </Form>
