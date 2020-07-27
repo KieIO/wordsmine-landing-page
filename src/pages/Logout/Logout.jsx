@@ -22,10 +22,10 @@ const Logout = ({history, match: {params}}) => {
         if (currentTime - time < EXPIRE_TOKEN_LOGOUT_TIME) {
             handleLogout()  
             console.log("logout success")
-            // history.push('/')
+            history.push('/')
         } else {
             console.log("not logout")
-            // history.push('/')
+            history.push('/')
         }
 
     }, [history, params])

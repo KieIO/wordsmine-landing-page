@@ -5,7 +5,7 @@ import './Banner.scss';
 import { useTranslation } from 'react-i18next'
 
 const Banner = () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <section className="banner" id="banner">
