@@ -1,4 +1,4 @@
-@import '../../sass/index.scss';
+@import "../../sass/index.scss";
 
 .button-custom {
     height: $height-btn-small;
@@ -28,9 +28,38 @@
     &.ant-btn-primary {
         background-color: $color-primary-dark !important;
         font-size: $font-size-paragraph1;
+        transition: all 0.4s ease 0s;
+        &:hover {
+        }
     }
     &.ant-btn-default {
         color: $color-primary-dark;
         border-color: $color-primary-dark;
+        position: relative;
+        transition: all 0.35s;
+        border: 1px solid;
+        span {
+            position: relative;
+            z-index: 2;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            bottom: 0;
+            height: 100%;
+            background: $color-primary-dark;
+            transition: all 0.35s;
+        }
+        &:hover {
+            color: $color-white;
+            border-radius: 5px;
+        }
+        &:hover:after {
+            width: 100%;
+            border-radius: 5px;
+        }
     }
 }
