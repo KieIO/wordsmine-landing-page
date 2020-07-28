@@ -1,12 +1,34 @@
 import React from 'react';
 import Scrollspy from 'react-scrollspy'
 import HeaderCategoryItem from '../HeaderCategoryItem/HeaderCategoryItem';
-import { CATEGORY_HEADER } from '../../../../utils/constant';
 import { useEffect } from 'react';
 
 import './HeaderCategory.scss';
 
 const HeaderCategory = () => {
+    const CATEGORY_HEADER = [
+        {
+            name: 'headerValue',
+            target: 'value'
+        },
+        {
+            name: 'headerOverview',
+            target: 'overview'
+        },
+        {
+            name: 'headerTopic',
+            target: 'topic'
+        },
+        {
+            name: 'headerFeature',
+            target: 'feature'
+        },
+        {
+            name: 'headerTestimonial',
+            target: 'testimonial'
+        },
+    ]
+
     useEffect(() => {
         window.scrollTo(0, 1) // to remove active "Value" in header at first
         const valueLinkElement = document.getElementsByClassName("header-category__item")[0]
