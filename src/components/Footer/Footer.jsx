@@ -6,49 +6,50 @@ import SocialFooter from "./components/SocialFooter/SocialFooter";
 import Copyright from "./components/Copyright/Copyright";
 
 import "./Footer.scss";
+import ChangeLanguage from "../ChangeLanguage/ChangeLanguage";
 
 const Footer = () => {
   const [footerColumns] = useState([
     {
-      title: "About",
+      title: 'footerAbout',
       data: [
         {
-          name: "Company",
+          name: 'footerCompany',
           slug: "/",
         },
         {
-          name: "Blog",
+          name: 'footerBlog',
           slug: "/",
         },
       ],
     },
     {
-      title: "Features",
+      title: 'footerFeatures',
       data: [
         {
-          name: "WordsMine! Extension",
+          name: 'footerExtension',
           slug: "/",
         },
         {
-          name: "WordsMine! Mobile App",
-          slug: "/",
-        },
-      ],
-    },
-    {
-      title: "Help",
-      data: [
-        {
-          name: "Sign up",
+          name: 'footerMobileApp',
           slug: "/",
         },
       ],
     },
     {
-      title: "Statistics",
+      title: 'footerHelp',
       data: [
         {
-          name: "Added Words: 0",
+          name: 'footerSignup',
+          slug: "/",
+        },
+      ],
+    },
+    {
+      title: 'footerStatistics',
+      data: [
+        {
+          name: 'footerAddedWords',
           slug: "/",
         },
       ],
@@ -57,7 +58,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__top">
-        <Row justify="center" align="center">
+        <Row justify="center" align="center" gutter={[36, 8]}>
           {footerColumns.map((item, index) => (
             <Col key={index} className="feature__item" lg={5} sm={6}>
               <FooterColumn {...item} />
@@ -66,6 +67,7 @@ const Footer = () => {
         </Row>
       </div>
       <div className="footer__bottom">
+        <ChangeLanguage />
         <SocialFooter />
         <Copyright />
       </div>

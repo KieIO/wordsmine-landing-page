@@ -7,10 +7,13 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../contexts/user.context';
 import { message } from 'antd';
 import { logout } from '../../api/user.api';
+import { useTranslation } from 'react-i18next'
 
 import './Header.scss';
+import ToolTipCovid from '../ToolTipCovid/ToolTipCovid';
 
-const Header = () => {
+const Header = (props) => {
+    const { t, i18n } = useTranslation()
     const [userContext, setUserContext] = useContext(UserContext)
     const handleLogout = async () => {
         try {
@@ -37,18 +40,18 @@ const Header = () => {
                         {
                             userContext ?
                                 <div className="header__btn-item">
-                                    <ButtonCustom onClick={handleLogout}>Logout</ButtonCustom>
+                                    <ButtonCustom onClick={handleLogout}>{t('headerLogout')}</ButtonCustom>
                                 </div>
                                 : (
                                     <>
                                         <div className="header__btn-item">
                                             <Link to="/login">
-                                                <ButtonCustom type="default" ghost={true}>Login</ButtonCustom>
+                                                <ButtonCustom size="normal" type="default" ghost={true}>{t('headerLogin')}</ButtonCustom>
                                             </Link>
                                         </div>
                                         <div className="header__btn-item">
                                             <Link to="/register">
-                                                <ButtonCustom >Register</ButtonCustom>
+                                                <ButtonCustom size="normal">{t('headerRegister')}</ButtonCustom>
                                             </Link>
                                         </div>
                                     </>
@@ -60,8 +63,9 @@ const Header = () => {
             <div className="header__small">
                 <HeaderBurgerMenu logout={handleLogout} />
             </div>
+            <ToolTipCovid closeToolTip={props.closeToolTip} isCloseToolTip={props.isCloseToolTip} />
         </header>
     );
 }
 
-export default React.memo(Header)   ;
+export default React.memo(Header);

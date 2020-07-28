@@ -1,21 +1,21 @@
 import React from "react";
 import ImgDes1 from "../../img/flashcard.jpg";
 import "./Description.scss";
+import { useTranslation } from 'react-i18next';
 
 const Description = () => {
+  const { t } = useTranslation()
+
   return (
     <section className="description u-padding-horizontal-section" id="overview">
       <div className="description__content-padding">
         {/* <h2>Fit your learning <br />into your busy day</h2> */}
         <h2>
-          What is Wordsmine?
+          {t('descriptionTitle')}
           <br />
         </h2>
         <p>
-          Wordsmine is the first second language learning app that helps you
-          collect vocabulary you see in daily Internet-surfing activities, and
-          learn them faster by giving you scientific approaches and
-          contextualized examples taken from reliable sources.
+          {t('descriptionDes')}
         </p>
       </div>
 

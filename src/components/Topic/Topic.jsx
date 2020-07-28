@@ -5,16 +5,19 @@ import TopicItem from "./components/TopicItem/TopicItem";
 import ExtensionImg from "../../assets/img/topic_1.png";
 import MobileImg from "../../assets/img/topic_2.png";
 import "./Topic.scss";
+import { useTranslation } from 'react-i18next';
 
 const Topic = () => {
+  const { t } = useTranslation();
+
   const [topic] = useState([
     {
-      name: "Web Extension",
+      name: t('topicWebExtension'),
       img:
         "https://assets.quizlet.com/a/i/homepage/topics/science.0262b9325450ec3.png",
     },
     {
-      name: "Mobile App",
+      name: t('topicMobileApp'),
       img:
         "https://assets.quizlet.com/a/i/homepage/topics/social_science.f080e4570fd49e2.png",
     },
@@ -22,7 +25,7 @@ const Topic = () => {
   return (
     <section className="topic u-padding-horizontal-section" id="topic">
       <div className="topic__heading">
-        <Heading>Give it a try! Let's go!</Heading>
+        <Heading>{t('topicTitle')}</Heading>
       </div>
       <Row justify="center" align="center">
         {topic.map((item, index) => (

@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import ButtonLarge from "../ButtonLarge/ButtonLarge";
 import { Form, message, Input } from "antd";
 import { API_SIGN_UP } from "../../utils/constant";
+import { useTranslation } from 'react-i18next';
 
 import "./FormSignUpWithEmail.scss";
 
 const FormSignUpWithEmail = () => {
+  const { t } = useTranslation();
   const [form] = Form.useForm();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -68,13 +70,13 @@ const FormSignUpWithEmail = () => {
           ]}
         >
           <div className="custom-input-with-email">
-            <Input placeholder="Your Email" type="email" />
+            <Input placeholder="Email" type="email" />
           </div>
         </Form.Item>
 
         <Form.Item className="form-item-btn">
           <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
-            Try Now
+            {t('bannerTryNowButton')}
           </ButtonLarge>
         </Form.Item>
       </Form>

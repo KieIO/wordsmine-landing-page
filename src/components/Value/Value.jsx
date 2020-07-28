@@ -7,23 +7,23 @@ const Value = () => {
   const [feature] = useState([
     {
       icon: <span className="lnr lnr-users"></span>,
-      title: 'Convenient',
-      description: 'Never miss new words you see everyday!'
+      title: 'valueConvenientTitle',
+      description: 'valueConvenientDes'
     },
     {
       icon: <span className="lnr lnr-rocket"></span>,
-      title: 'Cloud Storage',
-      description: 'Collect and save vocabulary from any where, any time'
+      title: 'valueCloudStorageTitle',
+      description: 'valueCloudStorageDes'
     },
     {
       icon: <span className="lnr lnr-eye"></span>,
-      title: 'Flashcard',
-      description: 'Testing your knowledge and being master with smart Flashcard mode'
+      title: 'valueFlashCardTitle',
+      description: 'valueFlashCardDes'
     },
     {
       icon: <span className="lnr lnr-magic-wand"></span>,
-      title: 'Lexicographer',
-      description: 'Enrich your vocabulary bank 10x times'
+      title: 'valueLexicographerTitle',
+      description: 'valueLexicographerDes'
     }
   ])
   return (

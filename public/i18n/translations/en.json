@@ -1,0 +1,73 @@
+{
+    "headerValue": "Value",
+    "headerOverview": "Overview",
+    "headerTopic": "Topic",
+    "headerFeature": "Feature",
+    "headerTestimonial": "Testimonial",
+    "headerLogin": "Login",
+    "headerRegister": "Register",
+    "headerLogout": "Logout",
+
+    "bannerTitle": "Learn any words, be unstoppable!",
+    "bannerDes1": "The fastest way to learn vocabulary",
+    "bannerDes2": "From everywhere and everytime",
+    "bannerTryNowButton": "Try Now",
+
+    "valueConvenientTitle": "Convenient",
+    "valueConvenientDes": "Never miss new words you see everyday!",
+    "valueCloudStorageTitle": "Cloud Storage",
+    "valueCloudStorageDes": "Collect and save vocabulary from any where, any time",
+    "valueFlashCardTitle": "Flashcard",
+    "valueFlashCardDes": "Testing your knowledge and being master with smart Flashcard mode",
+    "valueLexicographerTitle": "Lexicographer",
+    "valueLexicographerDes": "Enrich your vocabulary bank 10x times",
+
+    "descriptionTitle": "What is Wordsmine?",
+    "descriptionDes": "Wordsmine is the first second language learning app that helps you collect vocabulary you see in daily Internet-surfing activities, and learn them faster by giving you scientific approaches and contextualized examples taken from reliable sources.",
+
+    "topicTitle": "Give it a try! Let's go!",
+    "topicWebExtension": "Web Extension",
+    "topicMobileApp": "Mobile App",
+
+    "featureTitle": "What you can do with Wordsmine?",
+    "featureSaveFromSelectionTitle": "Save words from selection",
+    "featureSaveFromSelectionDes": "You can store any words from any pages. All the vocabularies are saved for later reviewing just in one place",
+    "featureSaveFromClipboardTitle": "Save words from clipboard",
+    "featureSaveFromClipboardDes": "You are in hurry? Don't worry, we also allow to you to save words on the go while surfing the net",
+    "featureCollectWordsFromMobileTitle": "Collect words from mobile",
+    "featureCollectWordsFromMobileDes": "Catch some new words when browsing web in mobile, we can capture them too",
+    "featureFlashcardToLearnTitle": "Use flashcard mode to memorize your learning",
+    "featureFlashcardToLearnDes": "No more forgetting every new word you see everyday, we help put them to stay engraved in your memory",
+    "featureLookupDefinitionTitle": "Lookup for definition from reliable sources",
+    "featureLookupDefinitionDes": "Learn to use your words wisely in proper context, word definition is provided from different reputable sources",
+    "featureCustomDefinitionTitle": "Customize your definition as you want",
+    "featureCustomDefinitionDes": "Personalize the word definition to your desire so it can be more memorable only for you",
+
+    "testimonialContent": "WordsMine! has helped me to understand just how fun and important and fun studying can be! This school year, in IELTS class I put my terms on WordsMine! and I already feel better about my upcoming test.",
+    "testimonialName": "Julien Ng, Ielts 8.0",
+
+    "appDownloadTitle": "Take your learning with you",
+    
+    "ctaTitle": "Ready to start getting better grades?",
+    "ctaFullName": "Your Full Name",
+    "ctaEmail": "Email",
+    "ctaInterest": "Your Interest",
+    "ctaRule": "I agree to the terms of service and privacy policy.",
+    "ctaButton": "Get Started",
+
+    "footerAbout": "About",
+    "footerCompany": "Company",
+    "footerBlog": "Blog",
+    "footerFeatures": "Features",
+    "footerExtension": "WordsMine! Extension",
+    "footerMobileApp": "WordsMine! Mobile App",
+    "footerHelp": "Help",
+    "footerSignup": "Sign up",
+    "footerStatistics": "Statistics",
+    "footerAddedWords": "Added Words: 0",
+
+    "footerEnglish": "English",
+    "footerVietnamese": "Vietnamese",
+
+    "toolTipContent": "Stay Home And Take Your Learning With You!"
+}

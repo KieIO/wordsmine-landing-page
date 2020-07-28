@@ -2,7 +2,7 @@ import { serializeForm, API_URL } from './utils.api';
 
 const axios = require('axios');
 
-export const HTTP_STATUS_SUCCESS = 200;
+export const HTTP_STATUS_SUCCESS = 200; 
 
 export const login = async (data) => {
     return axios({

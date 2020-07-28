@@ -3,15 +3,16 @@ import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
 import './index.css';
 import App from './App';
+import i18n from './i18n';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 
+console.disableYellowBox = true;
 
 ReactDOM.render(
-    <BrowserRouter basename="/">
-          <App/>
-    </BrowserRouter>,
-    // <App />,
+  <BrowserRouter basename="/">
+    <App />
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

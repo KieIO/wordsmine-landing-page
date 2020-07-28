@@ -1,0 +1,73 @@
+{
+    "headerValue": "Giá Trị",
+    "headerOverview": "Về WordsMine!",
+    "headerTopic": "Chủ Đề",
+    "headerFeature": "Chức Năng",
+    "headerTestimonial": "Đánh Giá",
+    "headerLogin": "Đăng Nhập",
+    "headerRegister": "Đăng Ký",
+    "headerLogout": "Đăng Xuất",
+
+    "bannerTitle": "Vốn từ vựng phong phú hướng ta đến tương lai không giới hạn!",
+    "bannerDes1": "Cách nhanh nhất để học từ vựng",
+    "bannerDes2": "Bất kỳ đâu, bất kỳ lúc nào",
+    "bannerTryNowButton": "Đăng Ký Ngay",
+
+    "valueConvenientTitle": "Thuận Tiện",
+    "valueConvenientDes": "Không bỏ lỡ từ vựng mới mà bạn nhìn thấy hàng ngày!",
+    "valueCloudStorageTitle": "Lưu Trữ Đám Mây",
+    "valueCloudStorageDes": "Thu thập và ghi nhớ từ vựng mới ở bất kỳ đâu, bất cứ khi nào",
+    "valueFlashCardTitle": "Flashcard",
+    "valueFlashCardDes": "Kiểm tra lại để ghi nhớ các từ vựng mới qua chức năng Flashcard",
+    "valueLexicographerTitle": "Chuyên Gia Ngôn Ngữ",
+    "valueLexicographerDes": "Cải thiện vốn từ vựng gấp 10 lần",
+
+    "descriptionTitle": "Wordsmine là gì?",
+    "descriptionDes": "Wordsmine là ứng dụng giúp thu thập các từ vựng bạn thấy xung quanh các hoạt động lướt Internet hàng ngày và học chúng nhanh hơn, được xây dựng cho những bạn muốn cải thiện vốn từ vựng trong thời gian ngắn.",
+
+    "topicTitle": "Dùng Thử WordsMine!",
+    "topicWebExtension": "Ứng dụng trên Chrome",
+    "topicMobileApp": "Ứng dụng iOS",
+
+    "featureTitle": "Bạn có thể làm gì với Wordsmine?",
+    "featureSaveFromSelectionTitle": "Lưu từ vựng bất kỳ từ vùng chữ được chọn",
+    "featureSaveFromSelectionDes": "Bạn có thể lưu trữ bất kỳ từ nào từ bất kỳ trang nào. Tất cả các từ vựng được lưu lại để xem lại sau này chỉ ở một nơi",
+    "featureSaveFromClipboardTitle": "Lưu từ vựng từ đã lưu trong bộ nhớ đệm",
+    "featureSaveFromClipboardDes": "Bạn đang vội? Đừng lo lắng, chúng tôi cũng cho phép bạn lưu các từ mà đã lưu trong bộ nhớ đệm khi đang lướt web",
+    "featureCollectWordsFromMobileTitle": "Lưu từ vựng từ trình duyệt trên điện thoại",
+    "featureCollectWordsFromMobileDes": "Ngay cả khi bạn gặp các từ vựng khi đang lướt web, ta cũng có thể lưu chúng vào kho từ để xem lại sau này",
+    "featureFlashcardToLearnTitle": "Dùng Flashcard để ghi nhớ các từ vựng đã lưu trong kho từ",
+    "featureFlashcardToLearnDes": "Các từ vựng bạn gặp mỗi ngày sẽ không còn trôi qua nữa, thay vì vậy, nền tảng sẽ giúp bạn ghi nhớ tất cả các từ vựng đó",
+    "featureLookupDefinitionTitle": "Tự động cung cấp định nghĩa từ các từ điển danh tiếng",
+    "featureLookupDefinitionDes": "Bạn có thể học cách sử dụng các từ vựng trong các ngữ cách khác nhau như người bản ngữ, định nghĩa từ được cung cấp từ các từ điển uy tín giúp bạn có nhiều định nghĩa khác nhau",
+    "featureCustomDefinitionTitle": "Thay đổi định nghĩa từ vựng theo ý thích",
+    "featureCustomDefinitionDes": "Dựa trên định nghĩa gợi ý, bạn có thể cá nhân hoá lại định nghĩa và cách dùng từ để từ có thể trở nên thân quen hơn",
+
+    "testimonialContent": "WordsMine! đã giúp tôi hiểu thêm về việc cải thiện vốn từ vựng có thể hiệu quả và mang lại nhiều giá trị đến vậy! Trong năm học này, tại lớp học về IELTS, mình đã dùng WordsMine! để lưu tất cả từ vựng mới trong ứng dụng và mình đã cảm thấy tốt hơn rất nhiều cho kỳ thi sắp đến.",
+    "testimonialName": "Julien Ng, Ielts 8.0",
+
+    "appDownloadTitle": "Đồng hành cải thiện vốn từ vựng cùng WordsMine!",
+    
+    "ctaTitle": "Sẵn sàng đạt điểm số cao hơn cùng WordsMine?",
+    "ctaFullName": "Họ tên",
+    "ctaEmail": "Email",
+    "ctaInterest": "Sở thích",
+    "ctaRule": "Tôi đồng ý với các điều khoản dịch vụ và chính sách bảo mật.",
+    "ctaButton": "Đăng Ký Dùng Thử",
+
+    "footerAbout": "Về Chúng Tôi",
+    "footerCompany": "Công Ty",
+    "footerBlog": "Blog",
+    "footerFeatures": "Nền Tảng",
+    "footerExtension": "WordsMine! Extension",
+    "footerMobileApp": "WordsMine! Mobile App",
+    "footerHelp": "Trợ Giúp",
+    "footerSignup": "Đăng Ký",
+    "footerStatistics": "Số Liệu Thống Kê",
+    "footerAddedWords": "Từ Đã Thêm: 0",
+
+    "footerEnglish": "Tiếng Anh",
+    "footerVietnamese": "Tiếng Việt",
+
+    "toolTipContent": "Hãy ở nhà để bảo vệ sức khỏe của bạn và cộng đồng!"
+}

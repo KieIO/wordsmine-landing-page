@@ -1,4 +1,4 @@
-@import '../../sass/index.scss';
+@import "../../sass/index.scss";
 
 .button-custom {
     height: $height-btn-small;
@@ -6,6 +6,10 @@
     border-radius: $boder-radious-btn;
     padding: 0 3rem;
     // size
+    &.normal {
+        height: $height-btn-small !important;
+        font-size: $font-size-heading6 !important;
+    }
     &.large {
         height: $height-btn-large !important;
         font-size: $font-size-heading5 !important;
@@ -28,9 +32,49 @@
     &.ant-btn-primary {
         background-color: $color-primary-dark !important;
         font-size: $font-size-paragraph1;
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+        outline: 1px solid;
+        outline-color: rgba(255, 255, 255, 0.5);
+        outline-offset: 0px;
+        text-shadow: none;
+        transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+        &:hover {
+            border: 1px solid;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+                0 0 20px rgba(255, 255, 255, 0.2);
+            outline-color: rgba(255, 255, 255, 0);
+            outline-offset: 15px;
+            text-shadow: 1px 1px 2px #427388;
+        }
     }
     &.ant-btn-default {
         color: $color-primary-dark;
         border-color: $color-primary-dark;
+        position: relative;
+        transition: all 0.35s;
+        border: 1px solid;
+        span {
+            position: relative;
+            z-index: 2;
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            bottom: 0;
+            height: 100%;
+            background: $color-primary-dark;
+            transition: all 0.35s;
+        }
+        &:hover {
+            color: $color-white;
+            border-radius: 5px;
+        }
+        &:hover:after {
+            width: 100%;
+            border-radius: 5px;
+        }
     }
 }
