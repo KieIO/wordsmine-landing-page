@@ -10,6 +10,7 @@ import { logout } from '../../api/user.api';
 import { useTranslation } from 'react-i18next'
 
 import './Header.scss';
+import ToolTipCovid from '../ToolTipCovid/ToolTipCovid';
 
 const Header = (props) => {
     const { t, i18n } = useTranslation()
@@ -62,6 +63,7 @@ const Header = (props) => {
             <div className="header__small">
                 <HeaderBurgerMenu logout={handleLogout} />
             </div>
+            <ToolTipCovid closeToolTip={props.closeToolTip} isCloseToolTip={props.isCloseToolTip} />
         </header>
     );
 }

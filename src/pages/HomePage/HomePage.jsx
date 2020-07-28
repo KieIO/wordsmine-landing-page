@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../sass/index.scss'
 import Feature from '../../components/Feature/Feature';
 import Topic from '../../components/Topic/Topic';
@@ -12,10 +12,17 @@ import AppDownload from '../../components/AppDownload/AppDownload';
 import CTA from '../../components/CTA/CTA';
 
 function HomePage() {
+    const [isCloseToolTip, setIsCloseToolTip] = useState(false);
+
+    const closeToolTip = () => {
+        setIsCloseToolTip(!isCloseToolTip);
+        console.log(isCloseToolTip)
+    }
+
     return (
         <main className="landing-page">
-            <Header />
-            <Banner />
+            <Header closeToolTip={closeToolTip} isCloseToolTip={isCloseToolTip} />
+            <Banner isCloseToolTip={isCloseToolTip} />
             <Value />
             <Description />
             <Topic />
