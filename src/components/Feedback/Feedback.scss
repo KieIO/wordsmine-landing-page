@@ -1,11 +1,13 @@
-@import '../../sass/index.scss';
+@import "../../sass/index.scss";
 
 .feedback {
     text-align: center;
-    background: rgb(0, 147, 233);
+    background: rgb(128, 208, 199);
     background: linear-gradient(
-        90deg,
-        rgba(0, 147, 233, 1) 87%,
+        120deg,
+        rgba(128, 208, 199, 1) 0%,
+        rgba(0, 147, 233, 1) 15%,
+        rgba(0, 147, 233, 1) 85%,
         rgba(128, 208, 199, 1) 100%
     );
     height: 35rem;
@@ -23,9 +25,11 @@
     }
 }
 
-
 @media (max-width: 700px) {
     .feedback {
         height: 50rem;
+        .ant-carousel {
+            width: 95%;
+        }
     }
 }
