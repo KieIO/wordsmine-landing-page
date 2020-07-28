@@ -70,7 +70,7 @@ const FormSignUpWithEmail = () => {
           ]}
         >
           <div className="custom-input-with-email">
-            <Input placeholder="Your Email" type="email" />
+            <Input placeholder="Email" type="email" />
           </div>
         </Form.Item>
 

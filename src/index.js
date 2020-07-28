@@ -7,6 +7,7 @@ import i18n from './i18n';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 
+console.disableYellowBox = true;
 
 ReactDOM.render(
   <BrowserRouter basename="/">
