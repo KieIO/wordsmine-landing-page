@@ -16,7 +16,6 @@ function HomePage() {
 
     const closeToolTip = () => {
         setIsCloseToolTip(!isCloseToolTip);
-        console.log(isCloseToolTip)
     }
 
     return (
