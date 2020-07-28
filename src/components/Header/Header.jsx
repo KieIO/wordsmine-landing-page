@@ -45,12 +45,12 @@ const Header = (props) => {
                                     <>
                                         <div className="header__btn-item">
                                             <Link to="/login">
-                                                <ButtonCustom type="default" ghost={true}>{t('headerLogin')}</ButtonCustom>
+                                                <ButtonCustom size="normal" type="default" ghost={true}>{t('headerLogin')}</ButtonCustom>
                                             </Link>
                                         </div>
                                         <div className="header__btn-item">
                                             <Link to="/register">
-                                                <ButtonCustom >{t('headerRegister')}</ButtonCustom>
+                                                <ButtonCustom size="normal">{t('headerRegister')}</ButtonCustom>
                                             </Link>
                                         </div>
                                     </>
