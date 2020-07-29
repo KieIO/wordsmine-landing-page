@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import LogoGoogle from '../../assets/img/google-logo.png'
 import { message } from 'antd';
+import React, { Component } from 'react';
+import { withTranslation } from 'react-i18next';
+import LogoGoogle from '../../assets/img/google-logo.png';
 import './AuthWithGoogle.scss';
-import { useTranslation, withTranslation } from 'react-i18next';
 
 class AuthWithGoogle extends Component {
     componentDidMount() {
