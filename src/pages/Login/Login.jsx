@@ -8,11 +8,13 @@ import ButtonCustom from "../../components/ButtonCustom/ButtonCustom";
 import { login, getProfile } from "../../api/user.api";
 import { UserContext } from "../../contexts/user.context";
 import "./Login.scss";
+import { useTranslation } from 'react-i18next';
 
 const Login = ({ history }) => {
   const [form] = Form.useForm();
   const [isLoading, setIsLoading] = useState(false);
   const [, setUserContext] = useContext(UserContext);
+  const { t } = useTranslation();
 
   const onCheck = async () => {
     setIsLoading(true);
@@ -21,9 +23,9 @@ const Login = ({ history }) => {
       try {
         const result = await login(values);
         message.success(
-          `Hello${
-            !result.data.lastName ? ' Wordminer,' : ` ${result.data.authName},`
-          } you login successfully`
+          `${t('messageHello')}${
+          !result.data.lastName ? ' Wordminer,' : ` ${result.data.authName},`
+          } ${t('messageLoginSuccess')}`
         );
         form.resetFields();
         const rs = await getProfile();
@@ -31,7 +33,7 @@ const Login = ({ history }) => {
         history.push("/");
       } catch (err) {
         console.debug("result: ", err);
-        message.error("Something went wrong, please try later");
+        message.error(t('messageLoginFail'));
       }
     } catch (err) {
       console.debug("result: ", err);
@@ -46,9 +48,9 @@ const Login = ({ history }) => {
           <span className=" lnr lnr-arrow-left"></span>
         </Link>
         <span className="content">
-          Back to{" "}
+          {t('backTo')}{" "}
           <Link className="link" to="/">
-            home page
+            {t('homePage')}
           </Link>
         </span>
       </div>
@@ -56,11 +58,11 @@ const Login = ({ history }) => {
         {/* <img className="login-avatar"
                     src="https://i2.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1"
                     alt="user" /> */}
-        <div className="title-form">Login</div>
+        <div className="title-form">{t('loginPageTitle')}</div>
 
         <div className="social-authen">
           <AuthWithGoogle />
-          <div className="or">OR</div>
+          <div className="or">{t('or')}</div>
         </div>
         <Form form={form} name="dynamic_rule" className="content-form">
           <Form.Item
@@ -71,17 +73,17 @@ const Login = ({ history }) => {
               { transform: (value) => (value ? value.trim() : "") },
               {
                 required: true,
-                message: "Please input your email",
+                message: t('warningEmptyEmail'),
               },
               {
                 type: "email",
-                message: "Email is not valid",
+                message: t('warningInvalidEmail'),
               },
             ]}
           >
             {/* <div className="custom-input-with-email"> */}
             <Input
-              placeholder="Your Email"
+              placeholder={t('emailPlaceholder')}
               type="email"
               prefix={<MailOutlined />}
             />
@@ -96,13 +98,13 @@ const Login = ({ history }) => {
               { transform: (value) => (value ? value.trim() : "") },
               {
                 required: true,
-                message: "Please input your password",
+                message: t('warningEmptyPassword'),
               },
             ]}
           >
             {/* <div className="custom-input-with-email"> */}
             <Input.Password
-              placeholder="Your password"
+              placeholder={t('passwordPlaceholder')}
               type="password"
               prefix={<LockOutlined />}
             />
@@ -116,12 +118,12 @@ const Login = ({ history }) => {
               onClick={onCheck}
               loading={isLoading}
             >
-              Continue
+              {t('continue')}
             </ButtonCustom>
           </Form.Item>
         </Form>
         <div className="other-option">
-          You do not have account? <Link to="/register">Register</Link>
+          {t('loginPageOption')} <Link to="/register">{t('loginPageRegisterOption')}</Link>
         </div>
       </div>
     </section>
