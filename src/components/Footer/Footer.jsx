@@ -6,7 +6,7 @@ import SocialFooter from "./components/SocialFooter/SocialFooter";
 import Copyright from "./components/Copyright/Copyright";
 
 import "./Footer.scss";
-// import ChangeLanguage from "../ChangeLanguage/ChangeLanguage";
+import ChangeLanguage from "../ChangeLanguage/ChangeLanguage";
 
 const Footer = () => {
   const [footerColumns] = useState([
@@ -67,7 +67,7 @@ const Footer = () => {
         </Row>
       </div>
       <div className="footer__bottom">
-        {/* <ChangeLanguage /> */}
+        <ChangeLanguage />
         <SocialFooter />
         <Copyright />
       </div>
