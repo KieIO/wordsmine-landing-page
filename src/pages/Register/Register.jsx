@@ -6,10 +6,12 @@ import { Link } from "react-router-dom";
 import AuthWithGoogle from "../../components/AuthWithGoogle/AuthWithGoogle";
 import ButtonCustom from "../../components/ButtonCustom/ButtonCustom";
 import { register } from "../../api/user.api";
+import { useTranslation } from 'react-i18next';
 
 const Register = (props) => {
   const [form] = Form.useForm();
   const [isLoading, setIsLoading] = useState(false);
+  const { t } = useTranslation();
 
   const onCheck = async () => {
     setIsLoading(true);
@@ -17,15 +19,18 @@ const Register = (props) => {
       const values = await form.validateFields();
       try {
         const result = await register(values);
-        message.success("Register Successfully!");
 
         if (result !== 400) {
+          message.success(t('messageRegisterSuccess'));
           props.history.push("/login");
+        }
+        else {
+          message.error(t('messageRegisterFail'));
         }
         // await submit(values)
         form.resetFields();
       } catch (err) {
-        message.error("Register fail, please try again!");
+        message.error(t('messageRegisterFail'));
         console.debug("result: ", err);
       }
     } catch (err) {
@@ -35,27 +40,27 @@ const Register = (props) => {
   };
 
   return (
-    <section class="login-wrap">
+    <section className="login-wrap">
       <div className="back-to-home">
         <Link className="icon-back" to="/">
           <span className=" lnr lnr-arrow-left"></span>
         </Link>
         <span className="content">
-          Back to{" "}
+          {t('backTo')}{" "}
           <Link className="link" to="/">
-            home page
+            {t('homePage')}
           </Link>
         </span>
       </div>
-      <div class="card-container">
+      <div className="card-container">
         {/* <img class="login-avatar"
                     src="https://i2.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1"
                     alt="user" /> */}
-        <div className="title-form">Register</div>
+        <div className="title-form">{t('registerPageTitle')}</div>
 
         <div className="social-authen">
           <AuthWithGoogle />
-          <div className="or">OR</div>
+          <div className="or">{t('or')}</div>
         </div>
         <Form form={form} name="dynamic_rule" className="content-form">
           <Form.Item
@@ -66,17 +71,17 @@ const Register = (props) => {
               { transform: (value) => (value ? value.trim() : "") },
               {
                 required: true,
-                message: "Please input your email",
+                message: t('warningEmptyEmail'),
               },
               {
                 type: "email",
-                message: "Email is not valid",
+                message: t('warningInvalidEmail'),
               },
             ]}
           >
             {/* <div className="custom-input-with-email"> */}
             <Input
-              placeholder="Your Email"
+              placeholder={t('emailPlaceholder')}
               type="email"
               prefix={<MailOutlined />}
             />
@@ -89,12 +94,12 @@ const Register = (props) => {
             rules={[
               {
                 required: true,
-                message: "Please input your name",
+                message: t('warningEmptyName'),
               },
             ]}
           >
             <Input
-              placeholder="Your name"
+              placeholder={t('namePlaceholder')}
               type="text"
               prefix={<UserOutlined />}
             />
@@ -108,21 +113,21 @@ const Register = (props) => {
               { transform: (value) => (value ? value.trim() : "") },
               {
                 required: true,
-                message: "Please input your password",
+                message: t('warningEmptyPassword'),
               },
               {
                 min: 6,
-                message: "Your password should more than 6 characters",
+                message: t('warningMinLengthPassword'),
               },
               {
                 max: 15,
-                message: "Your password should less than 15 characters",
+                message: t('warningMaxLengthPassword'),
               },
             ]}
           >
             {/* <div className="custom-input-with-email"> */}
             <Input.Password
-              placeholder="Your password"
+              placeholder={t('passwordPlaceholder')}
               type="password"
               prefix={<LockOutlined />}
             />
@@ -138,7 +143,7 @@ const Register = (props) => {
               { transform: (value) => (value ? value.trim() : "") },
               {
                 required: true,
-                message: "Please input your confirm password",
+                message: t('warningConfirmPassword'),
               },
               ({ getFieldValue }) => ({
                 validator(rule, value) {
@@ -146,7 +151,7 @@ const Register = (props) => {
                     return Promise.resolve();
                   }
                   return Promise.reject(
-                    "The two passwords that you entered do not match"
+                    t('warningPasswordNotMatch')
                   );
                 },
               }),
@@ -154,7 +159,7 @@ const Register = (props) => {
           >
             {/* <div className="custom-input-with-email"> */}
             <Input.Password
-              placeholder="Your confirm password"
+              placeholder={t('confirmPasswordPlaceholder')}
               type="password"
               prefix={<LockOutlined />}
             />
@@ -168,12 +173,12 @@ const Register = (props) => {
               onClick={onCheck}
               loading={isLoading}
             >
-              Continue
+              {t('continue')}
             </ButtonCustom>
           </Form.Item>
         </Form>
         <div className="other-option">
-          You have an account? <Link to="/login">Login</Link>
+          {t('registerPageOption')} <Link to="/login">{t('registerPageLoginOption')}</Link>
         </div>
       </div>
     </section>

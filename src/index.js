@@ -8,8 +8,6 @@ import { BrowserRouter } from 'react-router-dom';
 // eslint-disable-next-line no-unused-vars
 import i18n from './i18n';
 
-console.disableYellowBox = true;
-
 ReactDOM.render(
   <BrowserRouter basename="/">
     <App />

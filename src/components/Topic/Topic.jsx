@@ -10,12 +10,12 @@ const Topic = () => {
 
   const [topic] = useState([
     {
-      name: t('topicWebExtension'),
+      name: 'topicWebExtension',
       img:
         "https://assets.quizlet.com/a/i/homepage/topics/science.0262b9325450ec3.png",
     },
     {
-      name: t('topicMobileApp'),
+      name: 'topicMobileApp',
       img:
         "https://assets.quizlet.com/a/i/homepage/topics/social_science.f080e4570fd49e2.png",
     },

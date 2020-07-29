@@ -69,5 +69,36 @@
     "footerEnglish": "Tiếng Anh",
     "footerVietnamese": "Tiếng Việt",
 
-    "toolTipContent": "Hãy ở nhà để bảo vệ sức khỏe của bạn và cộng đồng!"
+    "toolTipContent": "Hãy ở nhà để bảo vệ sức khỏe của bạn và cộng đồng!",
+
+    "backTo": "Quay về",
+    "homePage": "trang chủ",
+    "loginPageTitle": "Đăng nhập",
+    "or": "Hoặc",
+    "authWithGoogle": "Đăng nhập với Google",
+    "emailPlaceholder": "Email",
+    "warningEmptyEmail": "Email không được bỏ trống",
+    "warningInvalidEmail": "Email sai định dạng",
+    "passwordPlaceholder": "Mật khẩu",
+    "warningEmptyPassword": "Mật khẩu không được bỏ trống",
+    "continue": "Tiếp tục",
+    "loginPageOption": "Bạn không có tài khoản?",
+    "loginPageRegisterOption": "Đăng ký",
+
+    "registerPageTitle": "Đăng ký",
+    "namePlaceholder": "Tên",
+    "warningEmptyName": "Tên không được để trống",
+    "warningMinLengthPassword": "Mật khẩu phải có tối thiểu 6 ký tự",
+    "warningMaxLengthPassword": "Mật khẩu tối đa 15 ký tự",
+    "warningConfirmPassword": "Xác nhận mật khẩu không được bỏ trống",
+    "warningPasswordNotMatch": "Mật khẩu không trùng khớp",
+    "confirmPasswordPlaceholder": "Xác nhận mật khẩu",
+    "registerPageOption": "Bạn đã có tài khoản?",
+    "registerPageLoginOption": "Đăng nhập",
+
+    "messageRegisterSuccess": "Đăng ký thành công",
+    "messageRegisterFail": "Đăng ký thất bại, hãy thử lại!",
+    "messageHello": "Xin chào",
+    "messageLoginSuccess": "Bạn đã đăng nhập thành công!",
+    "messageLoginFail": "Đăng nhập thất bại, hãy thử lại!"
 }
