@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Row, Col } from "antd";
 import Heading from "../Heading/Heading";
 import TopicItem from "./components/TopicItem/TopicItem";
-import ExtensionImg from "../../assets/img/topic_1.png";
-import MobileImg from "../../assets/img/topic_2.png";
 import "./Topic.scss";
 import { useTranslation } from 'react-i18next';
 
