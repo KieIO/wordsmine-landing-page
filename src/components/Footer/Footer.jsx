@@ -67,7 +67,7 @@ const Footer = () => {
         </Row>
       </div>
       <div className="footer__bottom">
-        <ChangeLanguage />
+        {/* <ChangeLanguage /> */}
         <SocialFooter />
         <Copyright />
       </div>

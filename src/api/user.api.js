@@ -14,7 +14,7 @@ export const login = async (data) => {
     })
         .then(function (response) {
             //handle success
-            // console.log("header: ", response)
+            console.log("header: ", response)
             return response;
         })
         .catch(function (response) {
@@ -75,6 +75,8 @@ export const getProfile = async (data) => {
         url: `${API_URL}/api/user/profile`,
         withCredentials: true,
     }).then(result => {
+        console.log("after get profile **: ", result)
+
         return result
     }).catch(err => {
         throw err
