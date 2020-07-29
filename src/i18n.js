@@ -2,10 +2,9 @@
 import i18n from 'i18next'
 import Backend from 'i18next-xhr-backend'
 import { initReactI18next } from 'react-i18next'
+import { getLanguage } from './utils/function.utils';
 
-// let languageInit = localStorage.getItem('language') ? localStorage.getItem('language') : 'en';
-// Vietnamese only
-let languageInit = 'vi'
+let languageInit = getLanguage() ? getLanguage() : 'en';
 
 i18n
     .use(Backend)

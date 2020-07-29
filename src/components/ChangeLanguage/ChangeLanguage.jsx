@@ -3,6 +3,7 @@ import { Select } from 'antd';
 import { useTranslation } from 'react-i18next';
 
 import './ChangeLanguage.scss';
+import { getLanguage } from '../../utils/function.utils';
 
 const { Option } = Select;
 
@@ -16,7 +17,7 @@ const ChangeLanguage = () => {
 
     return (
         <div className="change-language">
-            <Select defaultValue={localStorage.getItem('language') === 'vn' ? 'Tiếng Việt' : 'English'} style={{ width: 120 }} onChange={handleChange}>
+            <Select defaultValue={getLanguage() === 'vn' ? 'Tiếng Việt' : 'English'} style={{ width: 120 }} onChange={handleChange}>
                 <Option value="en">{t('footerEnglish')}</Option>
                 <Option value="vn">{t('footerVietnamese')}</Option>
             </Select>
