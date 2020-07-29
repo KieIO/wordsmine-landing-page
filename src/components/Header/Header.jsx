@@ -1,19 +1,20 @@
 import React, { useContext } from 'react';
+import { useTranslation } from 'react-i18next';
+import { message } from 'antd';
+import { Link } from 'react-router-dom';
+
 import Logo from './components/Logo/Logo';
 import HeaderCategory from './components/HeaderCategory/HeaderCategory';
 import HeaderBurgerMenu from './components/HeaderBurgerMenu/HeaderBurgerMenu.component';
 import ButtonCustom from '../ButtonCustom/ButtonCustom';
-import { Link } from 'react-router-dom';
 import { UserContext } from '../../contexts/user.context';
-import { message } from 'antd';
 import { logout } from '../../api/user.api';
-import { useTranslation } from 'react-i18next'
-
-import './Header.scss';
 import ToolTipCovid from '../ToolTipCovid/ToolTipCovid';
 
+import './Header.scss';
+
 const Header = (props) => {
-    const { t, i18n } = useTranslation()
+    const { t } = useTranslation()
     const [userContext, setUserContext] = useContext(UserContext)
     const handleLogout = async () => {
         try {
