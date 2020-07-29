@@ -69,5 +69,36 @@
     "footerEnglish": "English",
     "footerVietnamese": "Vietnamese",
 
-    "toolTipContent": "Stay Home And Take Your Learning With You!"
+    "toolTipContent": "Stay Home And Take Your Learning With You!",
+
+    "backTo": "Back to",
+    "homePage": "home page",
+    "loginPageTitle": "Login",
+    "or": "OR",
+    "authWithGoogle": "Continue with Google",
+    "emailPlaceholder": "Email",
+    "warningEmptyEmail": "Please input your email",
+    "warningInvalidEmail": "Email is not valid",
+    "passwordPlaceholder": "Password",
+    "warningEmptyPassword": "Please input your password",
+    "continue": "Continue",
+    "loginPageOption": "You do not have account?",
+    "loginPageRegisterOption": "Register",
+
+    "registerPageTitle": "Register",
+    "namePlaceholder": "Name",
+    "warningEmptyName": "Please input your name",
+    "warningMinLengthPassword": "Your password should more than 6 characters",
+    "warningMaxLengthPassword": "Your password should less than 15 characters",
+    "warningConfirmPassword": "Please input your confirm password",
+    "warningPasswordNotMatch": "The two password that you entered do not match",
+    "confirmPasswordPlaceholder": "Confirm password",
+    "registerPageOption": "You have an account?",
+    "registerPageLoginOption": "Login",
+    
+    "messageRegisterSuccess": "Register Successfully!",
+    "messageRegisterFail": "Register fail, please try again!",
+    "messageHello": "Hello",
+    "messageLoginSuccess": "you login successfully!",
+    "messageLoginFail": "Something went wrong, please try again"
 }
