@@ -1,0 +1,24 @@
+@import "../../sass/index.scss";
+
+.policy {
+    overflow-y: hidden;
+    .title {
+        font-weight: bold;
+        margin-top: 5rem;
+        width: 90%;
+        margin: auto;
+        margin-top: 10rem;
+        margin-bottom: 3rem;
+    }
+    .content {
+        width: 90%;
+        margin: auto;
+        h2 {
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+        p {
+            margin-left: 3rem;
+        }
+    }
+}

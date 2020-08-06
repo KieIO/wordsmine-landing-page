@@ -8,6 +8,7 @@ import Logout from './pages/Logout/Logout';
 import { getProfile } from './api/user.api';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
+import Policy from './pages/Policy/Policy';
 
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
           <WithNotLogin path="/login" component={Login} />
           <WithNotLogin path="/register" component={Register} />
           <Route path="/logout/:token" component={Logout} />
+          <Route exact path="/policy" component={Policy} />
         </Switch>
 
       </UserContext.Provider>
