@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ButtonLarge from "../ButtonLarge/ButtonLarge";
 import { Form, message, Input } from "antd";
 import { API_SIGN_UP } from "../../utils/constant";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
 import "./FormSignUpWithEmail.scss";
 
@@ -54,7 +54,7 @@ const FormSignUpWithEmail = () => {
   return (
     <section className="form-signup-with-email">
       <Form form={form} name="dynamic_rule" className="content-form">
-        <Form.Item
+        {/* <Form.Item
           className="form-item-email"
           name="email"
           type="email"
@@ -72,11 +72,11 @@ const FormSignUpWithEmail = () => {
           <div className="custom-input-with-email">
             <Input placeholder="Email" type="email" />
           </div>
-        </Form.Item>
+        </Form.Item> */}
 
         <Form.Item className="form-item-btn">
           <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
-            {t('bannerTryNowButton')}
+            {t("bannerTryNowButton")}
           </ButtonLarge>
         </Form.Item>
       </Form>
