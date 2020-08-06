@@ -64,7 +64,10 @@ const Header = (props) => {
             <div className="header__small">
                 <HeaderBurgerMenu logout={handleLogout} />
             </div>
-            <ToolTipCovid closeToolTip={props.closeToolTip} isCloseToolTip={props.isCloseToolTip} />
+            {
+                !props.isHideTooltip &&
+                <ToolTipCovid closeToolTip={props.closeToolTip} isCloseToolTip={props.isCloseToolTip} />
+            }
         </header>
     );
 }
