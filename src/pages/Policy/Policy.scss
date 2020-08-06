@@ -1,0 +1,17 @@
+@import "../../sass/index.scss";
+
+.policy {
+    h1 {
+        font-weight: bold;
+        margin-top: 5rem;
+    }
+    width: 90%;
+    margin: auto;
+    h2 {
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+    p {
+        margin-left: 3rem;
+    }
+}
