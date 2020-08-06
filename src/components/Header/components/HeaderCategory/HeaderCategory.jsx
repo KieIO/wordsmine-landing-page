@@ -31,10 +31,22 @@ const HeaderCategory = () => {
 
     useEffect(() => {
         window.scrollTo(0, 1) // to remove active "Value" in header at first
+        // const valueLinkElement = document.getElementsByClassName("header-category__item")[0]
+        const valueElement = document.getElementById("value")
+        
+        if (valueElement) {
+            window.addEventListener("scroll", handleScroll);
+        }
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
+
+
+    const handleScroll = () => {
         const valueLinkElement = document.getElementsByClassName("header-category__item")[0]
         const valueElement = document.getElementById("value")
-
-        window.addEventListener("scroll", () => {
             let fromTop = window.scrollY;
             if (
                 valueElement.offsetTop <= fromTop + 100 &&
@@ -46,8 +58,8 @@ const HeaderCategory = () => {
                 valueLinkElement.classList.remove("active")
 
             }
-        });
-    }, [])
+        
+    }
     return (
 
         <section className="header-category">
