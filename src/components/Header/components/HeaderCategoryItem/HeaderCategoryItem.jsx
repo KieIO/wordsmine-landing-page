@@ -1,12 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { withRouter } from 'react-router-dom';
 
 import './HeaderCategoryItem.scss';
 
 const HeaderCategoryItem = ({ target, name, isHandleClick = true, ...props }) => {
     const { t } = useTranslation();
-
     const scrollToView = (e) => {
         if (isHandleClick) {
             e.preventDefault()
@@ -42,9 +40,6 @@ const HeaderCategoryItem = ({ target, name, isHandleClick = true, ...props }) =>
                     )
                 }
             }
-            else {
-                props.history.push('/')
-            }
         }
     }
     return (
@@ -54,4 +49,4 @@ const HeaderCategoryItem = ({ target, name, isHandleClick = true, ...props }) =>
     );
 }
 
-export default withRouter(HeaderCategoryItem);
+export default HeaderCategoryItem;

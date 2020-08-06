@@ -33,9 +33,12 @@ const Header = (props) => {
                     <Logo />
                 </div>
                 <div className="header__right" id="header__right">
+                    {
+                        !props.isHideTooltip &&
                     <div className="header__category" id="header__category">
                         <HeaderCategory />
                     </div>
+                    }
 
                     <div className="header__btn" id="header__btn">
                         {
@@ -62,7 +65,7 @@ const Header = (props) => {
                 </div>
             </div>
             <div className="header__small">
-                <HeaderBurgerMenu logout={handleLogout} />
+                <HeaderBurgerMenu logout={handleLogout} isHideCategory = {props.isHideTooltip} />
             </div>
             {
                 !props.isHideTooltip &&

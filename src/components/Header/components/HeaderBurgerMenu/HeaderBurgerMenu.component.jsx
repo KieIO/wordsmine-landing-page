@@ -9,7 +9,7 @@ import { useTranslation } from 'react-i18next';
 
 import './HeaderBurgerMenu.scss';
 
-const HeaderBurgerMenu = ({ logout }) => {
+const HeaderBurgerMenu = ({ logout , isHideCategory}) => {
     const { t } = useTranslation();
 
     const CATEGORY_HEADER = [
@@ -69,6 +69,8 @@ const HeaderBurgerMenu = ({ logout }) => {
             </div>
 
             <div id="header-menu" className="header-burger-menu__content">
+                {
+                    !isHideCategory &&
                 <Scrollspy className="header-burger-menu__list"
                     offset={-80}
                     items={CATEGORY_HEADER.map(item => item.target)} currentClassName="active">
@@ -80,6 +82,7 @@ const HeaderBurgerMenu = ({ logout }) => {
                         ))
                     }
                 </Scrollspy>
+                }
 
                 <div className="header-burger-menu__btn" id="header__btn">
                     {
