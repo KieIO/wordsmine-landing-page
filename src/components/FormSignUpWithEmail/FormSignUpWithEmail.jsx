@@ -77,7 +77,7 @@ const FormSignUpWithEmail = () => {
             {t("bannerTryNowButton")}
           </ButtonLarge>
         </Form.Item>
-      </Form>
+      </Form> 
     </section>
   );
 };

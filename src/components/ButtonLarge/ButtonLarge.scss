@@ -1,8 +1,8 @@
 @import '../../sass/index.scss';
 
 .button-large {
-    background-color: $color-success;
-    color: #fff;
+    background-color: $color-warning;
+    color: $color-black !important;
     font-weight: bold;
     border-radius: $boder-radious-btn;
     height: $height-btn-large;
@@ -13,11 +13,10 @@
     border: none;
 
     &:hover {
-        background-color: $color-warning !important;
-        color: $color-black;
+        background-color: $color-success;
     }
     &:visited, &:focus {
-        background-color: $color-success;
-
+        // background-color: $color-success;
+        background-color: $color-warning ;
     }
 }
