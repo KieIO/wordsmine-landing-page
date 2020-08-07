@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../sass/index.scss'
 import Feature from '../../components/Feature/Feature';
+// eslint-disable-next-line no-unused-vars
 import Topic from '../../components/Topic/Topic';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
