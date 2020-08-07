@@ -28,6 +28,7 @@
                 .chrome-extension-logo {
                     margin-left: 5px;
                     img {
+                        object-fit: contain;
                         width: 200px;
                         height: 100px;
                     }
