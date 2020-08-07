@@ -1,16 +1,15 @@
+import { Carousel, Col, Row } from "antd";
 import React from "react";
-import { Row, Col } from "antd";
-import { Carousel } from "antd";
-import "./AppDownload.scss";
-
-// IMPORT IMAGES
-import appStore from "../../assets/img/dowload-mobile-app-store.png";
-import chPlay from "../../assets/img/dowload-mobile-google-store.png";
+import { useTranslation } from "react-i18next";
 import background1 from "../../assets/img/background1.png";
 import background2 from "../../assets/img/background2.png";
 import background3 from "../../assets/img/background3.png";
+// IMPORT IMAGES
+import appStore from "../../assets/img/dowload-mobile-app-store.png";
+import chromeExtensionLogo from "../../assets/img/chrome-extension-logo.png";
+import "./AppDownload.scss";
 
-import { useTranslation } from "react-i18next";
+
 
 const AppDownload = () => {
   const { t } = useTranslation();
@@ -25,7 +24,9 @@ const AppDownload = () => {
               <a className="app-store" href="/">
                 <img src={appStore} alt="app-store" />
               </a>
-              Chrome Extension Logo Here
+              <a className="chrome-extension-logo" href="/">
+                <img src={chromeExtensionLogo} alt="chrome-extension" />
+              </a>
             </div>
           </div>
         </Col>
