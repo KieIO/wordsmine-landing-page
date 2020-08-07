@@ -14,7 +14,7 @@ const Description = () => {
           {t('descriptionTitle')}
           <br />
         </h2>
-        <p>
+        <p className="description__definition">
           {t('descriptionDes')}
         </p>
       </div>

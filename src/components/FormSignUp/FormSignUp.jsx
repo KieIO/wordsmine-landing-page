@@ -62,7 +62,7 @@ const FormSignUp = () => {
 
   return (
     <section className="form">
-      <Form form={form} name="dynamic_rule">
+      <Form id="form-cta" form={form} name="dynamic_rule">
         <Form.Item
           name="fullName"
           rules={[
