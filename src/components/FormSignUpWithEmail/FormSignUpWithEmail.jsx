@@ -1,10 +1,10 @@
+import { Form, message } from "antd";
 import React, { useState } from "react";
-import ButtonLarge from "../ButtonLarge/ButtonLarge";
-import { Form, message, Input } from "antd";
-import { API_SIGN_UP } from "../../utils/constant";
 import { useTranslation } from "react-i18next";
-
+import { API_SIGN_UP } from "../../utils/constant";
+import ButtonLarge from "../ButtonLarge/ButtonLarge";
 import "./FormSignUpWithEmail.scss";
+
 
 const FormSignUpWithEmail = () => {
   const { t } = useTranslation();
@@ -35,25 +35,23 @@ const FormSignUpWithEmail = () => {
     setIsLoading(true);
     try {
       const values = await form.validateFields();
-      // console.log("value: ", values)
 
       try {
         await submit(values);
         message.success("Thanks for your submission");
         form.resetFields();
       } catch (err) {
-        console.debug("result: ", err);
         message.error("Something went wrong, please try later");
       }
     } catch (err) {
-      console.debug("result: ", err);
+      message.error("Something went wrong, please try later");
     }
     setIsLoading(false);
   };
 
   return (
     <section className="form-signup-with-email">
-      <Form form={form} name="dynamic_rule" className="content-form">
+      <Form id="form-try" form={form} name="dynamic_rule" className="content-form">
         {/* <Form.Item
           className="form-item-email"
           name="email"
