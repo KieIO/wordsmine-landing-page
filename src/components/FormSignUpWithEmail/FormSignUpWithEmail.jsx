@@ -53,7 +53,13 @@ const FormSignUpWithEmail = () => {
 
   return (
     <section className="form-signup-with-email">
-      <Form form={form} name="dynamic_rule" className="content-form">
+
+       <ButtonLarge type="primary" >
+            {t('bannerTryNowButton')}
+      </ButtonLarge>
+
+
+      {/* <Form form={form} name="dynamic_rule" className="content-form">
         <Form.Item
           className="form-item-email"
           name="email"
@@ -79,7 +85,7 @@ const FormSignUpWithEmail = () => {
             {t('bannerTryNowButton')}
           </ButtonLarge>
         </Form.Item>
-      </Form>
+      </Form> */}
     </section>
   );
 };
