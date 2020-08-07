@@ -24,7 +24,7 @@ function HomePage() {
             <Banner isCloseToolTip={isCloseToolTip} />
             <Value />
             <Description />
-            <Topic />
+            {/* <Topic /> */}
             <Feature />
             <Feedback />
             <AppDownload />

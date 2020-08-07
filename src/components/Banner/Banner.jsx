@@ -8,7 +8,7 @@ const Banner = (props) => {
   const { t } = useTranslation()
 
   return (
-      <section className="banner" id="banner" style={props.isCloseToolTip ? {marginTop: '6.9rem', transition: 'all .5s ease-in'} : {marginTop: '11.9rem'}}>
+      <section className="banner" id="banner" style={props.isCloseToolTip ? {marginTop: '6.7rem', transition: 'all .5s ease-in'} : {marginTop: '11.9rem'}}>
         <div className="banner__center">
           <h1 className="banner__text-color">{t('bannerTitle')}</h1>
           <div>
