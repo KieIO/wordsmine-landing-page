@@ -79,29 +79,6 @@ const HeaderBurgerMenu = ({ logout, isHideCategory }) => {
             ))}
           </Scrollspy>
         )}
-
-        <div className="header-burger-menu__btn" id="header__btn">
-          {userContext ? (
-            <div className="header__btn-item">
-              <ButtonCustom onClick={logout}>{t("headerLogout")}</ButtonCustom>
-            </div>
-          ) : (
-            <>
-              <div className="header__btn-item">
-                <Link to="/login">
-                  <ButtonCustom type="default" ghost={true}>
-                    {t("headerLogin")}
-                  </ButtonCustom>
-                </Link>
-              </div>
-              <div className="header__btn-item">
-                <Link to="/register">
-                  <ButtonCustom>{t("headerRegister")}</ButtonCustom>
-                </Link>
-              </div>
-            </>
-          )}
-        </div>
       </div>
     </div>
   );
