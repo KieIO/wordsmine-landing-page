@@ -13,6 +13,14 @@
   "bannerDes2": "Bất kỳ đâu, bất kỳ lúc nào",
   "bannerTryNowButton": "Đăng Ký Ngay",
 
+  "problemTitle": "Bạn có gặp phải các vấn đề về từ vựng này mỗi ngày không?",
+  "problemDes1": "Không thể nhớ ra đúng các từ vựng để diễn đạt ý của mình khi giao tiếp.",
+  "problemDes2": "Không biết cách dùng từ mới trong câu như thế nào.",
+  "problemDes3": "Hàng ngày gặp quá nhiều từ vựng mới mà không có cách nào để lưu trữ lại.",
+  "problemDes4": "Không biết cách để luyện tập, ghi nhớ hết các từ vựng một cách hiệu quả.",
+  "problemDes5": "Không biết cách dùng từ mới trong câu như thế nào.",
+  "problemTryNowButton": "Khám Phá Giải Pháp",
+
   "valueConvenientTitle": "Thuận Tiện",
   "valueConvenientDes": "Không bỏ lỡ từ vựng mới mà bạn nhìn thấy hàng ngày!",
   "valueCloudStorageTitle": "Lưu Trữ Đám Mây",
@@ -48,7 +56,7 @@
 
   "appDownloadTitle": "Đồng hành cải thiện vốn từ vựng cùng WordsMine!",
 
-  "ctaTitle": "Sẵn sàng đạt điểm số cao hơn cùng WordsMine?",
+  "ctaTitle": "Đồng hành cải thiện vốn từ vựng cùng WordsMine!",
   "ctaFullName": "Họ tên",
   "ctaEmail": "Email",
   "ctaInterest": "Sở thích",

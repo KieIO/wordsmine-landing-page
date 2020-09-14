@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Form, Input, message, Checkbox } from "antd";
 import ButtonLarge from "../ButtonLarge/ButtonLarge";
 import { API_SIGN_UP } from "../../utils/constant";
-import { useTranslation } from 'react-i18next';
-
+import { useTranslation } from "react-i18next";
+import happyIcon from "../../img/happy.svg";
 import "./FormSignUp.scss";
 
 const FormSignUp = () => {
@@ -73,7 +73,9 @@ const FormSignUp = () => {
           ]}
         >
           <div className="custom-input">
-            <span className="custom-input__placeholder">{t('ctaFullName')}</span>
+            <span className="custom-input__placeholder">
+              {t("ctaFullName")}
+            </span>
             <Input placeholder="David Copperfield" />
           </div>
         </Form.Item>
@@ -92,28 +94,29 @@ const FormSignUp = () => {
           ]}
         >
           <div className="custom-input">
-            <span className="custom-input__placeholder">{t('ctaEmail')}</span>
+            <span className="custom-input__placeholder">{t("ctaEmail")}</span>
             <Input placeholder="davicopper@email.com" type="email" />
           </div>
         </Form.Item>
 
-        <Form.Item name="interest">
+        {/* <Form.Item name="interest">
           <div className="custom-input">
             <span className="custom-input__placeholder">{t('ctaInterest')}</span>
             <Input placeholder="Learn vocabulary, grammar, etc" />
           </div>
-        </Form.Item>
+        </Form.Item> */}
 
         <Form.Item className="check-box">
           <Checkbox checked={checkAgreePolicy} onChange={onCheckboxChange}>
             {" "}
-            {t('ctaRule')}
+            {t("ctaRule")}
           </Checkbox>
         </Form.Item>
 
         <Form.Item className="form__btn-start">
           <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
-            {t('ctaButton')}
+            {t("ctaButton")} &nbsp;{" "}
+            <img src={happyIcon} alt="problem" width="30px;"></img>
           </ButtonLarge>
         </Form.Item>
       </Form>
