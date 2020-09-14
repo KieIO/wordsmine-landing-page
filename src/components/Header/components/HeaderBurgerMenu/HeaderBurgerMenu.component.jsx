@@ -1,17 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import Scrollspy from "react-scrollspy";
 import HeaderCategoryItem from "../HeaderCategoryItem/HeaderCategoryItem";
 import Logo from "../Logo/Logo";
-import { UserContext } from "../../../../contexts/user.context";
-import ButtonCustom from "../../../ButtonCustom/ButtonCustom";
-import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 
 import "./HeaderBurgerMenu.scss";
 
 const HeaderBurgerMenu = ({ logout, isHideCategory }) => {
-  const { t } = useTranslation();
-
   const CATEGORY_HEADER = [
     {
       name: "headerOverview",
@@ -27,7 +21,6 @@ const HeaderBurgerMenu = ({ logout, isHideCategory }) => {
     },
   ];
 
-  const [userContext] = useContext(UserContext);
   const [isOpen, setIsOpen] = useState(false);
   const toggleIsOpen = (e) => {
     e.preventDefault();
