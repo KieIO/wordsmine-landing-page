@@ -43,8 +43,8 @@ const FormSignUp = () => {
       const values = await form.validateFields();
       if (checkAgreePolicy) {
         try {
-          const result = await submit(values);
-          console.debug("result: ", result);
+          console.debug("result: ", values);
+          await submit(values);
           message.success("Thanks for your submission");
           form.resetFields();
         } catch (err) {
@@ -59,6 +59,22 @@ const FormSignUp = () => {
     }
     setIsLoading(false);
   };
+
+   const validatePhone = (_rule, value, callback) => {
+        const phoneRegex = /^[+]?[(]?[0-9]{4}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{3,4}$/im;
+        if (!value) {
+            console.debug("empty")
+            // empty
+            callback();
+            return
+        }
+        const isMatch = value.match(phoneRegex);
+        if (!isMatch && value !== '') {
+            callback('Invalid phone')
+        } else {
+            callback();
+        }
+    };
 
   return (
     <section className="form">
@@ -94,6 +110,18 @@ const FormSignUp = () => {
           <div className="custom-input">
             <span className="custom-input__placeholder">{t('ctaEmail')}</span>
             <Input placeholder="davicopper@email.com" type="email" />
+          </div>
+        </Form.Item>
+
+         <Form.Item
+          name="phone"
+          rules={[
+            { validator: validatePhone }
+          ]}
+        >
+          <div className="custom-input">
+            <span className="custom-input__placeholder">{t('ctaPhone')}</span>
+            <Input placeholder="0999 222 888" />
           </div>
         </Form.Item>
 
