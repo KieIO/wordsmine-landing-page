@@ -43,8 +43,8 @@ const FormSignUp = () => {
       const values = await form.validateFields();
       if (checkAgreePolicy) {
         try {
-          const result = await submit(values);
-          console.debug("result: ", result);
+          console.debug("result: ", values);
+          await submit(values);
           message.success("Thanks for your submission");
           form.resetFields();
         } catch (err) {
@@ -58,6 +58,22 @@ const FormSignUp = () => {
       console.debug("result: ", err);
     }
     setIsLoading(false);
+  };
+
+  const validatePhone = (_rule, value, callback) => {
+    const phoneRegex = /^[+]?[(]?[0-9]{4}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{3,4}$/im;
+    if (!value) {
+      console.debug("empty")
+      // empty
+      callback();
+      return
+    }
+    const isMatch = value.match(phoneRegex);
+    if (!isMatch && value !== '') {
+      callback('Invalid phone')
+    } else {
+      callback();
+    }
   };
 
   return (
@@ -99,7 +115,20 @@ const FormSignUp = () => {
           </div>
         </Form.Item>
 
-        {/* <Form.Item name="interest">
+        <Form.Item
+          name="phone"
+          rules={[
+            { validator: validatePhone }
+          ]}
+        >
+          <div className="custom-input">
+            <span className="custom-input__placeholder">{t('ctaPhone')}</span>
+            <Input placeholder="0999 222 888" />
+          </div>
+        </Form.Item>
+
+          {/* <Form.Item name="interest">
+          name="interest">
           <div className="custom-input">
             <span className="custom-input__placeholder">{t('ctaInterest')}</span>
             <Input placeholder="Learn vocabulary, grammar, etc" />
@@ -108,19 +137,19 @@ const FormSignUp = () => {
 
         <Form.Item className="check-box">
           <Checkbox checked={checkAgreePolicy} onChange={onCheckboxChange}>
-            {" "}
-            {t("ctaRule")}
-          </Checkbox>
+          {" "}
+          {t("ctaRule")}
+        </Checkbox>
         </Form.Item>
 
-        <Form.Item className="form__btn-start">
-          <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
-            {t("ctaButton")} &nbsp;{" "}
-            <img src={happyIcon} alt="problem" width="30px;"></img>
-          </ButtonLarge>
-        </Form.Item>
+      <Form.Item className="form__btn-start">
+        <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
+          {t("ctaButton")} &nbsp;{" "}
+          <img src={happyIcon} alt="problem" width="30px;"></img>
+        </ButtonLarge>
+      </Form.Item>
       </Form>
-    </section>
+    </section >
   );
 };
 
