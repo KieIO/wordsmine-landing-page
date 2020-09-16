@@ -24,6 +24,25 @@ export const login = async (data) => {
         });
 };
 
+export const loginWithGoogle = async (data) => {
+    return axios({
+        method: 'post',
+        url: `${API_URL}/login`,
+        data: JSON.stringify(data),
+        withCredentials: true,
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    })
+        .then(function (response) {
+            //handle success
+            return response;
+        })
+        .catch(function (error) {
+            // handle error
+            console.debug(error);
+            throw error;
+        });
+};
+
 export const register = async (data) => {
     const { authEmail, username, password } = data;
 

@@ -15,9 +15,9 @@ class AuthWithGoogle extends Component {
             {},
             googleUser => {
                 const profile = googleUser.getBasicProfile()
-                // console.log("profile: ", profile)
+                console.log("profile: ", profile)
                 message.success(`Hello ${profile.getName()}, you login successfully`)
-                window.location.href = "/"
+                // window.location.href = "/"
 
                 // const token = googleUser.getAuthResponse().id_token
                 // const email = profile.getEmail()
