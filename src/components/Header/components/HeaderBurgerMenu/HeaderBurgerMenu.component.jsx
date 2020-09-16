@@ -19,6 +19,10 @@ const HeaderBurgerMenu = ({ logout, isHideCategory }) => {
       name: "headerTestimonial",
       target: "testimonial",
     },
+    {
+      name: "headerTryOut",
+      target: "cta",
+    },
   ];
 
   const [isOpen, setIsOpen] = useState(false);

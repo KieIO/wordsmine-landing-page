@@ -37,12 +37,12 @@ const Banner = (props) => {
           <p className="banner__text-color description">{t("bannerDes2")}</p>
         </div>
         <div className="banner__btn">
-          <Link to="/register">
+          <a href="#cta">
             <ButtonLarge type="primary">
               {t("bannerTryNowButton")} &nbsp;{" "}
               <img src={happyIcon} alt="problem" width="30px;"></img>
             </ButtonLarge>
-          </Link>
+          </a>
         </div>
       </div>
       <div className="banner__img">

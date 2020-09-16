@@ -8,7 +8,7 @@ const CTA = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="cta u-margin-vertical-section u-padding-horizontal-section">
+    <section id="cta" className="cta u-margin-vertical-section u-padding-horizontal-section">
       <div className="cta__column cta__wrap">
         <h1 className="cta__title">{t('ctaTitle')}</h1>
         <TimeCountDown/>
