@@ -1,19 +1,20 @@
 import React from "react";
-import { Select } from "antd";
-import { useTranslation } from "react-i18next";
+// import { Select } from "antd";
+// import { useTranslation } from "react-i18next";
 
 import "./ChangeLanguage.scss";
-import { getLanguage } from "../../utils/function.utils";
+// import { getLanguage } from "../../utils/function.utils";
 
-const { Option } = Select;
+// const { Option } = Select;
 
 const ChangeLanguage = () => {
-  const { t, i18n } = useTranslation();
+  // const { t, i18n } = useTranslation();
+  // const { i18n } = useTranslation();
 
-  const handleChange = (value) => {
-    i18n.changeLanguage(value);
-    localStorage.setItem("language", value);
-  };
+  // const handleChange = (value) => {
+  //   i18n.changeLanguage(value);
+  //   localStorage.setItem("language", value);
+  // };
 
   return (
     <div className="change-language">
