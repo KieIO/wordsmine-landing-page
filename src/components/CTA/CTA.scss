@@ -1,50 +1,52 @@
-@import '../../sass/index.scss';
+@import "../../sass/index.scss";
 
 .cta {
-    // text-align: center;
-    // margin-bottom: 10rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
-    // &__column {
-    //     // flex: 1,
-    // }
-    &__wrap {
-        // margin-left: $padding-container-md;
-        margin-right: $padding-container-md;
-        text-align: center;
-    }
-    &__title {
-        font-size: $font-size-heading1;
-        color: $color-black;
-        margin-bottom: 0;;
-        cursor: default;
-    }
+  // text-align: center;
+  // margin-bottom: 10rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  // &__column {
+  //     // flex: 1,
+  // }
+  &__wrap {
+    // margin-left: $padding-container-md;
+    margin-right: $padding-container-md;
+    text-align: center;
+  }
+  &__title {
+    font-size: $font-size-heading1;
+    color: $color-black;
+    margin-bottom: 0;
+    cursor: default;
+    letter-spacing: 0.05rem;
+    line-height: 4rem;
+    padding-bottom: 10px;
+  }
 }
 
 @media (max-width: 750px) {
-    .cta {
-        margin-top: 13rem;
-        flex-direction: column-reverse;
-        &__wrap {
-            order: 1;
-            margin-bottom: 4rem;
-        }
+  .cta {
+    margin-top: 13rem;
+    flex-direction: column-reverse;
+    &__wrap {
+      order: 1;
+      margin-bottom: 4rem;
     }
-
+  }
 }
 @media (max-width: 407px) {
-    .cta {
-        &__wrap {
-            margin-left: $padding-container-sm;
-            margin-right: $padding-container-sm;
-        }
-        &__title {
-            font-size: $font-size-heading3;
-        }
-        &__button {
-            margin-top: 2rem;
-        }
+  .cta {
+    &__wrap {
+      margin-left: $padding-container-sm;
+      margin-right: $padding-container-sm;
     }
+    &__title {
+      font-size: $font-size-heading3;
+    }
+    &__button {
+      margin-top: 2rem;
+    }
+  }
 }

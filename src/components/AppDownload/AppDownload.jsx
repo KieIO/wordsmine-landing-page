@@ -11,8 +11,6 @@ import background3 from "../../assets/img/background3.png";
 import chromeExtensionLogo from "../../assets/img/chrome-extension-logo.png";
 import "./AppDownload.scss";
 
-
-
 const AppDownload = () => {
   const { t } = useTranslation();
 
