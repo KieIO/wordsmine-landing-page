@@ -3,7 +3,6 @@ import React, { useState, useContext } from "react";
 import { Form, Input, message } from "antd";
 import { MailOutlined, LockOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import AuthWithGoogle from "../../components/AuthWithGoogle/AuthWithGoogle";
 import ButtonCustom from "../../components/ButtonCustom/ButtonCustom";
 import { login, getProfile } from "../../api/user.api";
 import { UserContext } from "../../contexts/user.context";

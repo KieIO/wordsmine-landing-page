@@ -8,46 +8,9 @@ import "./LoginWithGoogle.scss";
 import GoogleLogin from "react-google-login";
 
 class LoginWithGoogle extends Component {
-  state = {
-    isClickLogin: false,
-  };
-
-  unsubscribeFromAuth = null;
-
-  // componentDidMount() {
-  //   this.unsubscribeFromAuth = auth.onAuthStateChanged(async (user) => {
-  //     console.log("login", user);
-  //     if (user && this.state.isClickLogin) {
-  //       try {
-  //         console.log("user changed: ", user);
-  //         // this.setState({ currentUser: user });
-  //         // login
-  //         const { email } = user;
-  //         const idToken = await user.getIdToken();
-  //         const rs = await loginWithGoogle(email, idToken);
-  //         // todo: save current user
-  //         console.log("rs: ", rs);
-  //       } catch (err) {
-  //         const { t } = this.props;
-  //         message.error(t("messageLoginFail"));
-  //       }
-  //     } else if (user) {
-  //       const { email } = user;
-  //       const idToken = await user.getIdTokenResult();
-  //       console.log(idToken);
-  //       const rs = await loginWithGoogle(email, idToken.token);
-  //     }
-  //   });
-  // }
-
-  componentWillUnmount() {
-    if (this.unsubscribeFromAuth) {
-      this.unsubscribeFromAuth();
-    }
-  }
-
   handleLoginDone = async (response) => {
     try {
+     console.debug("response: ", response)
       if (!response || !response.tokenId || !response.profileObj) {
         return;
       }
