@@ -1,26 +1,23 @@
 @import "../../sass/index.scss";
 
-.banner {
-  background-color: #e9f8ff;
+.problem {
+  background-color: #e9f8ff85;
   display: flex;
-  justify-content: space-between;
-  margin: auto;
-  margin-top: 11.9rem;
+  justify-content: flex-end;
   min-height: fit-content;
-  padding-top: 7rem;
-  padding-bottom: 13rem;
+  padding-bottom: 0.8rem;
   &__btn {
     margin-top: 3rem;
   }
   &__img {
+    width: 50%;
     position: relative;
-    padding-right: 5rem;
     img {
       width: 100%;
       height: 100%;
       background-repeat: no-repeat;
       object-fit: cover;
-      padding: 2rem 8rem;
+      padding: 7rem 6rem;
     }
     video {
       width: 100%;
@@ -28,11 +25,10 @@
     }
   }
 
-  &__center {
-    width: 65%;
+  &__right {
+    width: 50%;
     text-align: center;
-    margin: auto;
-    padding: 1rem 6rem;
+    padding: 5rem 6rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -49,6 +45,8 @@
   .description {
     font-size: $font-size-heading5;
     cursor: default;
+    line-height: 2.5rem;
+    padding-bottom: 2rem;
   }
   p {
     font-size: $font-size-subtitle1;
@@ -57,11 +55,12 @@
 
   h1 {
     font-weight: 700;
+    line-height: 4.5rem;
   }
 }
 
 @media (max-width: 1125px) {
-  .banner {
+  .problem {
     &__center {
       padding: 1rem 0rem 1rem 5rem;
     }
@@ -75,7 +74,7 @@
 }
 
 @media (max-width: 994px) {
-  .banner {
+  .problem {
     &__center {
       margin-top: 4rem;
       width: 90%;
@@ -84,33 +83,24 @@
 }
 
 @media (max-width: 895px) {
-  .banner {
-    flex-direction: column;
-    &__center {
-      display: flex;
-
-      justify-content: center;
-      align-items: center;
-      padding-left: 0;
-    }
-    &__text-color {
-      font-size: 3.6rem;
-      text-align: center;
-    }
-    .description {
-      font-size: 2.2rem;
-      display: flex;
-      justify-content: center;
-    }
+  .problem {
     &__img {
-      position: relative;
       img {
-        width: 100%;
-        height: 30%;
-        // max-height: 30rem;
-        background-repeat: no-repeat;
-        object-fit: cover;
+        height: auto;
       }
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .problem {
+    flex-direction: column;
+    &__img {
+      width: 100%;
+    }
+    &__right {
+      width: 100%;
+      padding-top: 0;
     }
   }
 }

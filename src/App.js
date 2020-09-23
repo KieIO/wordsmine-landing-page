@@ -2,13 +2,13 @@ import React, { useEffect, useState, Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage';
 import { UserContext } from './contexts/user.context';
-import WithNotLogin from './components/WithNotLogin/WithNotLogin';
 import './sass/index.scss'
 import Logout from './pages/Logout/Logout';
 import { getProfile } from './api/user.api';
+import Policy from './pages/Policy/Policy';
+import WithNotLogin from './components/WithNotLogin/WithNotLogin';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
-import Policy from './pages/Policy/Policy';
 
 
 const App = () => {

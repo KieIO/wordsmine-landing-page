@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Form, Input, message, Checkbox } from "antd";
 import ButtonLarge from "../ButtonLarge/ButtonLarge";
 import { API_SIGN_UP } from "../../utils/constant";
-import { useTranslation } from 'react-i18next';
-
+import { useTranslation } from "react-i18next";
+import happyIcon from "../../img/happy.svg";
 import "./FormSignUp.scss";
 
 const FormSignUp = () => {
@@ -60,21 +60,21 @@ const FormSignUp = () => {
     setIsLoading(false);
   };
 
-   const validatePhone = (_rule, value, callback) => {
-        const phoneRegex = /^[+]?[(]?[0-9]{4}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{3,4}$/im;
-        if (!value) {
-            console.debug("empty")
-            // empty
-            callback();
-            return
-        }
-        const isMatch = value.match(phoneRegex);
-        if (!isMatch && value !== '') {
-            callback('Invalid phone')
-        } else {
-            callback();
-        }
-    };
+  const validatePhone = (_rule, value, callback) => {
+    const phoneRegex = /^[+]?[(]?[0-9]{4}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{3,4}$/im;
+    if (!value) {
+      console.debug("empty")
+      // empty
+      callback();
+      return
+    }
+    const isMatch = value.match(phoneRegex);
+    if (!isMatch && value !== '') {
+      callback('Invalid phone')
+    } else {
+      callback();
+    }
+  };
 
   return (
     <section className="form">
@@ -89,7 +89,9 @@ const FormSignUp = () => {
           ]}
         >
           <div className="custom-input">
-            <span className="custom-input__placeholder">{t('ctaFullName')}</span>
+            <span className="custom-input__placeholder">
+              {t("ctaFullName")}
+            </span>
             <Input placeholder="David Copperfield" />
           </div>
         </Form.Item>
@@ -108,12 +110,12 @@ const FormSignUp = () => {
           ]}
         >
           <div className="custom-input">
-            <span className="custom-input__placeholder">{t('ctaEmail')}</span>
+            <span className="custom-input__placeholder">{t("ctaEmail")}</span>
             <Input placeholder="davicopper@email.com" type="email" />
           </div>
         </Form.Item>
 
-         <Form.Item
+        <Form.Item
           name="phone"
           rules={[
             { validator: validatePhone }
@@ -125,27 +127,29 @@ const FormSignUp = () => {
           </div>
         </Form.Item>
 
-        <Form.Item name="interest">
+          {/* <Form.Item name="interest">
+          name="interest">
           <div className="custom-input">
             <span className="custom-input__placeholder">{t('ctaInterest')}</span>
             <Input placeholder="Learn vocabulary, grammar, etc" />
           </div>
-        </Form.Item>
+        </Form.Item> */}
 
         <Form.Item className="check-box">
           <Checkbox checked={checkAgreePolicy} onChange={onCheckboxChange}>
-            {" "}
-            {t('ctaRule')}
-          </Checkbox>
+          {" "}
+          {t("ctaRule")}
+        </Checkbox>
         </Form.Item>
 
-        <Form.Item className="form__btn-start">
-          <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
-            {t('ctaButton')}
-          </ButtonLarge>
-        </Form.Item>
+      <Form.Item className="form__btn-start">
+        <ButtonLarge type="primary" onClick={onCheck} loading={isLoading}>
+          {t("ctaButton")} &nbsp;{" "}
+          <img src={happyIcon} alt="problem" width="30px;"></img>
+        </ButtonLarge>
+      </Form.Item>
       </Form>
-    </section>
+    </section >
   );
 };
 

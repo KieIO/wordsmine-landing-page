@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import { Form, Input, message } from "antd";
 import { MailOutlined, LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import AuthWithGoogle from "../../components/AuthWithGoogle/AuthWithGoogle";
 import ButtonCustom from "../../components/ButtonCustom/ButtonCustom";
 import { register } from "../../api/user.api";
 import { useTranslation } from 'react-i18next';
+import LoginWithGoogle from "../Login/components/LoginWithGoogle/LoginWithGoogle";
 
 const Register = (props) => {
   const [form] = Form.useForm();
@@ -57,9 +57,8 @@ const Register = (props) => {
                     src="https://i2.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png?fit=256%2C256&quality=100&ssl=1"
                     alt="user" /> */}
         <div className="title-form">{t('registerPageTitle')}</div>
-
         <div className="social-authen">
-          <AuthWithGoogle />
+          <LoginWithGoogle />
           <div className="or">{t('or')}</div>
         </div>
         <Form form={form} name="dynamic_rule" className="content-form">
