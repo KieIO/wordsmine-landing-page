@@ -3,12 +3,12 @@ import React, { useState, useContext } from "react";
 import { Form, Input, message } from "antd";
 import { MailOutlined, LockOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import AuthWithGoogle from "../../components/AuthWithGoogle/AuthWithGoogle";
 import ButtonCustom from "../../components/ButtonCustom/ButtonCustom";
 import { login, getProfile } from "../../api/user.api";
 import { UserContext } from "../../contexts/user.context";
 import "./Login.scss";
 import { useTranslation } from 'react-i18next';
+import LoginWithGoogle from "./components/LoginWithGoogle/LoginWithGoogle";
 
 const Login = ({ history }) => {
   const [form] = Form.useForm();
@@ -61,7 +61,7 @@ const Login = ({ history }) => {
         <div className="title-form">{t('loginPageTitle')}</div>
 
         <div className="social-authen">
-          <AuthWithGoogle />
+          <LoginWithGoogle/>
           <div className="or">{t('or')}</div>
         </div>
         <Form form={form} name="dynamic_rule" className="content-form">
