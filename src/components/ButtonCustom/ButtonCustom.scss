@@ -29,6 +29,14 @@
             background-color: $color-success;
         }
     }
+    &.bright {
+        background-color: $color-warning;
+        border: none;
+        color: $color-black;
+        &:hover {
+            background-color: rgba($color-warning, .7);
+        }
+    }
     &.ant-btn-primary {
         background-color: $color-primary-dark !important;
         font-size: $font-size-paragraph1;

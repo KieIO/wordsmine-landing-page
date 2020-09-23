@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import Scrollspy from "react-scrollspy";
+import ButtonCustom from "../../../ButtonLarge/ButtonLarge";
 import HeaderCategoryItem from "../HeaderCategoryItem/HeaderCategoryItem";
 import Logo from "../Logo/Logo";
 
 import "./HeaderBurgerMenu.scss";
 
 const HeaderBurgerMenu = ({ logout, isHideCategory }) => {
+  const { t } = useTranslation();
   const CATEGORY_HEADER = [
     {
       name: "headerOverview",
@@ -19,10 +22,10 @@ const HeaderBurgerMenu = ({ logout, isHideCategory }) => {
       name: "headerTestimonial",
       target: "testimonial",
     },
-    {
-      name: "headerTryOut",
-      target: "cta",
-    },
+    // {
+    //   name: "headerTryOut",
+    //   target: "cta",
+    // },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -76,6 +79,9 @@ const HeaderBurgerMenu = ({ logout, isHideCategory }) => {
             ))}
           </Scrollspy>
         )}
+        <a className="btn-group" href="#cta">
+          <ButtonCustom type="bright">{t('headerTryOut')}</ButtonCustom>
+        </a>
       </div>
     </div>
   );

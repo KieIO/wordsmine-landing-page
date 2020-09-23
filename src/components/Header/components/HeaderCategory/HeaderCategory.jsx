@@ -1,30 +1,33 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Scrollspy from "react-scrollspy";
+import ButtonCustom from "../../../ButtonCustom/ButtonCustom";
 import HeaderCategoryItem from "../HeaderCategoryItem/HeaderCategoryItem";
 // import { useEffect } from "react";
 
 import "./HeaderCategory.scss";
 
-const HeaderCategory = () => {
-  const CATEGORY_HEADER = [
-    {
-      name: "headerOverview",
-      target: "overview",
-    },
-    {
-      name: "headerValue",
-      target: "value",
-    },
-    {
-      name: "headerTestimonial",
-      target: "testimonial",
-    },
-    {
-      name: "headerTryOut",
-      target: "cta",
-    },
-  ];
+const CATEGORY_HEADER = [
+  {
+    name: "headerOverview",
+    target: "overview",
+  },
+  {
+    name: "headerValue",
+    target: "value",
+  },
+  {
+    name: "headerTestimonial",
+    target: "testimonial",
+  },
+  // {
+  //   name: "headerTryOut",
+  //   target: "cta",
+  // },
+];
 
+const HeaderCategory = () => {
+  const { t } = useTranslation();
   // useEffect(() => {
   //   window.scrollTo(0, 1); // to remove active "Value" in header at first
   //   // const valueLinkElement = document.getElementsByClassName("header-category__item")[0]
@@ -72,6 +75,9 @@ const HeaderCategory = () => {
             <HeaderCategoryItem {...item} />
           </li>
         ))}
+        <a href="#cta">
+          <ButtonCustom type="bright">{t('headerTryOut')}</ButtonCustom>
+        </a>
       </Scrollspy>
     </section>
   );

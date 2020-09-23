@@ -34,11 +34,14 @@
         z-index: 2000;
         transition: all 0.3s;
         transform: translateX(100%);
-        padding: 2rem 2rem 0;
+        padding: 2rem;
         &--open {
             height: fit-content;
             opacity: 1;
             transform: translateX(0);
+        }
+        .btn-group {
+            padding: 2rem;
         }
     }
     &__icon {
