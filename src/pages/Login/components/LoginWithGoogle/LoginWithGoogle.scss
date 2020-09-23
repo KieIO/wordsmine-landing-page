@@ -1,30 +1,31 @@
-@import '../../../../sass/index.scss';
+@import "../../../../sass/index.scss";
 
 .auth-with-google {
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 1.5rem auto;
-    &:hover .content {
-        border: 1px solid rgba($color-white, .8);
-    }
-    .content {
+    > button {
+        background-color: rgba(#fff, 0) !important;
+        border: 0.05rem solid #fff !important;
+        border-radius: 0.5rem !important;
+        color: #fff !important;
+        box-shadow: 0 6px 10px #00000026 !important;
+        transition: all .2s;
         cursor: pointer;
-        padding: .5rem 1rem;
-        border: 1px solid rgba($color-white, .5);
-        border-radius: $boder-radious-btn;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
-        .logo {
-            $size: 3rem;
-            width: $size;
-            height: $size;
-            margin-right: 2rem;
+        &:disabled {
+            background-color:#ddd !important;
+            color: #ccc !important;
+            border: none !important;
         }
-        .title {
-    
+        &:hover {
+            background-color: rgba(#fff, 0.3) !important;
+            box-shadow: 0 6px 10px #00000040 !important;
+
+        }
+        > div {
+            border-radius: 0.5rem !important;
+            background: rgba(255, 255, 255, 0) !important;
         }
     }
 }

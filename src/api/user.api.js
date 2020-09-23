@@ -14,7 +14,6 @@ export const login = async (data) => {
   })
     .then(function (response) {
       //handle success
-      console.log("header: ", response);
       return response;
     })
     .catch(function (response) {
@@ -79,12 +78,10 @@ export const getlistWord = async () => {
   })
     .then(function (response) {
       //handle success
-      console.log(response);
       return response;
     })
     .catch(function (response) {
       //handle error
-      console.log(response.message);
       throw response;
     });
 };
@@ -96,8 +93,6 @@ export const getProfile = async (data) => {
     withCredentials: true,
   })
     .then((result) => {
-      console.log("after get profile **: ", result);
-
       return result;
     })
     .catch((err) => {

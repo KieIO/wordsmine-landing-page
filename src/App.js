@@ -8,7 +8,7 @@ import { getProfile } from './api/user.api';
 import Policy from './pages/Policy/Policy';
 import WithNotLogin from './components/WithNotLogin/WithNotLogin';
 import Login from './pages/Login/Login';
-// import Register from './pages/Register/Register';
+import Register from './pages/Register/Register';
 
 
 const App = () => {
@@ -35,7 +35,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <WithNotLogin path="/login" component={Login} />
-          {/* <WithNotLogin path="/register" component={Register} /> */}
+          <WithNotLogin path="/register" component={Register} />
           <Route path="/logout/:token" component={Logout} />
           <Route exact path="/policy" component={Policy} />
         </Switch>

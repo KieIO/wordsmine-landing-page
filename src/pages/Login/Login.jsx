@@ -61,7 +61,6 @@ const Login = ({ history }) => {
         <div className="title-form">{t('loginPageTitle')}</div>
 
         <div className="social-authen">
-          {/* <AuthWithGoogle /> */}
           <LoginWithGoogle/>
           <div className="or">{t('or')}</div>
         </div>

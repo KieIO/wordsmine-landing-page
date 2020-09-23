@@ -9,18 +9,16 @@ const Logout = ({history, match: {params}}) => {
              const time = parseInt(atob(token))
              const currentTime = Date.now();
 
-             console.log(currentTime, time, currentTime - time)
+             console.debug(currentTime, time, currentTime - time)
              if ((currentTime - time) <= EXPIRE_TOKEN_LOGOUT_TIME) {
                  try {
                      await logout()
-                     console.log("logout success") 
                      history.push("/")
                  } catch (err) {
                      console.debug(err.message)
                      history.push("/")
                  }
              } else {
-                 console.log("not logout")
                  history.push('/') //Redirect when logout successfully if remove extension
              }
         }

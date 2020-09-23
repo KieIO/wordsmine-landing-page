@@ -1,55 +1,42 @@
 import { message } from "antd";
-import React, { Component } from "react";
+import React, { useContext } from "react";
+import GoogleLogin from "react-google-login";
 import { withTranslation } from "react-i18next";
 import { loginWithGoogle } from "../../../../api/user.api";
-// import LogoGoogle from "../../../../assets/img/google-logo.png";
-// import { auth, signInWithGoogle } from "../../../../utils/firebase.utils";
+import { UserContext } from "../../../../contexts/user.context";
 import "./LoginWithGoogle.scss";
-import GoogleLogin from "react-google-login";
 
-class LoginWithGoogle extends Component {
-  handleLoginDone = async (response) => {
-    try {
-     console.debug("response: ", response)
-      if (!response || !response.tokenId || !response.profileObj) {
-        return;
-      }
-      const rs = await loginWithGoogle(
-        response.profileObj.email,
-        response.tokenId
-      );
-      console.log("rs: ", rs);
-    } catch (err) {
-      const { t } = this.props;
-      message.error(t("messageLoginFail"));
-    }
-  };
+const LoginWithGoogle = ({ t }) => {
+    const [, setUserContext] = useContext(UserContext);
 
-  // handleLogin = (e) => {
-  //   this.setState({ isClickLogin: true }, () => {
-  //     //   e.stopPropagation();
-  //     signInWithGoogle();
-  //   });
-  // };
+    const handleLoginDone = async (response) => {
+        try {
+            if (!response || !response.tokenId || !response.profileObj) {
+                return;
+            }
+            const rs = await loginWithGoogle(
+                response.profileObj.email,
+                response.tokenId
+            );
+            await setUserContext(rs);
+        } catch (err) {
+            const { t } = this.props;
+            message.error(t("messageLoginFail"));
+        }
+    };
 
-  render() {
-    const { t } = this.props;
+
     return (
-      <div className="auth-with-google">
-        {/* <div className="content" onClick={this.handleLogin}>
-          <img className="logo" src={LogoGoogle} alt="Google" />
-          <span className="title">{t("authWithGoogle")}</span>
-        </div> */}
-        <GoogleLogin
-          clientId="241375531558-120od43cqeo7oetk8nj7dt9c1jpsrssr.apps.googleusercontent.com"
-          buttonText={t("authWithGoogle")}
-          onSuccess={this.handleLoginDone}
-          onFailure={this.handleLoginDone}
-          cookiePolicy={"single_host_origin"}
-        />
-      </div>
+        <div className="auth-with-google">
+            <GoogleLogin
+                clientId="241375531558-120od43cqeo7oetk8nj7dt9c1jpsrssr.apps.googleusercontent.com"
+                buttonText={t("authWithGoogle")}
+                onSuccess={handleLoginDone}
+                onFailure={handleLoginDone}
+                cookiePolicy={"single_host_origin"}
+            />
+        </div>
     );
-  }
 }
 
 export default withTranslation()(LoginWithGoogle);
