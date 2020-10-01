@@ -13,6 +13,10 @@
         box-shadow: 0 6px 10px #00000026 !important;
         transition: all .2s;
         cursor: pointer;
+        width: 15rem;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
         &:disabled {
             background-color:#ddd !important;
             color: #ccc !important;
@@ -26,6 +30,12 @@
         > div {
             border-radius: 0.5rem !important;
             background: rgba(255, 255, 255, 0) !important;
+            margin-bottom: -4px !important;
+            margin-right: 0 !important;
+            
+        }
+        >span {
+
         }
     }
 }

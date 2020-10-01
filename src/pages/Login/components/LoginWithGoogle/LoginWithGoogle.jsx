@@ -25,7 +25,6 @@ const LoginWithGoogle = ({ t }) => {
         }
     };
 
-
     return (
         <div className="auth-with-google">
             <GoogleLogin
