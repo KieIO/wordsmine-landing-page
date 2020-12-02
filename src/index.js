@@ -5,8 +5,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
+import ReactGA from 'react-ga';
+
+const trackingId = "G-CGSPWGLBGH"; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
 // eslint-disable-next-line no-unused-vars
 import i18n from './i18n';
+
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 
 ReactDOM.render(
   <BrowserRouter basename="/">
