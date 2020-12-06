@@ -31,9 +31,9 @@ const Problem = (props) => {
           <p className="problem__text-color description">{t("problemDes5")}</p>
         </div>
         <div className="problem__btn">
-          <Link to="/register">
+          <a href="#cta">
             <ButtonLarge type="primary">{t("problemTryNowButton")}</ButtonLarge>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

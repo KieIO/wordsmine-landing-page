@@ -2,26 +2,30 @@ import React, { useState } from 'react'
 import { Row, Col } from 'antd';
 import ValueItem from './components/FeatureItem/ValueItem';
 import './Value.scss'
+import ImgStep1 from "../../img/step1.png";
+import ImgStep2 from "../../img/step2.png";
+import ImgFlashcard from "../../img/flashcard_mobile_hori.jpg";
+import Dashboard from "../../img/dashboard.png";
 
 const Value = () => {
   const [feature] = useState([
     {
-      icon: <span className="lnr lnr-users"></span>,
+      icon: <img src={ImgStep1} className="ValuePic"/>,
       title: 'valueConvenientTitle',
       description: 'valueConvenientDes'
     },
     {
-      icon: <span className="lnr lnr-rocket"></span>,
+      icon: <img src={ImgStep2} className="ValuePic"/>,
       title: 'valueCloudStorageTitle',
       description: 'valueCloudStorageDes'
     },
     {
-      icon: <span className="lnr lnr-eye"></span>,
+      icon: <img src={ImgFlashcard} className="ValuePic"/>,
       title: 'valueFlashCardTitle',
       description: 'valueFlashCardDes'
     },
     {
-      icon: <span className="lnr lnr-magic-wand"></span>,
+      icon: <img src={Dashboard} className="ValuePic"/>,
       title: 'valueLexicographerTitle',
       description: 'valueLexicographerDes'
     }

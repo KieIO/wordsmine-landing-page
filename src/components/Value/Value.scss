@@ -1,19 +1,28 @@
-@import '../../sass/index.scss';
+@import "../../sass/index.scss";
 
 .value {
-    align-content: stretch;
-    &__item {
-      padding: 1rem;
-      cursor: default;
-    }
+  align-content: stretch;
+  &__item {
+    padding: 1rem;
+    cursor: default;
+  }
+}
+
+.ValuePic {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 @media only screen and (max-width: 579px) {
-    .value  {
-      position: relative;
-      padding: 1rem;
-      &__item {
-        width: 50%;
-      }
+  .value {
+    position: relative;
+    padding: 1rem;
+    &__item {
+      width: 50%;
     }
+  }
+  .ValuePic {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
